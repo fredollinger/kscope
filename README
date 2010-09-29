@@ -1,9 +1,11 @@
 KScope Branch
 
-This is a branch of kscope maintained by Fred Ollinger (follinge@gmail.com).
+kscope-1.6.0.orig/ is a branch of kscope maintained by Fred Ollinger (follinge@gmail.com).
 
 http://github.com/fredollinger/kscope
 
 It will compile against the latest KDE 3.
 
 The ultimate plan is to add new features as well as to port to KDE 4.
+
+If you just want the working binaries, grab kscope-binary-only-works-on-lucid/ and put it into /opt under /opt/kscope.

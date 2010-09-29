@@ -1,0 +1,6 @@
+Wed Sep 29 13:14:23 PDT 2010
+
+Made just enough changes to get this to compile under Ubuntu Lucid. 
+
+The main change was commenting out some ftp stuff which probably breaks ftp kio or 
+something. This is irrelevant for day to day kscope use.

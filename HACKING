@@ -1,0 +1,7 @@
+To develop this, you need to get standard kde libs, compile them from scratch
+and put it all into /opt/kscope:
+
+kdebase-3.5.9
+kdelibs-3.5.10
+kdesdk-4.4.2
+langpack-locales-2.11+git20100304
