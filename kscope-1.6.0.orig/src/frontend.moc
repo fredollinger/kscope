@@ -1,0 +1,209 @@
+/****************************************************************************
+** Frontend meta object code from reading C++ file 'frontend.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "frontend.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *Frontend::className() const
+{
+    return "Frontend";
+}
+
+QMetaObject *Frontend::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_Frontend( "Frontend", &Frontend::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString Frontend::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "Frontend", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString Frontend::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "Frontend", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* Frontend::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = KProcess::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_ptr, "KProcess", QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotProcessExit", 1, param_slot_0 };
+    static const QUParameter param_slot_1[] = {
+	{ 0, &static_QUType_ptr, "KProcess", QUParameter::In },
+	{ 0, &static_QUType_charstar, 0, QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_1 = {"slotReadStdout", 3, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
+	{ 0, &static_QUType_ptr, "KProcess", QUParameter::In },
+	{ 0, &static_QUType_charstar, 0, QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"slotReadStderr", 3, param_slot_2 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotProcessExit(KProcess*)", &slot_0, QMetaData::Protected },
+	{ "slotReadStdout(KProcess*,char*,int)", &slot_1, QMetaData::Private },
+	{ "slotReadStderr(KProcess*,char*,int)", &slot_2, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "pToken", &static_QUType_ptr, "FrontendToken", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"dataReady", 1, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ "nRecords", &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"finished", 1, param_signal_1 };
+    static const QUMethod signal_2 = {"aborted", 0, 0 };
+    static const QUParameter param_signal_3[] = {
+	{ "nProgress", &static_QUType_int, 0, QUParameter::In },
+	{ "nTotal", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod signal_3 = {"progress", 2, param_signal_3 };
+    static const QUParameter param_signal_4[] = {
+	{ "sMsg", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod signal_4 = {"error", 1, param_signal_4 };
+    static const QMetaData signal_tbl[] = {
+	{ "dataReady(FrontendToken*)", &signal_0, QMetaData::Public },
+	{ "finished(uint)", &signal_1, QMetaData::Public },
+	{ "aborted()", &signal_2, QMetaData::Public },
+	{ "progress(int,int)", &signal_3, QMetaData::Public },
+	{ "error(const QString&)", &signal_4, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"Frontend", parentObject,
+	slot_tbl, 3,
+	signal_tbl, 5,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_Frontend.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* Frontend::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "Frontend" ) )
+	return this;
+    return KProcess::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL dataReady
+void Frontend::dataReady( FrontendToken* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+// SIGNAL finished
+void Frontend::finished( uint t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 1 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_varptr.set(o+1,&t0);
+    activate_signal( clist, o );
+}
+
+// SIGNAL aborted
+void Frontend::aborted()
+{
+    activate_signal( staticMetaObject()->signalOffset() + 2 );
+}
+
+// SIGNAL progress
+void Frontend::progress( int t0, int t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 3 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_int.set(o+1,t0);
+    static_QUType_int.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL error
+void Frontend::error( const QString& t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 4, t0 );
+}
+
+bool Frontend::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotProcessExit((KProcess*)static_QUType_ptr.get(_o+1)); break;
+    case 1: slotReadStdout((KProcess*)static_QUType_ptr.get(_o+1),(char*)static_QUType_charstar.get(_o+2),(int)static_QUType_int.get(_o+3)); break;
+    case 2: slotReadStderr((KProcess*)static_QUType_ptr.get(_o+1),(char*)static_QUType_charstar.get(_o+2),(int)static_QUType_int.get(_o+3)); break;
+    default:
+	return KProcess::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool Frontend::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: dataReady((FrontendToken*)static_QUType_ptr.get(_o+1)); break;
+    case 1: finished((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 2: aborted(); break;
+    case 3: progress((int)static_QUType_int.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 4: error((const QString&)static_QUType_QString.get(_o+1)); break;
+    default:
+	return KProcess::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool Frontend::qt_property( int id, int f, QVariant* v)
+{
+    return KProcess::qt_property( id, f, v);
+}
+
+bool Frontend::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

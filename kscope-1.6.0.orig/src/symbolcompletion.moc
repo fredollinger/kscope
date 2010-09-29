@@ -1,0 +1,126 @@
+/****************************************************************************
+** SymbolCompletion meta object code from reading C++ file 'symbolcompletion.h'
+**
+** Created: Thu Sep 9 13:22:44 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "symbolcompletion.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *SymbolCompletion::className() const
+{
+    return "SymbolCompletion";
+}
+
+QMetaObject *SymbolCompletion::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_SymbolCompletion( "SymbolCompletion", &SymbolCompletion::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString SymbolCompletion::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SymbolCompletion", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString SymbolCompletion::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SymbolCompletion", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* SymbolCompletion::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QObject::staticMetaObject();
+    static const QUMethod slot_0 = {"slotComplete", 0, 0 };
+    static const QUMethod slot_1 = {"slotAutoComplete", 0, 0 };
+    static const QUMethod slot_2 = {"slotAutoCompleteTimeout", 0, 0 };
+    static const QUParameter param_slot_3[] = {
+	{ 0, &static_QUType_ptr, "FrontendToken", QUParameter::In }
+    };
+    static const QUMethod slot_3 = {"slotAddEntry", 1, param_slot_3 };
+    static const QUParameter param_slot_4[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_4 = {"slotQueryFinished", 1, param_slot_4 };
+    static const QUParameter param_slot_5[] = {
+	{ 0, &static_QUType_ptr, "KTextEditor::CompletionEntry", QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x03", QUParameter::In }
+    };
+    static const QUMethod slot_5 = {"slotFilterInsert", 2, param_slot_5 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotComplete()", &slot_0, QMetaData::Public },
+	{ "slotAutoComplete()", &slot_1, QMetaData::Public },
+	{ "slotAutoCompleteTimeout()", &slot_2, QMetaData::Private },
+	{ "slotAddEntry(FrontendToken*)", &slot_3, QMetaData::Private },
+	{ "slotQueryFinished(uint)", &slot_4, QMetaData::Private },
+	{ "slotFilterInsert(KTextEditor::CompletionEntry*,QString*)", &slot_5, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"SymbolCompletion", parentObject,
+	slot_tbl, 6,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_SymbolCompletion.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* SymbolCompletion::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "SymbolCompletion" ) )
+	return this;
+    return QObject::qt_cast( clname );
+}
+
+bool SymbolCompletion::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotComplete(); break;
+    case 1: slotAutoComplete(); break;
+    case 2: slotAutoCompleteTimeout(); break;
+    case 3: slotAddEntry((FrontendToken*)static_QUType_ptr.get(_o+1)); break;
+    case 4: slotQueryFinished((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 5: slotFilterInsert((KTextEditor::CompletionEntry*)static_QUType_ptr.get(_o+1),(QString*)static_QUType_varptr.get(_o+2)); break;
+    default:
+	return QObject::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool SymbolCompletion::qt_emit( int _id, QUObject* _o )
+{
+    return QObject::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool SymbolCompletion::qt_property( int id, int f, QVariant* v)
+{
+    return QObject::qt_property( id, f, v);
+}
+
+bool SymbolCompletion::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

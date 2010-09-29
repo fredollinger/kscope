@@ -1,0 +1,206 @@
+<sect1 id="config-dlg">
+<title>The Configuration Dialogue</title>
+
+<para>
+The configuration dialogue is the main tool for setting parameters required by &kapp;, or adjusting the user's preferences. The dialogue is displayed the first time &kapp; is run, and can be invoked later by using the <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure KScope...</guimenuitem></menuchoice> menu command.
+</para>
+
+<para>
+The dialogue is composed of several pages, each of which handles a different set of parameters.
+</para>
+
+<sect2 id="config-progs">
+<title>The Programmes Page</title>
+
+<para>
+&kapp; serves as a front-end to several console-based programmes: <application>Cscope</application>, <application>Ctags</application> and <application>Dot</application> (which is part of the <application>Graphviz</application> suite). Since &kapp; invokes these programmes directly, without using a shell, it cannot determine their paths. Therefore, it is required to inform &kapp; of the paths where the relevant executable files reside. Note that &kapp; needs the full path to each programme, along with the name of the executable.
+</para>
+
+<para>
+Another parameter required by &kapp; is whether <application>Cscope</application> supports the <option>-v</option> command line option. This is a relatively new feature, added to <application>Cscope</application> in version 15.5. It allows &kapp; to display accurate progress information during time-consuming operations, such as building the cross-reference database, or running a long query. It is highly recommended that you upgrade <application>Cscope</application> to a version that supports the <option>-v</option> option, as the user experience of &kapp; is much improved with it. However, if you choose to use an older version of <application>Cscope</application>, make sure the check-box for using the <option>-v</option> option is cleared.
+</para>
+
+<para>
+You can determine whether your version of <application>Cscope</application> supports this option by running <userinput><option>cscope</option> <option>-h</option></userinput>.
+</para>
+
+<para>
+The easiest way to configure programme paths is by using the automated script provided with &kapp;. This script can be activated by clicking the <guibutton>Guess...</guibutton> button. Once invoked, the script looks for the required programmes (using the shell's <filename>which</filename> utility). The script also makes sure that the found executables adhere to the standards required by &kapp; (e.g., that <application>Ctags</application> is the one provided by <application>Exuberant-Ctags</application> and that <application>Dot</application> supports the <option>-Tplain</option> command-line option). &kapp; uses the results of the script to adjust the values in the dialogue's controls.
+</para>
+
+<note>
+<para>The script will not override paths already set by the user. Instead, it will only verify the validity of these paths. For the script to determine paths automatically, the relevant text fields in the dialogue need to be cleared.</para>
+</note>
+
+<para>
+<screenshot>
+<screeninfo>The Programmes page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="pref_progs.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Programmes page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Cscope Path</guilabel></term>
+<listitem><para>The full path of the Cscope executable. The name of this executable must be <filename>cscope</filename>.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Use verbose mode (-v)</guilabel></term>
+<listitem><para>Instructs Cscope to produce verbose progress output, by appending <option>-v</option> to the command line.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Ctags Path</guilabel></term>
+<listitem><para>The full path of the Ctags executable. The name of this executable must contain the string <filename>ctags</filename>.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Dot Path</guilabel></term>
+<listitem><para>The full path of the Dot executable. The name of this executable must be <filename>dot</filename>.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Guess</guibutton></term>
+<listitem><para><action>Runs a script which attempts to determine the previous values automatically.</action> This script should work in most cases, by may fail to correctly obtain some or all of the values.</para></listitem>
+</varlistentry>
+</variablelist>
+If the file names on your system do not conform to the limitations described above, please create symbolic links to the executables.
+</para>
+
+</sect2>
+
+<sect2 id="config-clrs">
+<title>The Colours Page</title>
+
+<para>
+<screenshot>
+<screeninfo>The Colours page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="pref_clrs.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Colours page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+The Colours page allows you to configure &kapp; to look the way you want it to, by changing the foreground and background colours of some of &kapp;'s GUI elements. The elements that can be modified are:
+<itemizedlist>
+<listitem><para>The project's file list (to the right of the editing area)</para></listitem>
+<listitem><para>The editor's symbol (or tag) list (to the left of each editor window)</para></listitem>
+<listitem><para>The query results window</para></listitem>
+<listitem><para>The call graph's background and nodes</para></listitem>
+</itemizedlist>
+</para>
+
+<para>
+To change the colour of a GUI element, double-click over the element's entry in the list (or select this element and click <keycap>Enter</keycap>).
+</para>
+
+<note>
+<para>The editor's own colours are determined by the settings of the embedded editor, and are not controlled by &kapp;.</para>
+</note>
+
+</sect2>
+
+<sect2 id="config-fonts">
+<title>The Fonts Page</title>
+
+<para>
+<screenshot>
+<screeninfo>The Fonts page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="pref_fonts.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Fonts page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+The Fonts page allows you to determine the fonts used by any of &kapp;'s windows (see <link linkend="config-clrs">The Colours Page</link> section for a description of these windows.)
+</para>
+
+<para>
+To change the colour of a GUI element, double-click over the element's entry in the list (or select this element and click <keycap>Enter</keycap>).
+</para>
+
+<note>
+<para>As with the colour scheme, the fonts used by the embedded editor are not determined by &kapp;.</para>
+</note>
+
+</sect2>
+
+<sect2 id="config-opts">
+<title>The Options Page</title>
+
+<para>
+This page allows the user to configure certain parameters that affect the behaviour of &kapp;.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>The Options page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="pref_opts.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Options page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<variablelist>
+<varlistentry>
+<term><guilabel>External Editor</guilabel></term>
+<listitem><para>Specifies a command line for invoking an external editor application. &kapp; will replace the escape sequence %F with the file path, and the sequence %L with the current line number.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Read-Only Mode</guilabel></term>
+<listitem><para>If set, the embedded editor will be work in read-only mode, i.e., &kapp; will not allow any changes to the displayed source files (but you can still use the external editor).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Open Last Project on Start-Up</guilabel></term>
+<listitem><para>Determines whether &kapp; should automatically attempt to load the last active project when started.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Automatic Tag Highlighting</guilabel></term>
+<listitem><para>If set, &kapp; will highlight tags in the tag list based on the current position of the text cursor.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Brief Tab Captions for Query Pages</guilabel></term>
+<listitem><para>This option allows some space to be saved by using shortcuts for the page titles in the query window.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Warn When a File is Modified Outside &kapp;</guilabel></term>
+<listitem><para>If set, &kapp; will issue a warning whenever a file is changed on the hard drive, while it is open for editing in &kapp;. This option will only work in conjunction with the Kate text editor).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Automatically Sort Files in the File List</guilabel></term>
+<listitem><para>By default, &kapp; will sort the files in the project's file list whenever a project is loaded. However, such behaviour may not be suitable for large projects on older machines, causing &kapp; to hang for long periods when loading such projects. Uncheck this option to avoid automatic sorting.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>System Profile</guilabel></term>
+<listitem><para>Allows the choice between a fast and a slow system configuration. The fast profile will take certain actions automatically which are not appropriate for a slower system (for example, automatic database rebuilds and auto-completion are enabled by default for fast systems and disabled for slow systems). Note that the terms "fast" and "slow" do not necessarily refer to the particular machine which runs &kapp;, but rather to the complete environment (e.g., a fast machine may still be using a relatively slow file server).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Editor Popup Menu</guilabel></term>
+<listitem><para>Provides two choices for the embedded editor's context menu:
+<itemizedlist>
+<listitem><para>Embedded: A menu with Cscope actions is included as a sub-menu of the editor's own context menu.</para></listitem>
+<listitem><para>&kapp; Only: Only Cscope actions are available through the context menu.</para></listitem>
+</itemizedlist>
+The second choice provides quicker access to Cscope commands, but the editor's menu is discarded.
+</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+</sect1>

@@ -1,0 +1,118 @@
+/****************************************************************************
+** TreeWidget meta object code from reading C++ file 'treewidget.h'
+**
+** Created: Thu Sep 9 13:22:44 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "treewidget.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *TreeWidget::className() const
+{
+    return "TreeWidget";
+}
+
+QMetaObject *TreeWidget::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_TreeWidget( "TreeWidget", &TreeWidget::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString TreeWidget::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "TreeWidget", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString TreeWidget::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "TreeWidget", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* TreeWidget::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QueryView::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In },
+	{ 0, &static_QUType_ptr, "QRegExp", QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotSearch", 3, param_slot_0 };
+    static const QUParameter param_slot_1[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod slot_1 = {"slotShowAll", 1, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"slotQueryItem", 1, param_slot_2 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotSearch(QListViewItem*,const QRegExp&,int)", &slot_0, QMetaData::Protected },
+	{ "slotShowAll(QListViewItem*)", &slot_1, QMetaData::Protected },
+	{ "slotQueryItem(QListViewItem*)", &slot_2, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"TreeWidget", parentObject,
+	slot_tbl, 3,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_TreeWidget.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* TreeWidget::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "TreeWidget" ) )
+	return this;
+    return QueryView::qt_cast( clname );
+}
+
+bool TreeWidget::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotSearch((QListViewItem*)static_QUType_ptr.get(_o+1),(const QRegExp&)*((const QRegExp*)static_QUType_ptr.get(_o+2)),(int)static_QUType_int.get(_o+3)); break;
+    case 1: slotShowAll((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    case 2: slotQueryItem((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return QueryView::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool TreeWidget::qt_emit( int _id, QUObject* _o )
+{
+    return QueryView::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool TreeWidget::qt_property( int id, int f, QVariant* v)
+{
+    return QueryView::qt_property( id, f, v);
+}
+
+bool TreeWidget::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

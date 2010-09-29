@@ -1,0 +1,214 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>SearchResultsLayout</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>SearchResultsLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>361</width>
+            <height>307</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Filter Query Results</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Search For:</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>m_pSearchEdit</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout4</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Search In:</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>171</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>Function</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>File</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Line</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Text</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>m_pColumnCB</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QButtonGroup">
+            <property name="name">
+                <cstring>buttonGroup1</cstring>
+            </property>
+            <property name="title">
+                <string>Search Type</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>m_pTextRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Plain Text</string>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>m_pRegExpRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>RegE&amp;xp</string>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>m_pSimpRegExpRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Simplified RegExp</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pCaseSenCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Case Sensitive</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pNegateCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Negate Search</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout3</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>201</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pOKButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>OK</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pCancelButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Cancel</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<tabstops>
+    <tabstop>m_pSearchEdit</tabstop>
+    <tabstop>m_pColumnCB</tabstop>
+    <tabstop>m_pTextRadio</tabstop>
+    <tabstop>m_pRegExpRadio</tabstop>
+    <tabstop>m_pSimpRegExpRadio</tabstop>
+    <tabstop>m_pCaseSenCheck</tabstop>
+    <tabstop>m_pOKButton</tabstop>
+    <tabstop>m_pCancelButton</tabstop>
+</tabstops>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

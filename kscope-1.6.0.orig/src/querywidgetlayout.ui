@@ -1,0 +1,62 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>QueryWidgetLayout</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>QueryWidgetLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>740</width>
+            <height>343</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form2</string>
+    </property>
+    <hbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <property name="spacing">
+            <number>0</number>
+        </property>
+        <widget class="TabWidget">
+            <property name="name">
+                <cstring>m_pQueryTabs</cstring>
+            </property>
+        </widget>
+    </hbox>
+</widget>
+<customwidgets>
+    <customwidget>
+        <class>TabWidget</class>
+        <header location="local">tabwidget.h</header>
+        <sizehint>
+            <width>-1</width>
+            <height>-1</height>
+        </sizehint>
+        <container>1</container>
+        <sizepolicy>
+            <hordata>7</hordata>
+            <verdata>7</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image0</pixmap>
+    </customwidget>
+</customwidgets>
+<images>
+    <image name="image0">
+        <data format="PNG" length="437">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000017c49444154388dad95db71c32010458f322e652966f3ef325031a68bf8df14c3f6e27c80c4338927e39df1182474b85c2ed2465f4fde53db76b4bcbf3e55af98414af79709c778b3815cfe9f8fc7576e39803b249afe1ff074e716c062bd76696716cd83a0519c2019dd444e66b8035ad12738a53ba274d0142146a6658a802a386d2ff6632e5d2fd5668c10430f3b56660621801a783fab9fc1add20255cdbf56d131698c45fd0ec49ef1d1f55c7df084fa19eab52a0d012c31d5a43859f554b5bf77dbcbbd62c1e17fb291322a86d367915ee90925a70707aeac70a578062faa854213b745ec7e061f2a0a6815b77dcf2a53d90b591ca2c96327d906b30c5505cae17192a118ec9ff5191508831d4b2b8e4d8b21abf23e5f1307b7db30d6b33cf6cb1cab56c5a1e4d53940eaf28f4a114c67bbbb77c5d926ab142939b5d967f5bdff63e2ceb79b08ecc332c5954db21a2971d9535c1fb331392718ca0691978cf16b9cda6169919c0efcce7ae980fca7b6a6fd56d5dbd07fdbc7f41bcb78aa0bdc5b1e190000000049454e44ae426082</data>
+    </image>
+</images>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>tabwidget.h</includehint>
+</includehints>
+</UI>

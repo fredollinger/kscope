@@ -1,0 +1,69 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PrefFontLayout</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>PrefFontLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>363</width>
+            <height>210</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form4</string>
+    </property>
+    <hbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QListView">
+            <column>
+                <property name="text">
+                    <string>GUI Element</string>
+                </property>
+                <property name="clickable">
+                    <bool>true</bool>
+                </property>
+                <property name="resizable">
+                    <bool>true</bool>
+                </property>
+            </column>
+            <column>
+                <property name="text">
+                    <string>Font</string>
+                </property>
+                <property name="clickable">
+                    <bool>true</bool>
+                </property>
+                <property name="resizable">
+                    <bool>false</bool>
+                </property>
+            </column>
+            <property name="name">
+                <cstring>m_pList</cstring>
+            </property>
+        </widget>
+    </hbox>
+</widget>
+<connections>
+    <connection>
+        <sender>m_pList</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>PrefFontLayout</receiver>
+        <slot>slotItemSelected(QListViewItem*)</slot>
+    </connection>
+    <connection>
+        <sender>m_pList</sender>
+        <signal>returnPressed(QListViewItem*)</signal>
+        <receiver>PrefFontLayout</receiver>
+        <slot>slotItemSelected(QListViewItem*)</slot>
+    </connection>
+</connections>
+<slots>
+    <slot access="protected">slotItemSelected(QListViewItem*)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

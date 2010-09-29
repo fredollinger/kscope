@@ -1,0 +1,222 @@
+/****************************************************************************
+** QueryResultsMenu meta object code from reading C++ file 'queryresultsmenu.h'
+**
+** Created: Thu Sep 9 13:22:44 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "queryresultsmenu.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *QueryResultsMenu::className() const
+{
+    return "QueryResultsMenu";
+}
+
+QMetaObject *QueryResultsMenu::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_QueryResultsMenu( "QueryResultsMenu", &QueryResultsMenu::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString QueryResultsMenu::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "QueryResultsMenu", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString QueryResultsMenu::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "QueryResultsMenu", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* QueryResultsMenu::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QPopupMenu::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x0e", QUParameter::In },
+	{ "nCol", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotShow", 3, param_slot_0 };
+    static const QUMethod slot_1 = {"slotViewSource", 0, 0 };
+    static const QUMethod slot_2 = {"slotFindDef", 0, 0 };
+    static const QUMethod slot_3 = {"slotCopy", 0, 0 };
+    static const QUMethod slot_4 = {"slotFilter", 0, 0 };
+    static const QUMethod slot_5 = {"slotRemove", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotShow(QListViewItem*,const QPoint&,int)", &slot_0, QMetaData::Public },
+	{ "slotViewSource()", &slot_1, QMetaData::Private },
+	{ "slotFindDef()", &slot_2, QMetaData::Private },
+	{ "slotCopy()", &slot_3, QMetaData::Private },
+	{ "slotFilter()", &slot_4, QMetaData::Private },
+	{ "slotRemove()", &slot_5, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "pItem", &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"viewSource", 1, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ "sFunc", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"findDef", 1, param_signal_1 };
+    static const QUParameter param_signal_2[] = {
+	{ "pItem", &static_QUType_ptr, "QListViewItem", QUParameter::In },
+	{ "nCol", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod signal_2 = {"copy", 2, param_signal_2 };
+    static const QUParameter param_signal_3[] = {
+	{ "nCol", &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod signal_3 = {"filter", 1, param_signal_3 };
+    static const QUMethod signal_4 = {"showAll", 0, 0 };
+    static const QUParameter param_signal_5[] = {
+	{ "pItem", &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod signal_5 = {"remove", 1, param_signal_5 };
+    static const QMetaData signal_tbl[] = {
+	{ "viewSource(QListViewItem*)", &signal_0, QMetaData::Public },
+	{ "findDef(const QString&)", &signal_1, QMetaData::Public },
+	{ "copy(QListViewItem*,int)", &signal_2, QMetaData::Public },
+	{ "filter(int)", &signal_3, QMetaData::Public },
+	{ "showAll()", &signal_4, QMetaData::Public },
+	{ "remove(QListViewItem*)", &signal_5, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"QueryResultsMenu", parentObject,
+	slot_tbl, 6,
+	signal_tbl, 6,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_QueryResultsMenu.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* QueryResultsMenu::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "QueryResultsMenu" ) )
+	return this;
+    return QPopupMenu::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL viewSource
+void QueryResultsMenu::viewSource( QListViewItem* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+// SIGNAL findDef
+void QueryResultsMenu::findDef( const QString& t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 1, t0 );
+}
+
+// SIGNAL copy
+void QueryResultsMenu::copy( QListViewItem* t0, int t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 2 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_ptr.set(o+1,t0);
+    static_QUType_int.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL filter
+void QueryResultsMenu::filter( int t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 3, t0 );
+}
+
+// SIGNAL showAll
+void QueryResultsMenu::showAll()
+{
+    activate_signal( staticMetaObject()->signalOffset() + 4 );
+}
+
+// SIGNAL remove
+void QueryResultsMenu::remove( QListViewItem* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 5 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+bool QueryResultsMenu::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotShow((QListViewItem*)static_QUType_ptr.get(_o+1),(const QPoint&)*((const QPoint*)static_QUType_ptr.get(_o+2)),(int)static_QUType_int.get(_o+3)); break;
+    case 1: slotViewSource(); break;
+    case 2: slotFindDef(); break;
+    case 3: slotCopy(); break;
+    case 4: slotFilter(); break;
+    case 5: slotRemove(); break;
+    default:
+	return QPopupMenu::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool QueryResultsMenu::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: viewSource((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    case 1: findDef((const QString&)static_QUType_QString.get(_o+1)); break;
+    case 2: copy((QListViewItem*)static_QUType_ptr.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 3: filter((int)static_QUType_int.get(_o+1)); break;
+    case 4: showAll(); break;
+    case 5: remove((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return QPopupMenu::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool QueryResultsMenu::qt_property( int id, int f, QVariant* v)
+{
+    return QPopupMenu::qt_property( id, f, v);
+}
+
+bool QueryResultsMenu::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

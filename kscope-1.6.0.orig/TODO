@@ -1,0 +1,17 @@
+KScope TODO List
+================
+
+No. Problem                                 Type Target Version
+~~~ ~~~~~~~                                 ~~~~ ~~~~~~~~~~~~~~
+
+01. Project bookmark infrastructure/GUI     Feat       ?
+
+02. "Find Next" in search lists             Feat       ?
+
+03. New call tree widget                    Feat       ?
+
+04. Plugin architecture                     Feat       ?
+
+05. New GUI                                 Feat       ?
+    * IDEAl-style main window (?)
+    * True MDI (?)

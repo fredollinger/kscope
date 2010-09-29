@@ -1,0 +1,125 @@
+/****************************************************************************
+** PreferencesDlg meta object code from reading C++ file 'preferencesdlg.h'
+**
+** Created: Thu Sep 9 13:22:42 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "preferencesdlg.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *PreferencesDlg::className() const
+{
+    return "PreferencesDlg";
+}
+
+QMetaObject *PreferencesDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_PreferencesDlg( "PreferencesDlg", &PreferencesDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString PreferencesDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "PreferencesDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString PreferencesDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "PreferencesDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* PreferencesDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = KDialogBase::staticMetaObject();
+    static const QUMethod slot_0 = {"accept", 0, 0 };
+    static const QUMethod slot_1 = {"slotApply", 0, 0 };
+    static const QUMethod slot_2 = {"slotDefault", 0, 0 };
+    static const QUMethod slot_3 = {"slotModified", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "accept()", &slot_0, QMetaData::Protected },
+	{ "slotApply()", &slot_1, QMetaData::Protected },
+	{ "slotDefault()", &slot_2, QMetaData::Protected },
+	{ "slotModified()", &slot_3, QMetaData::Private }
+    };
+    static const QUMethod signal_0 = {"applyPref", 0, 0 };
+    static const QMetaData signal_tbl[] = {
+	{ "applyPref()", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"PreferencesDlg", parentObject,
+	slot_tbl, 4,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_PreferencesDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* PreferencesDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "PreferencesDlg" ) )
+	return this;
+    return KDialogBase::qt_cast( clname );
+}
+
+// SIGNAL applyPref
+void PreferencesDlg::applyPref()
+{
+    activate_signal( staticMetaObject()->signalOffset() + 0 );
+}
+
+bool PreferencesDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: accept(); break;
+    case 1: slotApply(); break;
+    case 2: slotDefault(); break;
+    case 3: slotModified(); break;
+    default:
+	return KDialogBase::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool PreferencesDlg::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: applyPref(); break;
+    default:
+	return KDialogBase::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool PreferencesDlg::qt_property( int id, int f, QVariant* v)
+{
+    return KDialogBase::qt_property( id, f, v);
+}
+
+bool PreferencesDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

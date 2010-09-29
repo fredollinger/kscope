@@ -1,0 +1,129 @@
+/****************************************************************************
+** ProjectFilesDlg meta object code from reading C++ file 'projectfilesdlg.h'
+**
+** Created: Thu Sep 9 13:22:43 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "projectfilesdlg.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *ProjectFilesDlg::className() const
+{
+    return "ProjectFilesDlg";
+}
+
+QMetaObject *ProjectFilesDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_ProjectFilesDlg( "ProjectFilesDlg", &ProjectFilesDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString ProjectFilesDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "ProjectFilesDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString ProjectFilesDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "ProjectFilesDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* ProjectFilesDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = ProjectFilesLayout::staticMetaObject();
+    static const QUMethod slot_0 = {"slotAddFiles", 0, 0 };
+    static const QUMethod slot_1 = {"slotAddDir", 0, 0 };
+    static const QUMethod slot_2 = {"slotAddTree", 0, 0 };
+    static const QUMethod slot_3 = {"slotRemSel", 0, 0 };
+    static const QUMethod slot_4 = {"slotRemDir", 0, 0 };
+    static const QUMethod slot_5 = {"slotRemTree", 0, 0 };
+    static const QUMethod slot_6 = {"slotFilter", 0, 0 };
+    static const QUMethod slot_7 = {"slotShowAll", 0, 0 };
+    static const QUMethod slot_8 = {"slotCancelDirScan", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotAddFiles()", &slot_0, QMetaData::Private },
+	{ "slotAddDir()", &slot_1, QMetaData::Private },
+	{ "slotAddTree()", &slot_2, QMetaData::Private },
+	{ "slotRemSel()", &slot_3, QMetaData::Private },
+	{ "slotRemDir()", &slot_4, QMetaData::Private },
+	{ "slotRemTree()", &slot_5, QMetaData::Private },
+	{ "slotFilter()", &slot_6, QMetaData::Private },
+	{ "slotShowAll()", &slot_7, QMetaData::Private },
+	{ "slotCancelDirScan()", &slot_8, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"ProjectFilesDlg", parentObject,
+	slot_tbl, 9,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_ProjectFilesDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* ProjectFilesDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "ProjectFilesDlg" ) )
+	return this;
+    if ( !qstrcmp( clname, "FileListTarget" ) )
+	return (FileListTarget*)this;
+    if ( !qstrcmp( clname, "FileListSource" ) )
+	return (FileListSource*)this;
+    return ProjectFilesLayout::qt_cast( clname );
+}
+
+bool ProjectFilesDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotAddFiles(); break;
+    case 1: slotAddDir(); break;
+    case 2: slotAddTree(); break;
+    case 3: slotRemSel(); break;
+    case 4: slotRemDir(); break;
+    case 5: slotRemTree(); break;
+    case 6: slotFilter(); break;
+    case 7: slotShowAll(); break;
+    case 8: slotCancelDirScan(); break;
+    default:
+	return ProjectFilesLayout::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool ProjectFilesDlg::qt_emit( int _id, QUObject* _o )
+{
+    return ProjectFilesLayout::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool ProjectFilesDlg::qt_property( int id, int f, QVariant* v)
+{
+    return ProjectFilesLayout::qt_property( id, f, v);
+}
+
+bool ProjectFilesDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

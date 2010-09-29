@@ -1,0 +1,16 @@
+Begin4
+Title:          KScope
+Version:        1.4.0
+Entered-date:   ?
+Description:    A source-editing environment for KDE bsaed on Cscope
+Keywords:       KDE Cscope Source Browser Editor IDE C
+Author:         elad_lahav@users.sourceforge.net (Elad Lahav)
+Maintained-by:  elad_lahav@users.sourceforge.net (Elad Lahav)
+Home-page:      http://kscope.sourceforge.net
+Alternate-site: 
+Primary-site:   http://download.sourceforge.net/kscope/
+                ?M  kscope-1.4.0.tar.gz
+                ?   kscope-1.4.0.lsm
+Platform:       Linux/Unix. Requires KDE.
+Copying-policy: BSD
+End

@@ -1,0 +1,101 @@
+<sect1 id="position-history">
+<title>Position History</title>
+
+<sect2 id="pos-hist-intro">
+<title>Introduction</title>
+
+<para>
+In its capacity as a source code browser, &kapp; allows the user to quickly browse through different lines in the code base. We refer to a combination of a source file and a line number as a "position" in the project. While browsing the code, it is often required to go back to a position visited in the past, e.g., to return to the caller after visiting the callee. To achieve this task, &kapp; provides a sophisticated position history mechanism, which not only allows the user to go back and forth between visited locations, but also to save and restore snapshots of "tours" through the code, as well as other manipulations of the position history. For the sake of both consistency and ease of use, recorded position history is viewed and handled in a way similar to the query results system.
+</para>
+
+<note>
+<para>
+In the context of this section, a "jump" is defined as the action taken by &kapp; after a query result record is selected for viewing (either by the user from a query page or a call-tree window, or automatically).
+</para>
+</note>
+
+<para>
+Position history records appear in pages incorporated into the Query Results window. These pages can be immediately distinguished from query results by their tab labels, which always read "History X" (where X is a unique number that identifies the page). Other than that the two types of pages look very much the same: a history page is composed of a list of records, each comprised of the following fields:
+<itemizedlist>
+<listitem><para>File</para></listitem>
+<listitem><para>Line</para></listitem>
+<listitem><para>Text</para></listitem>
+</itemizedlist>
+</para>
+
+<para>
+Note that the "Function" field is not provided for position history records.
+</para>
+
+<para>
+A history page behaves like a stack: entries are always added at the top of the list, and represent the most recently visited positions. The user can then go backwards in time, by moving the lower records, or forward, by moving to upper records. If the current record in the list is not the top one, all records above it are removed before new records are added at the top (the future history is thus "forgotten").
+</para>
+
+<para>
+At any given moment, at most one history page is considered as "active". This is the page to which history position records are added as the user browses through the code, and to which position navigation commands apply. See <link linkend="pos-hist-multi">Using Multiple Histories</link> for a detailed description of the active page concept.
+</para>
+
+<para>
+A newly created project contains no position history pages. An initial page is created and set as active automatically when the first jump is made to a location in the code.
+</para>
+
+<para>
+Each jump may add up to two entries to the active history list:
+<orderedlist>
+<listitem><para>The current position of the cursor (before the cursor jumps to the requested position), and</para></listitem>
+<listitem><para>The new position of the cursor.</para></listitem>
+</orderedlist>
+Duplicates never occur in the list. If the location of the cursor is the same as the location that appears at the top of the history list, only the new position of the cursor will be added.
+</para>
+
+</sect2>
+
+<sect2 id="pos-hist-nav">
+<title>Navigation</title>
+
+<para>
+The key feature of the position history mechanism is the ability to navigate through the recorded locations in the source code. There are two ways to navigate through a history list: moving back and forth through the list, and jumping directly to a specific position.
+</para>
+
+<para>
+To go back to the last position visited, select the <menuchoice><guimenu>Go</guimenu><guimenuitem>Previous Position</guimenuitem></menuchoice> menu item. This command selects the item immediately below the current one in the active history list (and moves the cursor to that position). Similarly, the menu command <menuchoice><guimenu>Go</guimenu><guimenuitem>Next Position</guimenuitem></menuchoice> selects the position record immediately above the current one in the active history page, and moves the editing cursor to the appropriate location.
+</para>
+
+<para>
+In addition to these commands, any position recorded in a history list can be accessed directly, by selecting the relevant item in the list (either by double-clicking the item, or by highlighting it and pressing the <keycap>Enter</keycap> key. This action can be applied to any history list, and not just to the active one.
+</para>
+
+<note>
+<para>
+Selecting a history record from a non-active list will add the selected item to the top of the active list, similar to a jump from a query result page.
+</para>
+</note>
+
+</sect2>
+
+<sect2 id="pos-hist-multi">
+<title>Using Multiple Histories</title>
+
+<para>
+The position history is a dynamic object, which changes as the user navigates through the code. In some cases, however, it is convenient to create a snapshot of a tour through the code, and keep it for later reference. &kapp; provides this feature through the availability of multiple history pages.
+</para>
+
+<para>
+As mentioned earlier, a history page is created automatically for a project when the first jump through the code is made. This page is considered as the active history page, which means that locations are added to this page, and that all navigational commands apply to the list contained in it.
+</para>
+
+<para>
+The user can decide to freeze the contents of the history recorded by the current page. This is done by locking the page, in a way similar to locking query results (see <link linkend="query-window">The Query Window</link>). Once the page is locked, its contents remain the same, even if jumps are made to other locations in the code. To record any successive jumps, &kapp; creates a new history page, which becomes the active one. A locked history page can also be activated by unlocking it. However, there can only be one unlocked history page at any given time (the active one), which means that unlocking one history page locks the previously unlocked one.
+</para>
+
+<para>
+Navigational commands (<menuchoice><guimenu>Go</guimenu><guimenuitem>Next Position</guimenuitem></menuchoice> and <menuchoice><guimenu>Go</guimenu><guimenuitem>Previous Position</guimenuitem></menuchoice>) always apply to the active history page. This is usually the unlocked history page, but may also be a locked one. This happens after the active page is locked, and before a new page is created due to a jump in the code. Other locked pages can still be used by manually selecting location records from these pages. Such a selection will move the editing cursor to the appropriate location, and hence add an entry in the active history page.
+</para>
+
+<para>
+As with query pages, locked history pages are saved when a project is closed, and restored when it is opened.
+</para>
+
+</sect2>
+
+</sect1>

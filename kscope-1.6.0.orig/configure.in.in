@@ -1,0 +1,17 @@
+#MIN_CONFIG(3.3)
+
+AM_INIT_AUTOMAKE(kscope, 1.6.0)
+AC_C_BIGENDIAN
+AC_CHECK_KDEMAXPATHLEN
+
+AM_PROG_LEX
+AC_CHECK_PROG(HAVE_LEX, $LEX, yes, no)
+if [[ "$HAVE_LEX" = "no" ]]; then
+	AC_MSG_ERROR(Lex/Flex is required in order to build KScope)
+fi
+
+AC_PROG_YACC
+AC_CHECK_PROG(HAVE_YACC, $YACC, yes, no)
+if [[ "$HAVE_YACC" = "no" ]]; then
+	AC_MSG_ERROR(Yacc/Bison is required in order to build KScope)
+fi

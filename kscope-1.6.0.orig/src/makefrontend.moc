@@ -1,0 +1,124 @@
+/****************************************************************************
+** MakeFrontend meta object code from reading C++ file 'makefrontend.h'
+**
+** Created: Thu Sep 9 13:22:42 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "makefrontend.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *MakeFrontend::className() const
+{
+    return "MakeFrontend";
+}
+
+QMetaObject *MakeFrontend::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_MakeFrontend( "MakeFrontend", &MakeFrontend::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString MakeFrontend::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "MakeFrontend", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString MakeFrontend::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "MakeFrontend", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* MakeFrontend::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = Frontend::staticMetaObject();
+    static const QUParameter param_signal_0[] = {
+	{ "sFile", &static_QUType_QString, 0, QUParameter::In },
+	{ "sLine", &static_QUType_QString, 0, QUParameter::In },
+	{ "sText", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"error", 3, param_signal_0 };
+    static const QMetaData signal_tbl[] = {
+	{ "error(const QString&,const QString&,const QString&)", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"MakeFrontend", parentObject,
+	0, 0,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_MakeFrontend.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* MakeFrontend::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "MakeFrontend" ) )
+	return this;
+    return Frontend::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL error
+void MakeFrontend::error( const QString& t0, const QString& t1, const QString& t2 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[4];
+    static_QUType_QString.set(o+1,t0);
+    static_QUType_QString.set(o+2,t1);
+    static_QUType_QString.set(o+3,t2);
+    activate_signal( clist, o );
+}
+
+bool MakeFrontend::qt_invoke( int _id, QUObject* _o )
+{
+    return Frontend::qt_invoke(_id,_o);
+}
+
+bool MakeFrontend::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: error((const QString&)static_QUType_QString.get(_o+1),(const QString&)static_QUType_QString.get(_o+2),(const QString&)static_QUType_QString.get(_o+3)); break;
+    default:
+	return Frontend::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool MakeFrontend::qt_property( int id, int f, QVariant* v)
+{
+    return Frontend::qt_property( id, f, v);
+}
+
+bool MakeFrontend::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

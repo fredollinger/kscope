@@ -1,0 +1,31 @@
+<sect1 id="about">
+<title>About &kapp;</title>
+
+<para>
+&kapp; is a KDE-based source-editing environment for C and C-style languages. Primarily, it is a front-end to the veteran <ulink url="http://cscope.sourceforge.net">Cscope</ulink>, a source-code browser originally developed at Bell Labs. <application>Cscope</application> works by parsing a set of source files, creating a cross-reference database, and allowing the user to query this database. &kapp; extends the feature-set of <application>Cscope</application> with a contemporary user interface, editor integration, project management capabilities, multiple query result windows, call trees and graphs, and more.
+</para>
+
+<para>
+&kapp; implements (almost) all of <application>Cscope</application>'s query types. Among these are:
+<itemizedlist>
+<listitem><para>Browse for all references to a symbol;</para></listitem>
+<listitem><para>Get the global definition of a symbol;</para></listitem>
+<listitem><para>Find all functions calling to or called by a function;</para></listitem>
+<listitem><para>Find a text string or an EGrep pattern;</para></listitem>
+<listitem><para>and more.</para></listitem>
+</itemizedlist>
+</para>
+
+<para>
+The main purpose of &kapp; is to provide developers with a rich environment for code editing and analysis. It is specifically geared towards large projects, with thousands of source files and millions of lines of code. Many traditional C/C++ IDEs do not scale well to handle projects of this magnitude, either because they do not provide adequate tools for understanding the code base, or because they are unable to efficiently digest that much information. By using <application>Cscope</application> as its underlying engine, &kapp; can easily handle projects such as the <ulink url="http://www.kernel.org">Linux kernel</ulink>, <ulink url="http://www.winehq.org">WINE</ulink>, <ulink url="http://www.postgresql.org">PostgreSQL</ulink>, etc.
+</para>
+
+<note><para>
+It has been reported by some users that &kapp; can be successfully used for C++ development. Nonetheless, &kapp; is mainly a tool for developing in pure C (either ANSI or K&amp;R style). Most C++ features will not be recognised by the cross-reference generator.
+</para></note>
+
+<para>
+&kapp; is a part of an ongoing effort to expand the range of open source applications. It could not have been created without the previous work of many devoted developers. &kapp; is therefore freely distributed, along with its source code, for the benefit of the open source community. I hope it can be of use to others, and I would appreciate any help in the form of bug reports or improvement suggestions.
+</para>
+
+</sect1>

@@ -1,0 +1,320 @@
+/****************************************************************************
+** CscopeFrontend meta object code from reading C++ file 'cscopefrontend.h'
+**
+** Created: Thu Sep 9 13:22:40 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "cscopefrontend.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *CscopeFrontend::className() const
+{
+    return "CscopeFrontend";
+}
+
+QMetaObject *CscopeFrontend::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_CscopeFrontend( "CscopeFrontend", &CscopeFrontend::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString CscopeFrontend::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeFrontend", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString CscopeFrontend::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeFrontend", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* CscopeFrontend::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = Frontend::staticMetaObject();
+    static const QUMethod slot_0 = {"slotCancel", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotCancel()", &slot_0, QMetaData::Public }
+    };
+    static const QUMethod signal_0 = {"buildInvIndex", 0, 0 };
+    static const QMetaData signal_tbl[] = {
+	{ "buildInvIndex()", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"CscopeFrontend", parentObject,
+	slot_tbl, 1,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_CscopeFrontend.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* CscopeFrontend::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "CscopeFrontend" ) )
+	return this;
+    return Frontend::qt_cast( clname );
+}
+
+// SIGNAL buildInvIndex
+void CscopeFrontend::buildInvIndex()
+{
+    activate_signal( staticMetaObject()->signalOffset() + 0 );
+}
+
+bool CscopeFrontend::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotCancel(); break;
+    default:
+	return Frontend::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool CscopeFrontend::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: buildInvIndex(); break;
+    default:
+	return Frontend::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool CscopeFrontend::qt_property( int id, int f, QVariant* v)
+{
+    return Frontend::qt_property( id, f, v);
+}
+
+bool CscopeFrontend::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES
+
+
+const char *CscopeProgress::className() const
+{
+    return "CscopeProgress";
+}
+
+QMetaObject *CscopeProgress::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_CscopeProgress( "CscopeProgress", &CscopeProgress::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString CscopeProgress::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeProgress", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString CscopeProgress::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeProgress", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* CscopeProgress::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QObject::staticMetaObject();
+    static const QUMethod slot_0 = {"slotShowProgressBar", 0, 0 };
+    static const QUMethod slot_1 = {"slotShowLabel", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotShowProgressBar()", &slot_0, QMetaData::Private },
+	{ "slotShowLabel()", &slot_1, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"CscopeProgress", parentObject,
+	slot_tbl, 2,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_CscopeProgress.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* CscopeProgress::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "CscopeProgress" ) )
+	return this;
+    return QObject::qt_cast( clname );
+}
+
+bool CscopeProgress::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotShowProgressBar(); break;
+    case 1: slotShowLabel(); break;
+    default:
+	return QObject::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool CscopeProgress::qt_emit( int _id, QUObject* _o )
+{
+    return QObject::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool CscopeProgress::qt_property( int id, int f, QVariant* v)
+{
+    return QObject::qt_property( id, f, v);
+}
+
+bool CscopeProgress::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES
+
+
+const char *CscopeVerifier::className() const
+{
+    return "CscopeVerifier";
+}
+
+QMetaObject *CscopeVerifier::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_CscopeVerifier( "CscopeVerifier", &CscopeVerifier::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString CscopeVerifier::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeVerifier", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString CscopeVerifier::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CscopeVerifier", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* CscopeVerifier::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QObject::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In },
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotConfigResult", 2, param_slot_0 };
+    static const QUMethod slot_1 = {"slotFinished", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotConfigResult(uint,const QString&)", &slot_0, QMetaData::Private },
+	{ "slotFinished()", &slot_1, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ 0, &static_QUType_bool, 0, QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"done", 2, param_signal_0 };
+    static const QMetaData signal_tbl[] = {
+	{ "done(bool,uint)", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"CscopeVerifier", parentObject,
+	slot_tbl, 2,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_CscopeVerifier.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* CscopeVerifier::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "CscopeVerifier" ) )
+	return this;
+    return QObject::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL done
+void CscopeVerifier::done( bool t0, uint t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_bool.set(o+1,t0);
+    static_QUType_varptr.set(o+2,&t1);
+    activate_signal( clist, o );
+}
+
+bool CscopeVerifier::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotConfigResult((uint)(*((uint*)static_QUType_ptr.get(_o+1))),(const QString&)static_QUType_QString.get(_o+2)); break;
+    case 1: slotFinished(); break;
+    default:
+	return QObject::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool CscopeVerifier::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: done((bool)static_QUType_bool.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    default:
+	return QObject::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool CscopeVerifier::qt_property( int id, int f, QVariant* v)
+{
+    return QObject::qt_property( id, f, v);
+}
+
+bool CscopeVerifier::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

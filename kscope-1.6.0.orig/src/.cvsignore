@@ -1,0 +1,8 @@
+.deps
+.libs
+kscope
+*layout.h
+*layout.cpp
+*.moc
+Makefile
+Makefile.in

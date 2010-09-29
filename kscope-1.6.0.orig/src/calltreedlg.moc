@@ -1,0 +1,171 @@
+/****************************************************************************
+** CallTreeDlg meta object code from reading C++ file 'calltreedlg.h'
+**
+** Created: Thu Sep 9 13:22:40 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "calltreedlg.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *CallTreeDlg::className() const
+{
+    return "CallTreeDlg";
+}
+
+QMetaObject *CallTreeDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_CallTreeDlg( "CallTreeDlg", &CallTreeDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString CallTreeDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CallTreeDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString CallTreeDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "CallTreeDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* CallTreeDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = CallTreeLayout::staticMetaObject();
+    static const QUMethod slot_0 = {"show", 0, 0 };
+    static const QUMethod slot_1 = {"slotSaveClicked", 0, 0 };
+    static const QUMethod slot_2 = {"slotZoomInClicked", 0, 0 };
+    static const QUMethod slot_3 = {"slotZoomOutClicked", 0, 0 };
+    static const QUMethod slot_4 = {"slotRotateClicked", 0, 0 };
+    static const QUMethod slot_5 = {"slotPrefClicked", 0, 0 };
+    static const QUParameter param_slot_6[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_6 = {"slotViewChanged", 1, param_slot_6 };
+    static const QMetaData slot_tbl[] = {
+	{ "show()", &slot_0, QMetaData::Public },
+	{ "slotSaveClicked()", &slot_1, QMetaData::Protected },
+	{ "slotZoomInClicked()", &slot_2, QMetaData::Protected },
+	{ "slotZoomOutClicked()", &slot_3, QMetaData::Protected },
+	{ "slotRotateClicked()", &slot_4, QMetaData::Protected },
+	{ "slotPrefClicked()", &slot_5, QMetaData::Protected },
+	{ "slotViewChanged(int)", &slot_6, QMetaData::Protected }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "sPath", &static_QUType_QString, 0, QUParameter::In },
+	{ "nLine", &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"lineRequested", 2, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ 0, &static_QUType_ptr, "CallTreeDlg", QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"closed", 1, param_signal_1 };
+    static const QMetaData signal_tbl[] = {
+	{ "lineRequested(const QString&,uint)", &signal_0, QMetaData::Public },
+	{ "closed(const CallTreeDlg*)", &signal_1, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"CallTreeDlg", parentObject,
+	slot_tbl, 7,
+	signal_tbl, 2,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_CallTreeDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* CallTreeDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "CallTreeDlg" ) )
+	return this;
+    return CallTreeLayout::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL lineRequested
+void CallTreeDlg::lineRequested( const QString& t0, uint t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_QString.set(o+1,t0);
+    static_QUType_varptr.set(o+2,&t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL closed
+void CallTreeDlg::closed( const CallTreeDlg* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 1 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+bool CallTreeDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: show(); break;
+    case 1: slotSaveClicked(); break;
+    case 2: slotZoomInClicked(); break;
+    case 3: slotZoomOutClicked(); break;
+    case 4: slotRotateClicked(); break;
+    case 5: slotPrefClicked(); break;
+    case 6: slotViewChanged((int)static_QUType_int.get(_o+1)); break;
+    default:
+	return CallTreeLayout::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool CallTreeDlg::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: lineRequested((const QString&)static_QUType_QString.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    case 1: closed((const CallTreeDlg*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return CallTreeLayout::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool CallTreeDlg::qt_property( int id, int f, QVariant* v)
+{
+    return CallTreeLayout::qt_property( id, f, v);
+}
+
+bool CallTreeDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

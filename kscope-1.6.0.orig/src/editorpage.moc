@@ -1,0 +1,251 @@
+/****************************************************************************
+** EditorPage meta object code from reading C++ file 'editorpage.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "editorpage.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *EditorPage::className() const
+{
+    return "EditorPage";
+}
+
+QMetaObject *EditorPage::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_EditorPage( "EditorPage", &EditorPage::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString EditorPage::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "EditorPage", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString EditorPage::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "EditorPage", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* EditorPage::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QHBox::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotGotoLine", 1, param_slot_0 };
+    static const QUMethod slot_1 = {"slotMenuSelect", 0, 0 };
+    static const QUMethod slot_2 = {"slotCompleteSymbol", 0, 0 };
+    static const QUMethod slot_3 = {"slotChildResized", 0, 0 };
+    static const QUMethod slot_4 = {"slotFileOpened", 0, 0 };
+    static const QUMethod slot_5 = {"slotSetModified", 0, 0 };
+    static const QUMethod slot_6 = {"slotUndoChanged", 0, 0 };
+    static const QUMethod slot_7 = {"slotCursorPosChange", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotGotoLine(uint)", &slot_0, QMetaData::Public },
+	{ "slotMenuSelect()", &slot_1, QMetaData::Public },
+	{ "slotCompleteSymbol()", &slot_2, QMetaData::Public },
+	{ "slotChildResized()", &slot_3, QMetaData::Private },
+	{ "slotFileOpened()", &slot_4, QMetaData::Private },
+	{ "slotSetModified()", &slot_5, QMetaData::Private },
+	{ "slotUndoChanged()", &slot_6, QMetaData::Private },
+	{ "slotCursorPosChange()", &slot_7, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "pPage", &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ "sPath", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"fileOpened", 2, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ "pPage", &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"newFile", 1, param_signal_1 };
+    static const QUParameter param_signal_2[] = {
+	{ "pPage", &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ "bModified", &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod signal_2 = {"modified", 2, param_signal_2 };
+    static const QUParameter param_signal_3[] = {
+	{ "nLine", &static_QUType_varptr, "\x11", QUParameter::In },
+	{ "nCol", &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod signal_3 = {"cursorPosChanged", 2, param_signal_3 };
+    static const QUParameter param_signal_4[] = {
+	{ "sPath", &static_QUType_QString, 0, QUParameter::In },
+	{ "bIsNew", &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod signal_4 = {"fileSaved", 2, param_signal_4 };
+    static const QUParameter param_signal_5[] = {
+	{ "sPath", &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod signal_5 = {"fileClosed", 1, param_signal_5 };
+    static const QMetaData signal_tbl[] = {
+	{ "fileOpened(EditorPage*,const QString&)", &signal_0, QMetaData::Public },
+	{ "newFile(EditorPage*)", &signal_1, QMetaData::Public },
+	{ "modified(EditorPage*,bool)", &signal_2, QMetaData::Public },
+	{ "cursorPosChanged(uint,uint)", &signal_3, QMetaData::Public },
+	{ "fileSaved(const QString&,bool)", &signal_4, QMetaData::Public },
+	{ "fileClosed(const QString&)", &signal_5, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"EditorPage", parentObject,
+	slot_tbl, 8,
+	signal_tbl, 6,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_EditorPage.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* EditorPage::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "EditorPage" ) )
+	return this;
+    if ( !qstrcmp( clname, "SymbolCompletion::Interface" ) )
+	return (SymbolCompletion::Interface*)this;
+    return QHBox::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL fileOpened
+void EditorPage::fileOpened( EditorPage* t0, const QString& t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_ptr.set(o+1,t0);
+    static_QUType_QString.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL newFile
+void EditorPage::newFile( EditorPage* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 1 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+// SIGNAL modified
+void EditorPage::modified( EditorPage* t0, bool t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 2 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_ptr.set(o+1,t0);
+    static_QUType_bool.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL cursorPosChanged
+void EditorPage::cursorPosChanged( uint t0, uint t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 3 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_varptr.set(o+1,&t0);
+    static_QUType_varptr.set(o+2,&t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL fileSaved
+void EditorPage::fileSaved( const QString& t0, bool t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 4 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_QString.set(o+1,t0);
+    static_QUType_bool.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL fileClosed
+void EditorPage::fileClosed( const QString& t0 )
+{
+    activate_signal( staticMetaObject()->signalOffset() + 5, t0 );
+}
+
+bool EditorPage::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotGotoLine((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 1: slotMenuSelect(); break;
+    case 2: slotCompleteSymbol(); break;
+    case 3: slotChildResized(); break;
+    case 4: slotFileOpened(); break;
+    case 5: slotSetModified(); break;
+    case 6: slotUndoChanged(); break;
+    case 7: slotCursorPosChange(); break;
+    default:
+	return QHBox::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool EditorPage::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: fileOpened((EditorPage*)static_QUType_ptr.get(_o+1),(const QString&)static_QUType_QString.get(_o+2)); break;
+    case 1: newFile((EditorPage*)static_QUType_ptr.get(_o+1)); break;
+    case 2: modified((EditorPage*)static_QUType_ptr.get(_o+1),(bool)static_QUType_bool.get(_o+2)); break;
+    case 3: cursorPosChanged((uint)(*((uint*)static_QUType_ptr.get(_o+1))),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    case 4: fileSaved((const QString&)static_QUType_QString.get(_o+1),(bool)static_QUType_bool.get(_o+2)); break;
+    case 5: fileClosed((const QString&)static_QUType_QString.get(_o+1)); break;
+    default:
+	return QHBox::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool EditorPage::qt_property( int id, int f, QVariant* v)
+{
+    return QHBox::qt_property( id, f, v);
+}
+
+bool EditorPage::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

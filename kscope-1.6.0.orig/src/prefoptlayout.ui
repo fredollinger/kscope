@@ -1,0 +1,217 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PrefOptLayout</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>PrefOptLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>354</width>
+            <height>312</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form4</string>
+    </property>
+    <property name="whatsThis" stdset="0">
+        <string>Determines whether KScope should automatically load the last project when started.</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout7</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>m_pExtEditorLabel</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="text">
+                        <string>External Editor</string>
+                    </property>
+                </widget>
+                <widget class="QLineEdit">
+                    <property name="name">
+                        <cstring>m_pExtEditorEdit</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>7</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>1</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pReadOnlyCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Read-Onl&amp;y Mode</string>
+            </property>
+            <property name="accel">
+                <string>Alt+Y</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Forces all editor windows to work in a read-only mode, so that the user cannot modify the displayed files.</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pLastProjCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Open Last Project on Start-Up</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pTagHlCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Automatic Tag Highlighting</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Determines whether the tag list should highlight the relevant tag based on the cursor's position.</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pBriefQueryCaptCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Brief Tab Captions for &amp;Query Pages</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>If set, the tab captions for query pages will be shortened, by using aliases for the query types.</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pWarnModifiedOnDiskCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Warn When a File is Modified Outside KScope</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>If set, the user is prompted whenever the currently edited file is changed by an external programme.</string>
+            </property>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pAutoSortCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Automatically Sort Files in the File List</string>
+            </property>
+            <property name="accel">
+                <string></string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Sorts files in the project's file list when a project is loaded. This may be too slow for large projects on older machines.</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout2</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="text">
+                        <string>System Profile</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>Fast</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>Slow</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>m_pSysProfileCB</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout3</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel2</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Editor Popup Menu</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <item>
+                        <property name="text">
+                            <string>Embedded</string>
+                        </property>
+                    </item>
+                    <item>
+                        <property name="text">
+                            <string>KScope Only</string>
+                        </property>
+                    </item>
+                    <property name="name">
+                        <cstring>m_pEditorPopupCB</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <spacer>
+            <property name="name">
+                <cstring>spacer11</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>21</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+    </vbox>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

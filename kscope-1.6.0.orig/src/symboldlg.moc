@@ -1,0 +1,138 @@
+/****************************************************************************
+** SymbolDlg meta object code from reading C++ file 'symboldlg.h'
+**
+** Created: Thu Sep 9 13:22:44 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "symboldlg.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *SymbolDlg::className() const
+{
+    return "SymbolDlg";
+}
+
+QMetaObject *SymbolDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_SymbolDlg( "SymbolDlg", &SymbolDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString SymbolDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SymbolDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString SymbolDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SymbolDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* SymbolDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = SymbolLayout::staticMetaObject();
+    static const QUMethod slot_0 = {"slotHintClicked", 0, 0 };
+    static const QUParameter param_slot_1[] = {
+	{ 0, &static_QUType_ptr, "FrontendToken", QUParameter::In }
+    };
+    static const QUMethod slot_1 = {"slotHintDataReady", 1, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"slotHintItemSelected", 1, param_slot_2 };
+    static const QUParameter param_slot_3[] = {
+	{ 0, &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod slot_3 = {"slotHintOptionChanged", 1, param_slot_3 };
+    static const QUParameter param_slot_4[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_4 = {"slotHintProgress", 2, param_slot_4 };
+    static const QUParameter param_slot_5[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_5 = {"slotHintFinished", 1, param_slot_5 };
+    static const QUParameter param_slot_6[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_6 = {"slotTypeChanged", 1, param_slot_6 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotHintClicked()", &slot_0, QMetaData::Private },
+	{ "slotHintDataReady(FrontendToken*)", &slot_1, QMetaData::Private },
+	{ "slotHintItemSelected(QListViewItem*)", &slot_2, QMetaData::Private },
+	{ "slotHintOptionChanged(bool)", &slot_3, QMetaData::Private },
+	{ "slotHintProgress(int,int)", &slot_4, QMetaData::Private },
+	{ "slotHintFinished(uint)", &slot_5, QMetaData::Private },
+	{ "slotTypeChanged(int)", &slot_6, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"SymbolDlg", parentObject,
+	slot_tbl, 7,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_SymbolDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* SymbolDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "SymbolDlg" ) )
+	return this;
+    return SymbolLayout::qt_cast( clname );
+}
+
+bool SymbolDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotHintClicked(); break;
+    case 1: slotHintDataReady((FrontendToken*)static_QUType_ptr.get(_o+1)); break;
+    case 2: slotHintItemSelected((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    case 3: slotHintOptionChanged((bool)static_QUType_bool.get(_o+1)); break;
+    case 4: slotHintProgress((int)static_QUType_int.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 5: slotHintFinished((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 6: slotTypeChanged((int)static_QUType_int.get(_o+1)); break;
+    default:
+	return SymbolLayout::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool SymbolDlg::qt_emit( int _id, QUObject* _o )
+{
+    return SymbolLayout::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool SymbolDlg::qt_property( int id, int f, QVariant* v)
+{
+    return SymbolLayout::qt_property( id, f, v);
+}
+
+bool SymbolDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

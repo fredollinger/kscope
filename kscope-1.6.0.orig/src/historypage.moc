@@ -1,0 +1,92 @@
+/****************************************************************************
+** HistoryPage meta object code from reading C++ file 'historypage.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "historypage.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *HistoryPage::className() const
+{
+    return "HistoryPage";
+}
+
+QMetaObject *HistoryPage::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_HistoryPage( "HistoryPage", &HistoryPage::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString HistoryPage::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "HistoryPage", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString HistoryPage::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "HistoryPage", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* HistoryPage::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QueryPageBase::staticMetaObject();
+    metaObj = QMetaObject::new_metaobject(
+	"HistoryPage", parentObject,
+	0, 0,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_HistoryPage.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* HistoryPage::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "HistoryPage" ) )
+	return this;
+    return QueryPageBase::qt_cast( clname );
+}
+
+bool HistoryPage::qt_invoke( int _id, QUObject* _o )
+{
+    return QueryPageBase::qt_invoke(_id,_o);
+}
+
+bool HistoryPage::qt_emit( int _id, QUObject* _o )
+{
+    return QueryPageBase::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool HistoryPage::qt_property( int id, int f, QVariant* v)
+{
+    return QueryPageBase::qt_property( id, f, v);
+}
+
+bool HistoryPage::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

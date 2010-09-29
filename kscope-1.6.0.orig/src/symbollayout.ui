@@ -1,0 +1,291 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>SymbolLayout</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>SymbolLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>343</width>
+            <height>420</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>KScope Query</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout15</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout14</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel1</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>Type</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>textLabel2</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>5</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>Symbol</string>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>layout13</cstring>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QComboBox">
+                            <item>
+                                <property name="text">
+                                    <string>References to</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Definition of</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Functions called by</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Functions calling</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Find text</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Find EGrep pattern</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Find file</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Files #including</string>
+                                </property>
+                            </item>
+                            <item>
+                                <property name="text">
+                                    <string>Call graph for</string>
+                                </property>
+                            </item>
+                            <property name="name">
+                                <cstring>m_pTypeCombo</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>7</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                        </widget>
+                        <widget class="KHistoryCombo">
+                            <property name="name">
+                                <cstring>m_pSymbolHC</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>7</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="insertionPolicy">
+                                <enum>AtTop</enum>
+                            </property>
+                            <property name="duplicatesEnabled">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                    </vbox>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>m_pSubStringCheck</cstring>
+            </property>
+            <property name="text">
+                <string>Search for &amp;a Sub-String</string>
+            </property>
+            <property name="accel">
+                <string>Alt+A</string>
+            </property>
+        </widget>
+        <widget class="Line">
+            <property name="name">
+                <cstring>line2</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout3</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>71</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pOKButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>OK</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pHintButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Hi&amp;nt</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pCancelButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Cancel</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QListView">
+            <property name="name">
+                <cstring>m_pHintList</cstring>
+            </property>
+        </widget>
+        <widget class="QButtonGroup">
+            <property name="name">
+                <cstring>m_pHintGroup</cstring>
+            </property>
+            <property name="title">
+                <string>Hint Options</string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>m_pBeginWithRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>S&amp;ymbols Beginning With...</string>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>m_pContainRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Sym&amp;bols Containing...</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+    </vbox>
+</widget>
+<customwidgets>
+</customwidgets>
+<tabstops>
+    <tabstop>m_pSymbolHC</tabstop>
+    <tabstop>m_pTypeCombo</tabstop>
+    <tabstop>m_pSubStringCheck</tabstop>
+    <tabstop>m_pOKButton</tabstop>
+    <tabstop>m_pHintButton</tabstop>
+    <tabstop>m_pCancelButton</tabstop>
+    <tabstop>m_pHintList</tabstop>
+    <tabstop>m_pBeginWithRadio</tabstop>
+    <tabstop>m_pContainRadio</tabstop>
+</tabstops>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kcombobox.h</includehint>
+    <includehint>klineedit.h</includehint>
+</includehints>
+</UI>

@@ -1,0 +1,390 @@
+1.6.0 (?)
+
+* Improved: Updated the documentation
+* Improved: Implemented multiple-call nodes in the call-graph
+* Improved: Workspace toolbar buttons re-arranged
+* Improved: Hitting Enter in the "Open Project" dialogue's list of 
+  recent projects opens the selected project
+* Bug fix: Handle file extensions correctly in the file list
+* Bug fix: Avoid hanging status bar messages when a project is closed
+* Bug fix: Prevent infinite loops in the file finder in the presence of
+  recursive symbolic links
+* Bug fix: Child windows should not disappear when dialogues are invoked
+* Bug fix: Added padding to the call graph, to avoid chopped-off drawing
+  of nodes close to the borders
+* Bug fix: Honour the preferred font when drawing the graph
+* Bug fix: Delete temporary dot files used for drawing graphs
+* Bug fix: Save call-tree files when a project is closed
+* Bug fix: Clean-up a project's directory name after it is created
+  
+1.5.2 (7-May-2007)
+
+* New: Useable global bookmarks system
+* Improved: Better infrastructure for handling projects
+* Improved: The soure root is set in the project properties dialogue
+* Improved: When saving a new file, the user is asked whether to include
+  it in the project
+* Improved: New toolbar layout
+* Improved: Temporary projects appear in the list of recently open
+  projects
+* Improved: Load a temporary project's cscope.files file, if it exists
+* Bug fix: Enable file/project menu items only when a file/project is
+  open
+* Bug fix: Handle column numbers in make output
+* Bug fix: Do not allow multiple instances of the same command in the
+  make history
+* Bug fix: Dropped project semaphores (too much hassle for a minor
+  feature)
+* Compilation fix: Support for automake 1.10
+
+1.5.1 (15-Feb-2007)
+
+* Improved: Support for recursive builds (make changing directories)
+* Improved: Show build errors/warnings on a separate list
+* Bug fix: The main window was not activated when requesting a source
+  position in a child window (call tree or the make window)
+* Bug fix: Maintain Call-tree child item order (by line)
+* Bug fix: Build output occasionally mixed standard output with standard
+  error
+
+1.5.0 (6-Feb-2007)
+
+* New: Make front-end (Rudimentary)
+* New: Global bookmarks list
+* New: Support for Cscope's -c and -D command-line options (-D requires
+  a patch to Cscope)
+* Improved: Detect Cscope's executable and capabilities on each load
+* Improved: Graph windows are no longer top-level (can be minimised or
+  hidden behind the main window)
+* Improved: Do not automatically open a project if it was already loaded 
+  by another instance of KScope
+* Improved: Show #include directives in the tag list
+* Bug fix: Better calculation of the area defined by a graph arrow
+* Bug fix: Files could not be found in the file list when using a common 
+  root ($)
+
+1.4.3 (15-Jan-2007)
+
+* New: Option for negating filters on query result lists
+* New: Command for setting the keyboard focus to the tag list
+* Improved: Restrict tag/file list navigation to current search pattern
+* Improved: Show goto labels in the tag list
+* Bug fix: Crash due to in-edges not being removed along with a function
+* Bug fix: Connected components disappeared after filtering calling/
+  called functions
+* Bug fix: Use only sh-style ouput redirection in kscope_config
+
+1.4.2 (16-Oct-2006)
+
+* New: Tool-tips for the project's file list
+* New: "Find Definition" entry in the query-results popup menu
+* Improved: Added '*.S' (kernel assembly files) to the list of standard
+  file types
+* Improved: Some code clean-ups in the query-results popup menu
+* Bug fix: All query results following a global definition were omitted 
+
+1.4.1 (23-Aug-2006)
+
+* Improved: Speed-up result list filtering
+* Improved: Keyboard shortcuts for the first entries in the Window menu
+* Improved: Show assmebly labels in the tag list
+* Bug fix: KScope crashes when a node is removed from the graph
+* Bug fix: KScope crashes when Next/Previous Result is invoked on an
+  empty query results list
+* Bug fix: Prevent whitespace in project names
+* Bug fix: Add entries to the results query list in the right order
+* Bug fix: Fixed several memory leaks
+
+1.4.0 (9-Aug-2006)
+
+* New: Option for sorting the file list when a project is loaded (on by
+  default)
+* Improved: The documentation is now up to date
+* Improved: Nicer layout for the "New Project" dialogue
+* Improved: Corrections to the desktop file (thanks to Tom Albers)
+* Improved: Close a project automatically before a new one is created
+* Bug fix: Do not show the progress dialogue if building fails to start
+* Compilation fix: Include stdlib.h in graphwidget.cpp
+* Compilation fix: Support for autoconf 2.6x
+* Compilation fix: Removed unnecessary options from the YACC source file
+* Compilation fix: Abort configuration if lex/flex and yacc/bison are not
+  found
+
+1.3.4 (14-Apr-2006)
+
+* New: Use graphviz from the command-line (dot). Should finally solve _all_ 
+  licensing issues
+* New: Informative welcome message
+* Improved: Allow multiple files on "File->Open..."
+* Improved: Better tool-tips for the tag list
+* Bug fix: KScope crashes after startup when attempting to set the cursor
+  to a non-existing line
+
+1.3.3 (5-Jan-2006)
+
+* License changed to BSD due to incompatibility between the GPL and the CPL
+  (graphviz)
+* New: Multiple-view call graph/tree dialogue
+* Improved: Function name is displayed first (consistent behaviour for query
+  views and call tree widgets)
+* Improved: Updated to the latest KDE 'configure' template
+
+1.3.2 (16-Nov-2005)
+
+* New: Support for graphviz 2.6
+* Improved: The 'configure' script detects he graphviz version and build flags
+* Improved: Better automatic configuration script for Cscope and Ctags
+* Improved: Added 'exctags' to the search for exuberant-ctags (FreeBSD)
+* Bug fix: Cursor set to the end of the line when jumping to a location in the 
+  code
+* Bug fix: Draw the call graph using the current DPI settings
+* Bug fix: Automatic configuration script no longer depends on "source" (which
+  is not available for all shells)
+* Bug fix: Editor GUI not merged upon opening a project if the selected file is 
+  the last one loaded
+
+1.3.1 (14-Oct-2005)
+
+* New: "Save All" menu command (was not included in previous release, despite
+  a claim to the contrary)
+* New: List and filter called/calling functions in the call graph
+* New: Delete graph nodes
+* New: Limit graph node in/out degree (requires latest Cscope CVS snapshot)
+* Improved: Redesigned node menu in the graph widget
+* Improved: All query result views share the same widget
+* Improved: Session management remembers file locations and last open file
+  (thanks to Alexander Kern)
+* Bug Fix: Delete graph files when they are no longer required (i.e., after
+  a graph dialogue is manually closed)
+* Bug fix: Do not show a border around the graph (nasty fix, but it works)
+* Bug fix: Nodes are now always drawn on top of edges
+* Compilation fix: Use QPtrList instead of the deprecated QList
+* Compilation fix: Should now compile with gcc 4.x
+
+1.3.0 (29-Jun-2005)
+
+* New: A new call graph based on the graphviz library
+* New: Use a special dialogue for executing and displaying quick 
+  definition queries
+* New: Use the project's root in the file list (root directory replaced
+  by a $ symbol)
+* Improved: Faster compilation through the inclusion of moc files
+* Improved: Better organised menu and toolbars
+* Improved: Quick definition does not write into the query widget
+
+1.2.0 (25-May-2005)
+
+* New: Keyboard shortcut for setting the focus to the file list
+* Improved: Documentation is now up to date
+* Improved: Use standard configuration actions
+* Improved: Faster loading times for projects
+* Bug fix: Incorrect sorting of the symbol history combo-box
+* Bug fix: Query window hidden unnecessarily on some occasions
+* Bug fix: A hidden query window is shown by the "Position History" menu
+  command
+* Bug fix: Modifying non-project files triggered a database rebuild
+
+1.1.1 (17-Mar-2005)
+
+* New: A new tab widget that displays a popup-menu with all open tabs
+* New: Automatic configuration of Cscope/Ctags paths and parameters
+* New: Filter query results
+* New: Tag list can be hidden
+* Improved: Display unique entries in the completion list
+* Improved: Two options for the editor's popup menu: Cscope actions embedded
+  in the editor's own menu, or the old-style KScope-only menu
+* Improved: The process of closing all editor windows (explicitly, when closing a 
+  project or when exiting KScope) is much faster
+* Bug fix: Do not show a hidden query window when browsing through position 
+  history
+* Bug fix: Refreshing a locked query opened a new page
+* Bug fix: Possibly wrong tag-highlighting if cursor was moved while Ctags is
+  working
+* Compilation Fix: Compiles under KDE 3.2 again
+
+1.1.0 (1-Feb-2005)
+
+* New: Cross-reference database is rebuilt automatically
+* New: Symbol completion (manual and automatic)
+* New: Allow multiple queries to be issued simultaneously
+* New: Query dialogue with symbol hinting, history, substring search option
+  and and  the ability to change the query type
+* New: System profiles (fast/slow) determine default settings for
+  time-consuming operations
+* New: Multiple position history paths
+* New: Postion history can be saved and restored
+* New: Drag&Drop support
+* New: Optional warnings when file is modified outside KScope (Supports Kate
+  part only)
+* New: Call Tree support for both Called and Calling tree modes
+* New: Call Tree save/restore support within the project
+* New: Unobtrusive progress information for all Cscope queries
+* New: Query results popup-menu for copying and removing items
+* New: Menu option for showing/hiding the toolbar
+* New: Configurable keyboard shortcuts
+* Improved: More command line options
+* Improved: External editor can be invoked in read-write mode
+* Improved: Faster project load times (file list is not sorted by default)
+* Bug fix: Symbol list last entry was not found
+* Bug fix: Crashed when jumping to a new position and no pages are open
+* Bug fix: Synchronise splitter sizes whenever a page gains focus
+* Bug fix: Query dialogue suggested text did not check current character
+* Bug fix: the progress information did not work with inverted index or
+  regular expressions
+
+
+1.0 (7-Dec-2004)
+* Bug fix: Selecting entries in the position history dialogue messes up the
+  history (thanks to Fekete Gabor)
+* Bug fix: Double clicking a directory name in the file system tree view opens
+  an editor page (thanks to Fekete Gabor)
+* Bug fix: "No source file found" message not detected since error output may
+  be broken (fix allows Cscope restart mechanism to be re-enabled)
+* Bug fix: Return file-system root as the root directory of a temporary project 
+* Bug fix: Handle file names without an extension in the file list (thanks to 
+  Anton G. Alvedro)
+* Bug fix: Show the main window before loading the last project (fixes
+  problems with the width of the tag list)
+* Bug fix: Use CTRL-5 for the EGrep pattern shortcut (CTRL-6 is already used
+  by Kate)
+* Bug fix: Do not restart Cscope when a file of the wrong format is opened as
+  a cscope.out file
+* Bug fix: Open editor pages were not found when using relative paths in 
+  cscope.files (thanks to Chris Mason)
+* Bug fix: Cannot rebuild database when working with temporary projects,
+  re-run Cscope instead (thanks to Chris Mason)
+* Bug fix: Do not populate file tree recursively (may significantly
+  increase the project loading time) (thanks to Albert Yosher)
+* Bug fix: Maximise main window before displaying the welcome message (on
+  first time usage)
+* Bug fix: Empty position history was added if jumping when no files were
+  open (thanks to Fekete Gabor)
+* Bug fix: Editor was not set to read-write mode if the edited file changed
+  its permission (thanks to Albert Yosher)
+* Bug fix: Clean paths from '.' and '..' before opening a file (thanks to
+  Albert Yosher)
+* Bug fix: KScope Crashes after applying new configuration if an empty query page 
+  exists
+* Bug fix: Use Ctrl-\ for a call tree (Ctrl-- is already used by Kate)
+* Improved project loading process  
+* Made documentation compliant with KDE's conventions
+
+0.9 (14-Oct-2004)
+* Option for using an external editor
+* File-system tree-view
+* Use application icons for tabs (for consistent look across themes)
+* Option for shorter query captions (thanks to Fekete Gabor)
+* Store current location before jumping (fixes position history behaviour)
+* Show current file path in KScope's title bar
+* Handle read-only files correctly
+* Show a special tab icon for a read-only file
+* Vim-style quick definition
+* Bug fix: ignore Cscope's "Possible references retrieved" messages
+  (thanks to Fekete Gabor)
+* Bug fix: report Cscope is working when rebuilding the cross-reference
+  database
+
+0.8 (2-Aug-2004)
+* Select word from cursor position when initiating a query
+* Show cursor position in status bar
+* Highlight relevant tag based on cursor position
+* Allow running KScope in read-only mode
+* "Fonts" preference page
+* "Options" preference page
+* A "refresh query" command for the query pages
+* Query file format changed to include query type and text (old files will
+  not be loaded)
+* Bug fix: restore file icon to unchanged when all undo levels have been
+  applied (thanks to Fekete Gabor)
+* Bug fix: better handling of the tag list width
+* Bug fix: accept any file name containing "ctags" as the Ctags executable
+  (since Gentoo is using exuberant-ctags)
+* Bug fix: files could not be reopened after "Close All Windows" (thanks to
+  Fekete Gabor)
+* Bug fix: query window may be incorrectly hidden if query returns a 
+  single record
+
+0.7 (15-Jun-2004)
+* Restore project session (open files and locked queries)
+* Lock/unlock queries
+* Prompt to save files before any file is closed
+* Use KTabWidget for both the Editors window and the Query window
+* Mark modified files
+* Show/hide the file list and the query window (thanks to Fekete Gabor)
+* Save/restore main window layout
+* Better Ctags support (using native Ctags files)
+* Open Cscope.out files in temporary projects, also available from the
+  command line (thanks to Fekete Gabor)
+* Removed sort buttons (requires further consideration)
+* Tag list sorting order is saved
+* Query page buttons to the right of the query widget
+* Bug fix: project was not closed if program was terminated from the main
+  window's title-bar
+* Bug fix: allow ctags-exuberant as the programme name for Ctags
+
+0.6 (21-Apr-2004)
+* Adjusted to KDE 3.2 (previous versions are no longer supported)
+* Implemented standard "New File" and "Open File" commands
+* Line numbers are aligned to the right
+* Display the type of each file in the file list
+* Use unsigned int for the entry size in Frontend (fixes compiler warnings)
+* Implemented Cscope's search for file query
+* Files are opened automatically if only one record was returned by a query
+* Close buttons for the editor tabs
+* Display Cscope error messages in a modeless dialogue
+* Basic navigation through position history
+* Open last project on restart
+* Option to build inverted index for projects (thanks to Fekete Gabor)
+* Project properties dialogue
+* Bug fix: calling for an including files query prompts for an EGrep pattern
+  (thanks to Fekete Gabor)
+* Bug fix: program crashes on including files query
+* Bug fix: set keyboard focus to editor when moving between tabs
+
+0.5 (3-Jan-2004)
+* Moved project to KDevelop 3.0 format
+* A new "Window" menu displaying a list of open files
+* The full path name appears as a tool-tip on each editor tab
+* Close buttons for query results windows
+* Fixed Tab order in dialogues
+
+0.4 (9-Oct-2003)
+* New integrated manual
+* Project files dialogue (add/remove source files)
+* Prompt for files when a project is empty
+* Bug fix: Error in rebuild command to cscope (string too long)
+* Bug fix: Directory names in the paths configuration were mistaken as legal
+  executable files
+* Bug fix: The directory scanner did not clean its list between consecutive
+  searches (thanks to Craig Graham for this fix)
+* Bug fix: Initial file count in the dir scanning progress dialogue showed
+  '123456' instead of '0'
+* Prompt the user to close the active project before creating a new one
+* Prevent the user from cancelling an already-finished query (i.e., while
+  results are written to the query window)
+
+0.3 (3-Aug-2003)
+* Context menu for running queries from an editor window
+* A dummy progress dialogue is displayed when progress information is
+  unavailable (simply to indicate that KScope is working)
+* Bug fix: Mix-up between the "Calling functions" and "Called functions" in
+  the query page titles
+* Bug fix: Only ".c" and ".h" files could be added to a project
+* New query type: find #including files
+* Inform the user when a query ends with no results
+* Menu command to close the active project
+* All query pages are removed when a project is closed
+
+0.2 (21-Jul-2003)
+* Call tree window
+* High-colour icons
+* Sort buttons for the tag list
+* Partial fix for the cursor positioning bug in Kate
+
+0.1 (3-Jul-2003)
+* First public release
+* Front-end to most CScope features
+* Basic editing environment (multiple windows)
+* Tag list for each open editor
+* Multiple query windows
+* Basic project management

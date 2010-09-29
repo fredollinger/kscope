@@ -1,0 +1,302 @@
+/****************************************************************************
+** KScope meta object code from reading C++ file 'kscope.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "kscope.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *KScope::className() const
+{
+    return "KScope";
+}
+
+QMetaObject *KScope::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_KScope( "KScope", &KScope::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString KScope::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KScope", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString KScope::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "KScope", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* KScope::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = KParts::DockMainWindow::staticMetaObject();
+    static const QUMethod slot_0 = {"slotClose", 0, 0 };
+    static const QUMethod slot_1 = {"slotNewFile", 0, 0 };
+    static const QUMethod slot_2 = {"slotOpenFile", 0, 0 };
+    static const QUMethod slot_3 = {"slotCloseEditor", 0, 0 };
+    static const QUMethod slot_4 = {"slotCreateProject", 0, 0 };
+    static const QUMethod slot_5 = {"slotOpenProject", 0, 0 };
+    static const QUMethod slot_6 = {"slotProjectFiles", 0, 0 };
+    static const QUMethod slot_7 = {"slotProjectProps", 0, 0 };
+    static const QUMethod slot_8 = {"slotProjectCscopeOut", 0, 0 };
+    static const QUParameter param_slot_9[] = {
+	{ 0, &static_QUType_bool, 0, QUParameter::Out }
+    };
+    static const QUMethod slot_9 = {"slotCloseProject", 1, param_slot_9 };
+    static const QUMethod slot_10 = {"slotQueryReference", 0, 0 };
+    static const QUMethod slot_11 = {"slotQueryDefinition", 0, 0 };
+    static const QUMethod slot_12 = {"slotQueryCalled", 0, 0 };
+    static const QUMethod slot_13 = {"slotQueryCalling", 0, 0 };
+    static const QUMethod slot_14 = {"slotQueryText", 0, 0 };
+    static const QUMethod slot_15 = {"slotQueryPattern", 0, 0 };
+    static const QUMethod slot_16 = {"slotQueryFile", 0, 0 };
+    static const QUMethod slot_17 = {"slotQueryIncluding", 0, 0 };
+    static const QUMethod slot_18 = {"slotQueryQuickDef", 0, 0 };
+    static const QUMethod slot_19 = {"slotCallTree", 0, 0 };
+    static const QUMethod slot_20 = {"slotRebuildDB", 0, 0 };
+    static const QUMethod slot_21 = {"slotHistoryShow", 0, 0 };
+    static const QUMethod slot_22 = {"slotShortcuts", 0, 0 };
+    static const QUMethod slot_23 = {"slotConfigure", 0, 0 };
+    static const QUMethod slot_24 = {"slotCloseAllWindows", 0, 0 };
+    static const QUMethod slot_25 = {"slotExtEdit", 0, 0 };
+    static const QUMethod slot_26 = {"slotCompleteSymbol", 0, 0 };
+    static const QUMethod slot_27 = {"slotShowWelcome", 0, 0 };
+    static const QUMethod slot_28 = {"slotGotoTag", 0, 0 };
+    static const QUMethod slot_29 = {"slotProjectMake", 0, 0 };
+    static const QUMethod slot_30 = {"slotProjectRemake", 0, 0 };
+    static const QUMethod slot_31 = {"slotShowBookmarks", 0, 0 };
+    static const QUMethod slot_32 = {"slotProjectFilesChanged", 0, 0 };
+    static const QUParameter param_slot_33[] = {
+	{ 0, &static_QUType_varptr, "\x04", QUParameter::In }
+    };
+    static const QUMethod slot_33 = {"slotFilesAdded", 1, param_slot_33 };
+    static const QUParameter param_slot_34[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In },
+	{ 0, &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod slot_34 = {"slotQuery", 2, param_slot_34 };
+    static const QUParameter param_slot_35[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod slot_35 = {"slotDeleteEditor", 1, param_slot_35 };
+    static const QUParameter param_slot_36[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod slot_36 = {"slotChangeEditor", 2, param_slot_36 };
+    static const QUParameter param_slot_37[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_37 = {"slotShowEditor", 2, param_slot_37 };
+    static const QUParameter param_slot_38[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_38 = {"slotFileOpened", 2, param_slot_38 };
+    static const QUParameter param_slot_39[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In },
+	{ 0, &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod slot_39 = {"slotFileSaved", 2, param_slot_39 };
+    static const QUParameter param_slot_40[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_40 = {"slotCscopeError", 1, param_slot_40 };
+    static const QUParameter param_slot_41[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_41 = {"slotBuildProgress", 2, param_slot_41 };
+    static const QUMethod slot_42 = {"slotBuildInvIndex", 0, 0 };
+    static const QUParameter param_slot_43[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_43 = {"slotBuildFinished", 1, param_slot_43 };
+    static const QUMethod slot_44 = {"slotBuildAborted", 0, 0 };
+    static const QUMethod slot_45 = {"slotApplyPref", 0, 0 };
+    static const QUParameter param_slot_46[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_46 = {"slotShowCursorPos", 2, param_slot_46 };
+    static const QUParameter param_slot_47[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_47 = {"slotQueryShowEditor", 2, param_slot_47 };
+    static const QUParameter param_slot_48[] = {
+	{ 0, &static_QUType_ptr, "QDropEvent", QUParameter::In }
+    };
+    static const QUMethod slot_48 = {"slotDropEvent", 1, param_slot_48 };
+    static const QUParameter param_slot_49[] = {
+	{ 0, &static_QUType_bool, 0, QUParameter::In },
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_49 = {"slotCscopeVerified", 2, param_slot_49 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotClose()", &slot_0, QMetaData::Public },
+	{ "slotNewFile()", &slot_1, QMetaData::Private },
+	{ "slotOpenFile()", &slot_2, QMetaData::Private },
+	{ "slotCloseEditor()", &slot_3, QMetaData::Private },
+	{ "slotCreateProject()", &slot_4, QMetaData::Private },
+	{ "slotOpenProject()", &slot_5, QMetaData::Private },
+	{ "slotProjectFiles()", &slot_6, QMetaData::Private },
+	{ "slotProjectProps()", &slot_7, QMetaData::Private },
+	{ "slotProjectCscopeOut()", &slot_8, QMetaData::Private },
+	{ "slotCloseProject()", &slot_9, QMetaData::Private },
+	{ "slotQueryReference()", &slot_10, QMetaData::Private },
+	{ "slotQueryDefinition()", &slot_11, QMetaData::Private },
+	{ "slotQueryCalled()", &slot_12, QMetaData::Private },
+	{ "slotQueryCalling()", &slot_13, QMetaData::Private },
+	{ "slotQueryText()", &slot_14, QMetaData::Private },
+	{ "slotQueryPattern()", &slot_15, QMetaData::Private },
+	{ "slotQueryFile()", &slot_16, QMetaData::Private },
+	{ "slotQueryIncluding()", &slot_17, QMetaData::Private },
+	{ "slotQueryQuickDef()", &slot_18, QMetaData::Private },
+	{ "slotCallTree()", &slot_19, QMetaData::Private },
+	{ "slotRebuildDB()", &slot_20, QMetaData::Private },
+	{ "slotHistoryShow()", &slot_21, QMetaData::Private },
+	{ "slotShortcuts()", &slot_22, QMetaData::Private },
+	{ "slotConfigure()", &slot_23, QMetaData::Private },
+	{ "slotCloseAllWindows()", &slot_24, QMetaData::Private },
+	{ "slotExtEdit()", &slot_25, QMetaData::Private },
+	{ "slotCompleteSymbol()", &slot_26, QMetaData::Private },
+	{ "slotShowWelcome()", &slot_27, QMetaData::Private },
+	{ "slotGotoTag()", &slot_28, QMetaData::Private },
+	{ "slotProjectMake()", &slot_29, QMetaData::Private },
+	{ "slotProjectRemake()", &slot_30, QMetaData::Private },
+	{ "slotShowBookmarks()", &slot_31, QMetaData::Private },
+	{ "slotProjectFilesChanged()", &slot_32, QMetaData::Private },
+	{ "slotFilesAdded(const QStringList&)", &slot_33, QMetaData::Private },
+	{ "slotQuery(uint,bool)", &slot_34, QMetaData::Private },
+	{ "slotDeleteEditor(EditorPage*)", &slot_35, QMetaData::Private },
+	{ "slotChangeEditor(EditorPage*,EditorPage*)", &slot_36, QMetaData::Private },
+	{ "slotShowEditor(const QString&,uint)", &slot_37, QMetaData::Private },
+	{ "slotFileOpened(EditorPage*,const QString&)", &slot_38, QMetaData::Private },
+	{ "slotFileSaved(const QString&,bool)", &slot_39, QMetaData::Private },
+	{ "slotCscopeError(const QString&)", &slot_40, QMetaData::Private },
+	{ "slotBuildProgress(int,int)", &slot_41, QMetaData::Private },
+	{ "slotBuildInvIndex()", &slot_42, QMetaData::Private },
+	{ "slotBuildFinished(uint)", &slot_43, QMetaData::Private },
+	{ "slotBuildAborted()", &slot_44, QMetaData::Private },
+	{ "slotApplyPref()", &slot_45, QMetaData::Private },
+	{ "slotShowCursorPos(uint,uint)", &slot_46, QMetaData::Private },
+	{ "slotQueryShowEditor(const QString&,uint)", &slot_47, QMetaData::Private },
+	{ "slotDropEvent(QDropEvent*)", &slot_48, QMetaData::Private },
+	{ "slotCscopeVerified(bool,uint)", &slot_49, QMetaData::Private }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"KScope", parentObject,
+	slot_tbl, 50,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_KScope.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* KScope::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "KScope" ) )
+	return this;
+    return DockMainWindow::qt_cast( clname );
+}
+
+bool KScope::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotClose(); break;
+    case 1: slotNewFile(); break;
+    case 2: slotOpenFile(); break;
+    case 3: slotCloseEditor(); break;
+    case 4: slotCreateProject(); break;
+    case 5: slotOpenProject(); break;
+    case 6: slotProjectFiles(); break;
+    case 7: slotProjectProps(); break;
+    case 8: slotProjectCscopeOut(); break;
+    case 9: static_QUType_bool.set(_o,slotCloseProject()); break;
+    case 10: slotQueryReference(); break;
+    case 11: slotQueryDefinition(); break;
+    case 12: slotQueryCalled(); break;
+    case 13: slotQueryCalling(); break;
+    case 14: slotQueryText(); break;
+    case 15: slotQueryPattern(); break;
+    case 16: slotQueryFile(); break;
+    case 17: slotQueryIncluding(); break;
+    case 18: slotQueryQuickDef(); break;
+    case 19: slotCallTree(); break;
+    case 20: slotRebuildDB(); break;
+    case 21: slotHistoryShow(); break;
+    case 22: slotShortcuts(); break;
+    case 23: slotConfigure(); break;
+    case 24: slotCloseAllWindows(); break;
+    case 25: slotExtEdit(); break;
+    case 26: slotCompleteSymbol(); break;
+    case 27: slotShowWelcome(); break;
+    case 28: slotGotoTag(); break;
+    case 29: slotProjectMake(); break;
+    case 30: slotProjectRemake(); break;
+    case 31: slotShowBookmarks(); break;
+    case 32: slotProjectFilesChanged(); break;
+    case 33: slotFilesAdded((const QStringList&)*((const QStringList*)static_QUType_ptr.get(_o+1))); break;
+    case 34: slotQuery((uint)(*((uint*)static_QUType_ptr.get(_o+1))),(bool)static_QUType_bool.get(_o+2)); break;
+    case 35: slotDeleteEditor((EditorPage*)static_QUType_ptr.get(_o+1)); break;
+    case 36: slotChangeEditor((EditorPage*)static_QUType_ptr.get(_o+1),(EditorPage*)static_QUType_ptr.get(_o+2)); break;
+    case 37: slotShowEditor((const QString&)static_QUType_QString.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    case 38: slotFileOpened((EditorPage*)static_QUType_ptr.get(_o+1),(const QString&)static_QUType_QString.get(_o+2)); break;
+    case 39: slotFileSaved((const QString&)static_QUType_QString.get(_o+1),(bool)static_QUType_bool.get(_o+2)); break;
+    case 40: slotCscopeError((const QString&)static_QUType_QString.get(_o+1)); break;
+    case 41: slotBuildProgress((int)static_QUType_int.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 42: slotBuildInvIndex(); break;
+    case 43: slotBuildFinished((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 44: slotBuildAborted(); break;
+    case 45: slotApplyPref(); break;
+    case 46: slotShowCursorPos((uint)(*((uint*)static_QUType_ptr.get(_o+1))),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    case 47: slotQueryShowEditor((const QString&)static_QUType_QString.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    case 48: slotDropEvent((QDropEvent*)static_QUType_ptr.get(_o+1)); break;
+    case 49: slotCscopeVerified((bool)static_QUType_bool.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    default:
+	return DockMainWindow::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool KScope::qt_emit( int _id, QUObject* _o )
+{
+    return DockMainWindow::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool KScope::qt_property( int id, int f, QVariant* v)
+{
+    return DockMainWindow::qt_property( id, f, v);
+}
+
+bool KScope::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

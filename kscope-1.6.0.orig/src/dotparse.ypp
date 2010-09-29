@@ -1,0 +1,234 @@
+/* dot.y */
+
+%{
+#include <qdict.h>
+#include <qptrstack.h>
+#include <qlistview.h>
+#include "calltreedlg.h"
+#include "graphwidget.h"
+#include "treewidget.h"
+#include "encoder.h"
+
+extern FILE* yyin;
+int yylex();
+void yyinit(CallTreeDlg*, FILE*, Encoder*);
+void yyerror(const char*);
+
+static QMap<QString, QString> s_pMapAttr;
+static QStack<QListViewItem> s_pParentStack;
+static QListView* s_pTree;
+
+static GraphWidget* s_pGraph;
+static TreeWidget* s_pCallTree;
+static TreeWidget* s_pCallingTree;
+static Encoder* s_pEncoder;
+
+// Avoid compiler warnings
+#define YYENABLE_NLS 0
+#ifndef YYLTYPE_IS_TRIVIAL
+#define YYLTYPE_IS_TRIVIAL 0
+#endif
+%}
+
+%union {
+	QString* pText;
+}
+
+%token GRAPH DIGRAPH NODE NAME STRING NUMBER DIR_EDGE UNDIR_EDGE
+%token CALL_TREE CALLING_TREE
+%type <pText> NAME STRING NUMBER attr_val
+
+%start file
+
+%%
+
+file
+	: call_tree calling_tree graph
+
+graph
+	: graph_type NAME '{' graph_desc_list '}' { delete $2; }
+	;
+
+graph_type
+	: GRAPH
+	| DIGRAPH
+	;
+
+graph_desc_list
+	:
+	| graph_desc_entry graph_desc_list
+	;
+
+graph_desc_entry
+	: def_node_attr
+	| graph_attr
+	| node_record
+	| edge_record 
+	;
+	
+def_node_attr
+	: NODE attributes ';'
+	;
+	
+graph_attr
+	: GRAPH attributes ';'
+		{
+			if (s_pMapAttr.find("kscope_zoom") != s_pMapAttr.end())
+				s_pGraph->setZoom(s_pMapAttr["kscope_zoom"].toDouble());
+		}
+	;
+	
+node_record
+	: NAME attributes ';'
+		{
+			s_pGraph->addNode(*$1);
+			delete $1;
+			s_pMapAttr.clear();
+		}
+	;
+	
+edge_record
+	: NAME edge_type NAME attributes ';'
+		{
+			GraphWidget::CallData cd;
+			
+			cd.m_sCaller = *$1;
+			cd.m_sCallee = *$3;
+			cd.m_sFile = s_pMapAttr["kscope_file"];
+			cd.m_sLine = s_pMapAttr["kscope_line"];
+			cd.m_sText = s_pEncoder->decode(s_pMapAttr["kscope_text"]);
+			s_pGraph->addCall(cd);
+			
+			delete $1;
+			delete $3;
+			s_pMapAttr.clear();
+		}
+	;
+	
+edge_type
+	: DIR_EDGE
+	| UNDIR_EDGE
+	;
+	
+attributes
+	: 
+	| '[' attr_list ']'
+	;
+	
+attr_list
+	:
+	| non_empty_attr_list
+	;
+	
+non_empty_attr_list
+	: attr
+	| attr ',' attr_list
+	;
+	
+attr
+	: NAME '=' attr_val
+		{
+			s_pMapAttr.insert(*$1, *$3);
+			delete $1;
+			delete $3;
+		}
+	;
+	
+attr_val
+	: NAME
+	| STRING
+	| NUMBER
+	;
+	
+call_tree
+	: call_tree_prepare '{' root_node '}'
+	;
+	
+call_tree_prepare
+	: CALL_TREE { s_pTree = s_pCallTree; }
+	;
+	
+calling_tree
+	: calling_tree_prepare '{' root_node '}'
+	;
+	
+calling_tree_prepare
+	: CALLING_TREE { s_pTree = s_pCallingTree; }
+	;
+
+root_node
+	: root_tree_node '{' child_list '}'
+		{
+			QListViewItem* pItem;
+			
+			pItem = s_pParentStack.pop();
+			if (pItem->firstChild() != NULL)
+				pItem->setOpen(true);
+		}
+	;
+
+root_tree_node
+	: NAME
+		{
+			QListViewItem* pItem;
+			
+			pItem = new QListViewItem(s_pTree, *$1);
+			s_pParentStack.push(pItem);
+			delete $1;
+		}
+	;
+	
+child_list
+	:
+	| child_node child_list
+	;
+	
+child_node
+	: tree_node tree_attributes '{' child_list '}'
+		{
+			QListViewItem* pItem;
+			
+			pItem = s_pParentStack.pop();
+			if (pItem->firstChild() != NULL)
+				pItem->setOpen(true);
+		}
+	;
+
+tree_node
+	: NAME
+		{
+			QListViewItem* pItem;
+			
+			pItem = new QListViewItem(s_pParentStack.top(), *$1);
+			s_pParentStack.push(pItem);
+			delete $1;
+		}
+	;
+
+tree_attributes
+	: attributes
+		{
+			QListViewItem* pItem;
+			
+			pItem = s_pParentStack.top();
+			pItem->setText(1, s_pMapAttr["kscope_file"]);
+			pItem->setText(2, s_pMapAttr["kscope_line"]);
+			pItem->setText(3, s_pEncoder->decode(s_pMapAttr["kscope_text"]));
+		}
+	;
+
+%%
+
+void yyinit(CallTreeDlg* pDlg, FILE* pFile, Encoder* pEnc)
+{
+	yyin = pFile;
+	s_pCallTree = pDlg->m_pCalledWidget;
+	s_pCallingTree = pDlg->m_pCallingWidget;
+	s_pGraph = pDlg->m_pGraphWidget;
+	s_pEncoder = pEnc;
+}
+
+void yyerror(const char* szError)
+{
+	fprintf(stderr, "%s\n", szError);
+}

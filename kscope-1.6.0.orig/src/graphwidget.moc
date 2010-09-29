@@ -1,0 +1,183 @@
+/****************************************************************************
+** GraphWidget meta object code from reading C++ file 'graphwidget.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "graphwidget.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *GraphWidget::className() const
+{
+    return "GraphWidget";
+}
+
+QMetaObject *GraphWidget::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_GraphWidget( "GraphWidget", &GraphWidget::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString GraphWidget::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "GraphWidget", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString GraphWidget::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "GraphWidget", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* GraphWidget::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QCanvasView::staticMetaObject();
+    static const QUMethod slot_0 = {"slotDotFinished", 0, 0 };
+    static const QUParameter param_slot_1[] = {
+	{ 0, &static_QUType_ptr, "FrontendToken", QUParameter::In }
+    };
+    static const QUMethod slot_1 = {"slotDataReady", 1, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In },
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"slotProgress", 2, param_slot_2 };
+    static const QUParameter param_slot_3[] = {
+	{ 0, &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod slot_3 = {"slotFinished", 1, param_slot_3 };
+    static const QUMethod slot_4 = {"slotAborted", 0, 0 };
+    static const QUMethod slot_5 = {"slotShowCalled", 0, 0 };
+    static const QUMethod slot_6 = {"slotListCalled", 0, 0 };
+    static const QUMethod slot_7 = {"slotHideCalled", 0, 0 };
+    static const QUMethod slot_8 = {"slotShowCalling", 0, 0 };
+    static const QUMethod slot_9 = {"slotListCalling", 0, 0 };
+    static const QUMethod slot_10 = {"slotHideCalling", 0, 0 };
+    static const QUMethod slot_11 = {"slotFindDef", 0, 0 };
+    static const QUMethod slot_12 = {"slotRemoveNode", 0, 0 };
+    static const QUMethod slot_13 = {"slotMultiCallDetails", 0, 0 };
+    static const QUMethod slot_14 = {"slotOpenCall", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotDotFinished()", &slot_0, QMetaData::Private },
+	{ "slotDataReady(FrontendToken*)", &slot_1, QMetaData::Private },
+	{ "slotProgress(int,int)", &slot_2, QMetaData::Private },
+	{ "slotFinished(uint)", &slot_3, QMetaData::Private },
+	{ "slotAborted()", &slot_4, QMetaData::Private },
+	{ "slotShowCalled()", &slot_5, QMetaData::Private },
+	{ "slotListCalled()", &slot_6, QMetaData::Private },
+	{ "slotHideCalled()", &slot_7, QMetaData::Private },
+	{ "slotShowCalling()", &slot_8, QMetaData::Private },
+	{ "slotListCalling()", &slot_9, QMetaData::Private },
+	{ "slotHideCalling()", &slot_10, QMetaData::Private },
+	{ "slotFindDef()", &slot_11, QMetaData::Private },
+	{ "slotRemoveNode()", &slot_12, QMetaData::Private },
+	{ "slotMultiCallDetails()", &slot_13, QMetaData::Private },
+	{ "slotOpenCall()", &slot_14, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "sPath", &static_QUType_QString, 0, QUParameter::In },
+	{ "nLine", &static_QUType_varptr, "\x11", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"lineRequested", 2, param_signal_0 };
+    static const QMetaData signal_tbl[] = {
+	{ "lineRequested(const QString&,uint)", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"GraphWidget", parentObject,
+	slot_tbl, 15,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_GraphWidget.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* GraphWidget::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "GraphWidget" ) )
+	return this;
+    return QCanvasView::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL lineRequested
+void GraphWidget::lineRequested( const QString& t0, uint t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_QString.set(o+1,t0);
+    static_QUType_varptr.set(o+2,&t1);
+    activate_signal( clist, o );
+}
+
+bool GraphWidget::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotDotFinished(); break;
+    case 1: slotDataReady((FrontendToken*)static_QUType_ptr.get(_o+1)); break;
+    case 2: slotProgress((int)static_QUType_int.get(_o+1),(int)static_QUType_int.get(_o+2)); break;
+    case 3: slotFinished((uint)(*((uint*)static_QUType_ptr.get(_o+1)))); break;
+    case 4: slotAborted(); break;
+    case 5: slotShowCalled(); break;
+    case 6: slotListCalled(); break;
+    case 7: slotHideCalled(); break;
+    case 8: slotShowCalling(); break;
+    case 9: slotListCalling(); break;
+    case 10: slotHideCalling(); break;
+    case 11: slotFindDef(); break;
+    case 12: slotRemoveNode(); break;
+    case 13: slotMultiCallDetails(); break;
+    case 14: slotOpenCall(); break;
+    default:
+	return QCanvasView::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool GraphWidget::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: lineRequested((const QString&)static_QUType_QString.get(_o+1),(uint)(*((uint*)static_QUType_ptr.get(_o+2)))); break;
+    default:
+	return QCanvasView::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool GraphWidget::qt_property( int id, int f, QVariant* v)
+{
+    return QCanvasView::qt_property( id, f, v);
+}
+
+bool GraphWidget::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

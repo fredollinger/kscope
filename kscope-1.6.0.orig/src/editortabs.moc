@@ -1,0 +1,225 @@
+/****************************************************************************
+** EditorTabs meta object code from reading C++ file 'editortabs.h'
+**
+** Created: Thu Sep 9 13:22:41 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "editortabs.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *EditorTabs::className() const
+{
+    return "EditorTabs";
+}
+
+QMetaObject *EditorTabs::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_EditorTabs( "EditorTabs", &EditorTabs::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString EditorTabs::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "EditorTabs", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString EditorTabs::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "EditorTabs", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* EditorTabs::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = TabWidget::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_ptr, "QWidget", QUParameter::In }
+    };
+    static const QUMethod slot_0 = {"slotRemovePage", 1, param_slot_0 };
+    static const QUMethod slot_1 = {"slotToggleTagList", 0, 0 };
+    static const QUMethod slot_2 = {"slotSaveAll", 0, 0 };
+    static const QUMethod slot_3 = {"slotGoLeft", 0, 0 };
+    static const QUMethod slot_4 = {"slotGoRight", 0, 0 };
+    static const QUParameter param_slot_5[] = {
+	{ 0, &static_QUType_ptr, "QWidget", QUParameter::In }
+    };
+    static const QUMethod slot_5 = {"slotCurrentChanged", 1, param_slot_5 };
+    static const QUParameter param_slot_6[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_6 = {"slotAttachFile", 2, param_slot_6 };
+    static const QUParameter param_slot_7[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod slot_7 = {"slotNewFile", 1, param_slot_7 };
+    static const QUParameter param_slot_8[] = {
+	{ 0, &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ 0, &static_QUType_bool, 0, QUParameter::In }
+    };
+    static const QUMethod slot_8 = {"slotFileModified", 2, param_slot_8 };
+    static const QUParameter param_slot_9[] = {
+	{ 0, &static_QUType_ptr, "QWidget", QUParameter::In }
+    };
+    static const QUMethod slot_9 = {"slotInitiateDrag", 1, param_slot_9 };
+    static const QUMethod slot_10 = {"slotFillWindowMenu", 0, 0 };
+    static const QUParameter param_slot_11[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::In }
+    };
+    static const QUMethod slot_11 = {"slotSetCurrentPage", 1, param_slot_11 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotRemovePage(QWidget*)", &slot_0, QMetaData::Public },
+	{ "slotToggleTagList()", &slot_1, QMetaData::Public },
+	{ "slotSaveAll()", &slot_2, QMetaData::Public },
+	{ "slotGoLeft()", &slot_3, QMetaData::Public },
+	{ "slotGoRight()", &slot_4, QMetaData::Public },
+	{ "slotCurrentChanged(QWidget*)", &slot_5, QMetaData::Private },
+	{ "slotAttachFile(EditorPage*,const QString&)", &slot_6, QMetaData::Private },
+	{ "slotNewFile(EditorPage*)", &slot_7, QMetaData::Private },
+	{ "slotFileModified(EditorPage*,bool)", &slot_8, QMetaData::Private },
+	{ "slotInitiateDrag(QWidget*)", &slot_9, QMetaData::Private },
+	{ "slotFillWindowMenu()", &slot_10, QMetaData::Private },
+	{ "slotSetCurrentPage(int)", &slot_11, QMetaData::Private }
+    };
+    static const QUParameter param_signal_0[] = {
+	{ "pOld", &static_QUType_ptr, "EditorPage", QUParameter::In },
+	{ "pNew", &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"editorChanged", 2, param_signal_0 };
+    static const QUParameter param_signal_1[] = {
+	{ "pPage", &static_QUType_ptr, "EditorPage", QUParameter::In }
+    };
+    static const QUMethod signal_1 = {"editorRemoved", 1, param_signal_1 };
+    static const QUParameter param_signal_2[] = {
+	{ "pEvent", &static_QUType_ptr, "QDropEvent", QUParameter::In }
+    };
+    static const QUMethod signal_2 = {"filesDropped", 1, param_signal_2 };
+    static const QMetaData signal_tbl[] = {
+	{ "editorChanged(EditorPage*,EditorPage*)", &signal_0, QMetaData::Public },
+	{ "editorRemoved(EditorPage*)", &signal_1, QMetaData::Public },
+	{ "filesDropped(QDropEvent*)", &signal_2, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"EditorTabs", parentObject,
+	slot_tbl, 12,
+	signal_tbl, 3,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_EditorTabs.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* EditorTabs::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "EditorTabs" ) )
+	return this;
+    return TabWidget::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL editorChanged
+void EditorTabs::editorChanged( EditorPage* t0, EditorPage* t1 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[3];
+    static_QUType_ptr.set(o+1,t0);
+    static_QUType_ptr.set(o+2,t1);
+    activate_signal( clist, o );
+}
+
+// SIGNAL editorRemoved
+void EditorTabs::editorRemoved( EditorPage* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 1 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+// SIGNAL filesDropped
+void EditorTabs::filesDropped( QDropEvent* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 2 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+bool EditorTabs::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotRemovePage((QWidget*)static_QUType_ptr.get(_o+1)); break;
+    case 1: slotToggleTagList(); break;
+    case 2: slotSaveAll(); break;
+    case 3: slotGoLeft(); break;
+    case 4: slotGoRight(); break;
+    case 5: slotCurrentChanged((QWidget*)static_QUType_ptr.get(_o+1)); break;
+    case 6: slotAttachFile((EditorPage*)static_QUType_ptr.get(_o+1),(const QString&)static_QUType_QString.get(_o+2)); break;
+    case 7: slotNewFile((EditorPage*)static_QUType_ptr.get(_o+1)); break;
+    case 8: slotFileModified((EditorPage*)static_QUType_ptr.get(_o+1),(bool)static_QUType_bool.get(_o+2)); break;
+    case 9: slotInitiateDrag((QWidget*)static_QUType_ptr.get(_o+1)); break;
+    case 10: slotFillWindowMenu(); break;
+    case 11: slotSetCurrentPage((int)static_QUType_int.get(_o+1)); break;
+    default:
+	return TabWidget::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool EditorTabs::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: editorChanged((EditorPage*)static_QUType_ptr.get(_o+1),(EditorPage*)static_QUType_ptr.get(_o+2)); break;
+    case 1: editorRemoved((EditorPage*)static_QUType_ptr.get(_o+1)); break;
+    case 2: filesDropped((QDropEvent*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return TabWidget::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool EditorTabs::qt_property( int id, int f, QVariant* v)
+{
+    return TabWidget::qt_property( id, f, v);
+}
+
+bool EditorTabs::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

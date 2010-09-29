@@ -1,0 +1,223 @@
+/****************************************************************************
+** SearchLineEdit meta object code from reading C++ file 'searchlist.h'
+**
+** Created: Thu Sep 9 13:22:44 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "searchlist.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *SearchLineEdit::className() const
+{
+    return "SearchLineEdit";
+}
+
+QMetaObject *SearchLineEdit::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_SearchLineEdit( "SearchLineEdit", &SearchLineEdit::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString SearchLineEdit::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SearchLineEdit", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString SearchLineEdit::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SearchLineEdit", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* SearchLineEdit::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QLineEdit::staticMetaObject();
+    static const QUParameter param_signal_0[] = {
+	{ "pEvent", &static_QUType_ptr, "QKeyEvent", QUParameter::In }
+    };
+    static const QUMethod signal_0 = {"keyPressed", 1, param_signal_0 };
+    static const QMetaData signal_tbl[] = {
+	{ "keyPressed(QKeyEvent*)", &signal_0, QMetaData::Public }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"SearchLineEdit", parentObject,
+	0, 0,
+	signal_tbl, 1,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_SearchLineEdit.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* SearchLineEdit::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "SearchLineEdit" ) )
+	return this;
+    return QLineEdit::qt_cast( clname );
+}
+
+#include <qobjectdefs.h>
+#include <qsignalslotimp.h>
+
+// SIGNAL keyPressed
+void SearchLineEdit::keyPressed( QKeyEvent* t0 )
+{
+    if ( signalsBlocked() )
+	return;
+    QConnectionList *clist = receivers( staticMetaObject()->signalOffset() + 0 );
+    if ( !clist )
+	return;
+    QUObject o[2];
+    static_QUType_ptr.set(o+1,t0);
+    activate_signal( clist, o );
+}
+
+bool SearchLineEdit::qt_invoke( int _id, QUObject* _o )
+{
+    return QLineEdit::qt_invoke(_id,_o);
+}
+
+bool SearchLineEdit::qt_emit( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->signalOffset() ) {
+    case 0: keyPressed((QKeyEvent*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return QLineEdit::qt_emit(_id,_o);
+    }
+    return TRUE;
+}
+#ifndef QT_NO_PROPERTIES
+
+bool SearchLineEdit::qt_property( int id, int f, QVariant* v)
+{
+    return QLineEdit::qt_property( id, f, v);
+}
+
+bool SearchLineEdit::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES
+
+
+const char *SearchList::className() const
+{
+    return "SearchList";
+}
+
+QMetaObject *SearchList::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_SearchList( "SearchList", &SearchList::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString SearchList::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SearchList", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString SearchList::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "SearchList", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* SearchList::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = QVBox::staticMetaObject();
+    static const QUMethod slot_0 = {"slotSetFocus", 0, 0 };
+    static const QUParameter param_slot_1[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_1 = {"slotFindItem", 1, param_slot_1 };
+    static const QUParameter param_slot_2[] = {
+	{ 0, &static_QUType_ptr, "QListViewItem", QUParameter::In }
+    };
+    static const QUMethod slot_2 = {"slotItemSelected", 1, param_slot_2 };
+    static const QUMethod slot_3 = {"slotItemSelected", 0, 0 };
+    static const QUParameter param_slot_4[] = {
+	{ 0, &static_QUType_ptr, "QKeyEvent", QUParameter::In }
+    };
+    static const QUMethod slot_4 = {"slotKeyPressed", 1, param_slot_4 };
+    static const QMetaData slot_tbl[] = {
+	{ "slotSetFocus()", &slot_0, QMetaData::Public },
+	{ "slotFindItem(const QString&)", &slot_1, QMetaData::Protected },
+	{ "slotItemSelected(QListViewItem*)", &slot_2, QMetaData::Protected },
+	{ "slotItemSelected()", &slot_3, QMetaData::Protected },
+	{ "slotKeyPressed(QKeyEvent*)", &slot_4, QMetaData::Protected }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"SearchList", parentObject,
+	slot_tbl, 5,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_SearchList.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* SearchList::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "SearchList" ) )
+	return this;
+    return QVBox::qt_cast( clname );
+}
+
+bool SearchList::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: slotSetFocus(); break;
+    case 1: slotFindItem((const QString&)static_QUType_QString.get(_o+1)); break;
+    case 2: slotItemSelected((QListViewItem*)static_QUType_ptr.get(_o+1)); break;
+    case 3: slotItemSelected(); break;
+    case 4: slotKeyPressed((QKeyEvent*)static_QUType_ptr.get(_o+1)); break;
+    default:
+	return QVBox::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool SearchList::qt_emit( int _id, QUObject* _o )
+{
+    return QVBox::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool SearchList::qt_property( int id, int f, QVariant* v)
+{
+    return QVBox::qt_property( id, f, v);
+}
+
+bool SearchList::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

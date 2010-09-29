@@ -1,0 +1,201 @@
+/****************************************************************************
+** AutoCompletionDlg meta object code from reading C++ file 'newprojectdlg.h'
+**
+** Created: Thu Sep 9 13:22:42 2010
+**      by: The Qt MOC ($Id: qt/moc_yacc.cpp   3.3.8   edited Feb 2 14:59 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#undef QT_NO_COMPAT
+#include "newprojectdlg.h"
+#include <qmetaobject.h>
+#include <qapplication.h>
+
+#include <private/qucomextra_p.h>
+#if !defined(Q_MOC_OUTPUT_REVISION) || (Q_MOC_OUTPUT_REVISION != 26)
+#error "This file was generated using the moc from 3.3.8b. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+const char *AutoCompletionDlg::className() const
+{
+    return "AutoCompletionDlg";
+}
+
+QMetaObject *AutoCompletionDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_AutoCompletionDlg( "AutoCompletionDlg", &AutoCompletionDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString AutoCompletionDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "AutoCompletionDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString AutoCompletionDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "AutoCompletionDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* AutoCompletionDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = AutoCompletionLayout::staticMetaObject();
+    static const QUParameter param_slot_0[] = {
+	{ 0, &static_QUType_int, 0, QUParameter::Out }
+    };
+    static const QUMethod slot_0 = {"exec", 1, param_slot_0 };
+    static const QUMethod slot_1 = {"accept", 0, 0 };
+    static const QMetaData slot_tbl[] = {
+	{ "exec()", &slot_0, QMetaData::Public },
+	{ "accept()", &slot_1, QMetaData::Protected }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"AutoCompletionDlg", parentObject,
+	slot_tbl, 2,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_AutoCompletionDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* AutoCompletionDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "AutoCompletionDlg" ) )
+	return this;
+    return AutoCompletionLayout::qt_cast( clname );
+}
+
+bool AutoCompletionDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: static_QUType_int.set(_o,exec()); break;
+    case 1: accept(); break;
+    default:
+	return AutoCompletionLayout::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool AutoCompletionDlg::qt_emit( int _id, QUObject* _o )
+{
+    return AutoCompletionLayout::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool AutoCompletionDlg::qt_property( int id, int f, QVariant* v)
+{
+    return AutoCompletionLayout::qt_property( id, f, v);
+}
+
+bool AutoCompletionDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES
+
+
+const char *NewProjectDlg::className() const
+{
+    return "NewProjectDlg";
+}
+
+QMetaObject *NewProjectDlg::metaObj = 0;
+static QMetaObjectCleanUp cleanUp_NewProjectDlg( "NewProjectDlg", &NewProjectDlg::staticMetaObject );
+
+#ifndef QT_NO_TRANSLATION
+QString NewProjectDlg::tr( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "NewProjectDlg", s, c, QApplication::DefaultCodec );
+    else
+	return QString::fromLatin1( s );
+}
+#ifndef QT_NO_TRANSLATION_UTF8
+QString NewProjectDlg::trUtf8( const char *s, const char *c )
+{
+    if ( qApp )
+	return qApp->translate( "NewProjectDlg", s, c, QApplication::UnicodeUTF8 );
+    else
+	return QString::fromUtf8( s );
+}
+#endif // QT_NO_TRANSLATION_UTF8
+
+#endif // QT_NO_TRANSLATION
+
+QMetaObject* NewProjectDlg::staticMetaObject()
+{
+    if ( metaObj )
+	return metaObj;
+    QMetaObject* parentObject = NewProjectLayout::staticMetaObject();
+    static const QUMethod slot_0 = {"accept", 0, 0 };
+    static const QUMethod slot_1 = {"slotAddType", 0, 0 };
+    static const QUMethod slot_2 = {"slotRemoveType", 0, 0 };
+    static const QUParameter param_slot_3[] = {
+	{ 0, &static_QUType_QString, 0, QUParameter::In }
+    };
+    static const QUMethod slot_3 = {"slotAvailTypesChanged", 1, param_slot_3 };
+    static const QMetaData slot_tbl[] = {
+	{ "accept()", &slot_0, QMetaData::Protected },
+	{ "slotAddType()", &slot_1, QMetaData::Protected },
+	{ "slotRemoveType()", &slot_2, QMetaData::Protected },
+	{ "slotAvailTypesChanged(const QString&)", &slot_3, QMetaData::Protected }
+    };
+    metaObj = QMetaObject::new_metaobject(
+	"NewProjectDlg", parentObject,
+	slot_tbl, 4,
+	0, 0,
+#ifndef QT_NO_PROPERTIES
+	0, 0,
+	0, 0,
+#endif // QT_NO_PROPERTIES
+	0, 0 );
+    cleanUp_NewProjectDlg.setMetaObject( metaObj );
+    return metaObj;
+}
+
+void* NewProjectDlg::qt_cast( const char* clname )
+{
+    if ( !qstrcmp( clname, "NewProjectDlg" ) )
+	return this;
+    return NewProjectLayout::qt_cast( clname );
+}
+
+bool NewProjectDlg::qt_invoke( int _id, QUObject* _o )
+{
+    switch ( _id - staticMetaObject()->slotOffset() ) {
+    case 0: accept(); break;
+    case 1: slotAddType(); break;
+    case 2: slotRemoveType(); break;
+    case 3: slotAvailTypesChanged((const QString&)static_QUType_QString.get(_o+1)); break;
+    default:
+	return NewProjectLayout::qt_invoke( _id, _o );
+    }
+    return TRUE;
+}
+
+bool NewProjectDlg::qt_emit( int _id, QUObject* _o )
+{
+    return NewProjectLayout::qt_emit(_id,_o);
+}
+#ifndef QT_NO_PROPERTIES
+
+bool NewProjectDlg::qt_property( int id, int f, QVariant* v)
+{
+    return NewProjectLayout::qt_property( id, f, v);
+}
+
+bool NewProjectDlg::qt_static_property( QObject* , int , int , QVariant* ){ return FALSE; }
+#endif // QT_NO_PROPERTIES

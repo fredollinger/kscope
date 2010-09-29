@@ -1,0 +1,719 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>NewProjectLayout</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>NewProjectLayout</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>539</width>
+            <height>383</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Create Project</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>tabWidget2</cstring>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Detai&amp;ls</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout9</cstring>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>textLabel2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Path</string>
+                                </property>
+                            </widget>
+                            <widget class="KURLRequester" row="2" column="2">
+                                <property name="name">
+                                    <cstring>m_pSrcRootRequester</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>textLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Source Root (Optional)</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>textLabel1</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Name</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="0" column="1" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>m_pNameEdit</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Enter a name for this project.
+The name must conform to the file system's naming conventions for directories (e.g., no spaces, exclamaion marks, etc.).</string>
+                                </property>
+                            </widget>
+                            <widget class="KURLRequester" row="1" column="1" rowspan="1" colspan="2">
+                                <property name="name">
+                                    <cstring>m_pPathRequester</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The path to hold this project.
+KScope will create a directory with the given name under this project, and populate it with the project configuration and database files.
+This does not need to be the path in which the source files reside.</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QLabel">
+                        <property name="name">
+                            <cstring>textLabel1_3</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&lt;blockquote&gt;A project consists of several files located in a directory
+ with the given name and path. The project's name needs to be a valid directory
+name and must not contain any whitespace.&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;blockquote&gt;The Source Root is a convinient way to specify a common
+path for all source files, but is not required.&lt;/blockquote&gt;</string>
+                        </property>
+                        <property name="alignment">
+                            <set>WordBreak|AlignVCenter</set>
+                        </property>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer29</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>31</width>
+                                <height>50</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>File T&amp;ypes</string>
+                </attribute>
+                <hbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox1</cstring>
+                        </property>
+                        <property name="title">
+                            <string>This Project</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QListBox">
+                                <property name="name">
+                                    <cstring>m_pTypesList</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>KScope uses these filters to locate source files to include in this project.</string>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout5</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer7</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>21</width>
+                                        <height>61</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>m_pAddButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&lt;&lt; &amp;Add</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+A</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Adds the selected file type to the current project.</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>m_pRemoveButton</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&gt;&gt; &amp;Remove</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+R</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Remove the selected file type from the project.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>21</width>
+                                        <height>50</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </vbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>groupBox2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Available Types</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>m_pTypesEdit</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>You can enter custom file types here.</string>
+                                </property>
+                            </widget>
+                            <widget class="QListBox">
+                                <item>
+                                    <property name="text">
+                                        <string>*.c</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.h</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.l</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.y</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.S</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.cc</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.cpp</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.cxx</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.C</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.hh</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.hpp</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.hxx</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>*.H</string>
+                                    </property>
+                                </item>
+                                <property name="name">
+                                    <cstring>m_pAvailTypesList</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>A list of standard file types.</string>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer8_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>61</width>
+                                <height>21</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </hbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>TabPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Options</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>m_pKernelCheck</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Kernel project (-k)</string>
+                        </property>
+                        <property name="accel">
+                            <string></string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>For kernel projects, symbols are not looked up in the standard include path.</string>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>m_pInvCheck</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Build inverted inde&amp;x (-q)</string>
+                        </property>
+                        <property name="accel">
+                            <string>Alt+X</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>An inverted index may greatly speed up searches in a large project. The project's building process is longer, though.</string>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>m_pNoCompCheck</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Do not compress the database (-c)</string>
+                        </property>
+                        <property name="accel">
+                            <string></string>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox">
+                        <property name="name">
+                            <cstring>m_pSlowPathCheck</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Slower, but more accurate, function definition detection (-D)</string>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout31</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>m_pAutoRebuildCheck</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Refresh data&amp;base automatically</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+B</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Rebuild the database after changed files are saved to disk.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer32</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>125</width>
+                                        <height>21</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>m_pAutoRebuildLabel</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="text">
+                                    <string>(Seconds)</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox">
+                                <property name="name">
+                                    <cstring>m_pAutoRebuildSpin</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Wait this number of seconds after the last save before rebuilding the database.</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout30</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>m_pACCheck</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Use symbol auto-completion</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+U</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>As-you-type symbol completion.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer33</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>61</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>m_pACButton</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="text">
+                                    <string>Options...</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>layout6</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>m_pTabWidthCheck</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Override default tab width (Kate only)</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Overrides the editor's configured tab width</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer9</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>211</width>
+                                        <height>31</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QSpinBox">
+                                <property name="name">
+                                    <cstring>m_pTabWidthSpin</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <spacer>
+                        <property name="name">
+                            <cstring>spacer31</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>21</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout19</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer8</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>141</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pCreateButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Cre&amp;ate</string>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pCancelButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Ca&amp;ncel</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<customwidgets>
+</customwidgets>
+<connections>
+    <connection>
+        <sender>m_pAddButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NewProjectLayout</receiver>
+        <slot>slotAddType()</slot>
+    </connection>
+    <connection>
+        <sender>m_pRemoveButton</sender>
+        <signal>clicked()</signal>
+        <receiver>NewProjectLayout</receiver>
+        <slot>slotRemoveType()</slot>
+    </connection>
+    <connection>
+        <sender>m_pAutoRebuildCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>m_pAutoRebuildSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>m_pACCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>m_pACButton</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>m_pAvailTypesList</sender>
+        <signal>highlighted(const QString&amp;)</signal>
+        <receiver>NewProjectLayout</receiver>
+        <slot>slotAvailTypesChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>m_pTabWidthCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>m_pTabWidthSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>m_pAutoRebuildCheck</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>m_pAutoRebuildLabel</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>m_pNameEdit</tabstop>
+    <tabstop>m_pPathRequester</tabstop>
+    <tabstop>m_pSrcRootRequester</tabstop>
+    <tabstop>m_pAddButton</tabstop>
+    <tabstop>m_pRemoveButton</tabstop>
+    <tabstop>m_pKernelCheck</tabstop>
+    <tabstop>m_pInvCheck</tabstop>
+    <tabstop>m_pNoCompCheck</tabstop>
+    <tabstop>m_pSlowPathCheck</tabstop>
+    <tabstop>m_pAutoRebuildCheck</tabstop>
+    <tabstop>m_pAutoRebuildSpin</tabstop>
+    <tabstop>m_pACCheck</tabstop>
+    <tabstop>m_pACButton</tabstop>
+    <tabstop>m_pTabWidthCheck</tabstop>
+    <tabstop>m_pTabWidthSpin</tabstop>
+    <tabstop>m_pCreateButton</tabstop>
+    <tabstop>m_pCancelButton</tabstop>
+    <tabstop>tabWidget2</tabstop>
+    <tabstop>m_pTypesList</tabstop>
+    <tabstop>m_pTypesEdit</tabstop>
+    <tabstop>m_pAvailTypesList</tabstop>
+</tabstops>
+<slots>
+    <slot access="protected">slotAddType()</slot>
+    <slot access="protected">slotRemoveType()</slot>
+    <slot access="protected">slotAutoRebuildChanged(bool)</slot>
+    <slot access="protected">slotAutoCompletionChanged(bool)</slot>
+    <slot access="protected">slotAvailTypesChanged(const QString&amp;)</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
+</UI>

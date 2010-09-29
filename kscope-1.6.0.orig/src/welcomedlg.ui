@@ -1,0 +1,126 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>WelcomeDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>WelcomeDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>519</width>
+            <height>386</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Welcome</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="KTextBrowser">
+            <property name="name">
+                <cstring>m_pBrowser</cstring>
+            </property>
+            <property name="paletteBackgroundColor">
+                <color>
+                    <red>255</red>
+                    <green>255</green>
+                    <blue>255</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string>&lt;h1&gt;Welcome to &lt;font color="#c00000"&gt;KScope&lt;/font&gt;!&lt;/h1&gt;
+
+If this is the first time you are running Kscope, please follow these steps (click on the links for detailed instructions):
+&lt;p&gt;
+1. &lt;a href="help:/kscope/configuration.html#config-progs"&gt;Configure&lt;/a&gt; paths to the required back-end executables&lt;br&gt;
+2. &lt;a href="help:/kscope/projects.html#project-create"&gt;Create&lt;/a&gt; a new project&lt;br&gt;
+3. &lt;a href="help:/kscope/projects.html#project-files"&gt;Populate&lt;/a&gt; the project with source files&lt;br&gt;
+4. &lt;a href="help:/kscope/queries.html"&gt;Browse&lt;/a&gt; the project and &lt;a href="help:/kscope/editing.html"&gt;edit&lt;/a&gt; files&lt;br&gt;
+
+&lt;/p&gt;
+
+&lt;p&gt;
+For more information, please take a look at KScope's &lt;a href="help:/kscope"&gt;manual&lt;/a&gt;, or visit the KScope &lt;a href="http://kscope.sourceforge.net"&gt;website&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+Enjoy!
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;font size="-1"&gt;This message will only appear once. Use the "&lt;b&gt;Help-&gt;Show Welcome Message...&lt;/b&gt;" menu command to show it again at any time.&lt;/font&gt;
+&lt;/p&gt;</string>
+            </property>
+        </widget>
+        <widget class="Line">
+            <property name="name">
+                <cstring>line1</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>381</width>
+                            <height>21</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>m_pCloseButton</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Close</string>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<customwidgets>
+</customwidgets>
+<connections>
+    <connection>
+        <sender>m_pCloseButton</sender>
+        <signal>clicked()</signal>
+        <receiver>WelcomeDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+</connections>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>ktextbrowser.h</includehint>
+</includehints>
+</UI>

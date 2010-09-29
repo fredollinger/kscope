@@ -1,0 +1,434 @@
+
+<sect1 id="queries">
+<title>The Query System</title>
+
+<para>
+The most important task of &kapp; is to execute <application>Cscope</application> queries and display their results. Queries are always performed on the cross-reference database of the active project.
+</para>
+<para>
+&kapp; currently supports the following query types:
+<itemizedlist>
+<listitem><para>Find all references to a symbol</para></listitem>
+<listitem><para>Find a symbol's global definition</para></listitem>
+<listitem><para>Find all functions called by a given function</para></listitem>
+<listitem><para>Find all functions calling a given function</para></listitem>
+<listitem><para>Find a text string</para></listitem>
+<listitem><para>Find an EGrep pattern (regular expression)</para></listitem>
+<listitem><para>Find a file's path by its name</para></listitem>
+<listitem><para>Find all files including a given file</para></listitem>
+<listitem><para>Display a call-tree for a given function</para></listitem>
+</itemizedlist>
+A symbol, as referred to in the above list, may be a function, a global variable, a structure, a union or a type definition.
+</para>
+
+<para>
+The cross-reference database may become obsolete when source files are modified, resulting in inaccurate (or simply wrong) query results. &kapp; has two ways for refreshing the database, manual and automatic. Manual database rebuilds are available through the <menuchoice><guimenu>Cscope</guimenu><guimenuitem>Rebuild Database</guimenuitem></menuchoice> menu command. Selecting this command will instruct Cscope to immediately rebuild the cross-reference database.
+</para>
+
+<para>
+Automatic database rebuilds are enabled per-project, an option controlled by the <guilabel>Project Properties</guilabel> dialogue. Since a database rebuild may be a time and resource-consuming operation, &kapp; does not invoke this procedure after every change to the source code. Instead, changes to the code initiate a timer (whose value is determined by the user in the <guilabel>Project Properties</guilabel> dialogue). Once this timer elapses, &kapp; instructs Cscope to rebuild the database. Code modifications that occur while the timer is running reset its value.
+</para>
+
+<para>
+A project's database is also updated whenever that project is opened.
+</para>
+
+<sect2 id="query-run">
+<title>Running a Query</title>
+
+<para>
+A query can be started in one of three ways:
+<orderedlist>
+<listitem><para>The main menu</para></listitem>
+<listitem><para>Keyboard shortcuts</para></listitem>
+<listitem><para>The editor's context-menu</para></listitem>
+</orderedlist>
+</para>
+
+<para>
+To start a query from the main menu, select the desired query type from the <guimenu>Cscope</guimenu> menu. This will display a dialogue box prompting you for the query's text. The text to enter depends upon the query's type.
+<screenshot>
+<screeninfo>The query dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="query_dlg.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The query dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Type</guilabel></term>
+<listitem><para>The type of query to perform. This value defaults to the requested type, by can be changed by selecting a different entry in the list.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Symbol</guibutton></term>
+<listitem><para>Enter the symbol to query in this box. The default value is the symbol currently under the editor's cursor (if any).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Search for a Sub-String</guilabel></term>
+<listitem><para>Mark this check-box to treat the entered text as part of a symbol (will query all symbols containing the entered text as a sub-string).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>OK</guibutton></term>
+<listitem><para><action>Runs the query.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Hint</guibutton></term>
+<listitem><para><action>Provides a list of possible matches to the entered symbol.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Cancel</guibutton></term>
+<listitem><para><action>Closes the dialogue without running the query.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Suggested Symbols</guilabel></term>
+<listitem><para>A list of known symbols matching the text in the symbol box.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Hint Options</guilabel></term>
+<listitem><para>These buttons affect the way text in the symbol box is matched to fill the suggested symbols list.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Symbols Beginning With...</guilabel></term>
+<listitem><para>Choose this option to match symbols starting with the given text.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Symbols Containing...</guilabel></term>
+<listitem><para>Choose this option to match symbols containing the given text.</para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>
+Any text selected in the editor when a query is requested will be automatically copied to the query dialogue. If no text is selected, KScope attempts to guess the requested symbol from the current location of the cursor.
+</para>
+
+<para>
+Each menu item is associated with a keyboard shortcut. These shortcuts follow the convention of using the <keycap>Ctrl</keycap> key, together with the numeric query index used by <application>Cscope</application> (this should allow experienced <application>Cscope</application> users to get quickly acquainted with &kapp;). For example, use <keycombo><keycap>Ctrl</keycap><keycap>1</keycap></keycombo> to look-up a symbol's definition. The call-tree is an exception to this convention (as it is not a native <application>Cscope</application> query). See the <link linkend="commands">Command Reference</link> for a complete listing of all menu and shortcut options.
+</para>
+
+<note>
+<para>
+The EGrep query is invoked using <keycombo><keycap>Ctrl</keycap><keycap>5</keycap></keycombo>, as <keycombo><keycap>Ctrl</keycap><keycap>6</keycap></keycombo> is already used by &kate;.
+</para>
+</note>
+
+<para>
+The third way of starting a query is by right-clicking inside an editor window. This invokes the context-menu, that displays the same options as in the <guimenu>Cscope</guimenu> section of the main menu. Using a context-menu is easy when combined with a symbol selection in the editor: position the text cursor inside a symbol, and then right click to display the context-menu.
+</para>
+
+<para>
+A query may take some time to complete, depending on its type and the size of the project. &kapp; displays a progress indicator during long queries. If <application>Cscope</application>'s <option>-v</option> command line option is used, this progress indication is accurate, and displays the percentage of files already searched in. In case this option was omitted (e.g., if working with a version of <application>Cscope</application> prior to 15.5), &kapp; will present a dummy progress bar, used simply to indicate that a query is running, and that &kapp; has not frozen. Please refer to the section <link linkend="configuration">Configuring &kapp;</link> for more information.
+</para>
+
+</sect2>
+
+<sect2 id="query-window">
+<title>The Query Results Window</title>
+
+<para>
+When a query has terminated, its output is displayed in the query window, at the bottom of &kapp;'s main window. This window can manage several result pages simultaneously, with each page holding the results of a different query. Each page is associated with a tab that displays a summary of the query that generated these results. This tab is used to bring the results page forward, and is also associated with several page operations through a close button and a context menu.
+</para>
+
+<para>
+By default, query results are displayed in the currently active page, overriding any prior contents. To keep a results page unchanged, the page needs to be "locked". Locked query pages are never overridden. The contents of these pages are also saved when the project is closed, and are restored when the project is reopened. To lock a project, either click the <guibutton>Lock/Unlock Query</guibutton> toggle button to the right of the query window, or use the context menu (available by right-clicking the page's tab.) The same methods can also be used to unlock a query.
+</para>
+
+<para>
+New query pages can also be created explicitly, by using either the <guibutton>New Query</guibutton> button to the right of the query window, or the context menu available by right-clicking the tab area of the query window.
+</para>
+
+<para>
+Each entry in a query results page represents a symbol or text string that complies to the search criteria. The entry is composed of four sections:
+<itemizedlist>
+<listitem><para>The path of the file in which the symbol or string were found</para></listitem>
+<listitem><para>The name of the function containing the symbol or text string</para></listitem>
+<listitem><para>The line number in this file</para></listitem>
+<listitem><para>The text of this line</para></listitem>
+</itemizedlist>
+</para>
+
+<para>
+By default, results are sorted according to the file name. This can be changed by clicking the column headers of the results list.
+</para>
+
+<para>
+The entries in a query results page can be used as shortcuts to editing the line in which the symbol or text string were found (or lines in that vicinity.) This is done by either double-clicking a result entry, or by selecting this entry and hitting the <keycap>Enter</keycap> key. As a result, &kapp; will open an editor window displaying the file referred to in the selected entry, and set the cursor to the beginning of the appropriate line.
+</para>
+
+<para>
+If a query results in a single entry, this entry is automatically selected for display.
+</para>
+
+<para>
+The results of a query can be refreshed by clicking the <guibutton>Refresh Query</guibutton> button to the right of the query window, or by using the context menu. This command is useful to rerun queries after the database has changed (such as after a <guimenuitem>Rebuild Database</guimenuitem> command had been issued).
+</para>
+
+<para>
+Query results pages can be closed by either clicking the icon on their tab, by clicking on the <guibutton>Close Query</guibutton> button to the right of the query window, by using the context menu (available by right-clicking the page's tab), or by selecting the <menuchoice><guimenu>Cscope</guimenu><guimenuitem>Close Query</guimenuitem></menuchoice> main-menu command.
+</para>
+
+<para>
+If the query window is not visible when a query is executed, it is temporarily displayed, and then re-hidden when the user selects an entry for viewing.
+</para>
+
+</sect2>
+
+<sect2 id="result-options">
+<title>Query Results Options</title>
+
+<para>
+Right-clicking a query result in either a query window or a call-tree dialogue displays a context menu. This menu includes several actions that can be used to either extract information or fine tune these results.
+</para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Copy File</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Copies the file path part of a result record to the clipboard</action> (the copy commands are available depending on the position of the mouse cursor).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Copy Function</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Copies the function name part of a result record to the clipboard.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Copy Line</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Copies the line number part of a result record.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Copy Text</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Copies the function name part of a result record to the clipboard.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Filter...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Filter Query Results dialogue.</action> See the section <link linkend="filter-results">Filtering Query Results</link> for a detailed description of this option.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Show All</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays all query results.</action> This option reverts the effects of any filters previously applied.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Remove Item</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Permanently removes a record from a query results window.</action> This action can only be undone by rerunning the query.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+<sect2 id="filter-results">
+<title>Filtering Query Results</title>
+
+<para>
+It is often the case the a query results in an abundance of information. &kapp; allows the user to filter query results in order to show only those results that the user finds interesting, an action referred to as "Filtering". Filtering is done by matching patterns on any of the query record fields (file name, function, line number and line text).
+</para>
+
+<para>
+The Filter Query Results dialogue is invoked from the query context menu (see <link linkend="result-options">Query Result Options</link>).
+<screenshot>
+<screeninfo>The Filter Query Results dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="query_filter.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Filter Query Results dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Search For</guilabel></term>
+<listitem><para>Enter the pattern to match in the query result records. This pattern is interpreted based on the Search Type selection.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Search In</guilabel></term>
+<listitem><para>The record field in which to look for the search pattern. By default, this is the field over which the context menu was invoked.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Search Type</guilabel></term>
+<listitem><para>Defines the way in which the pattern should be interpreted.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Plain Text</guilabel></term>
+<listitem><para>Choose this option to treat the pattern as a simple text string to search for.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>RegExp</guilabel></term>
+<listitem><para>Choose this option to treat the pattern as a regular expression.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Simplified RegExp</guilabel></term>
+<listitem><para>Choose this option to treat the pattern as a simplified regular expression (a-la file expressions in a Unix shell).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Case Sensitive</guilabel></term>
+<listitem><para>Check for a case sensitive search, uncheck for a case insensitive one.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>OK</guibutton></term>
+<listitem><para><action>Filters the query results based on the given information.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Cancel</guibutton></term>
+<listitem><para><action>Closes the dialogue without filtering the results.</action></para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="call-tree-graph">
+<title>Displaying Call-Trees and Graphs</title>
+
+<para>
+Tracing a sequence of calls in the code base is a common task in code analysis. To facilitate this task, &kapp; offers two mechanisms for visualising the relationships between different functions in a project: the Call-Tree and the Call-Graph. Both of these mechanisms are provided through the <guilabel>Call Graph Dialogue</guilabel> which can be invoked on a function name in a similar way to a regular <application>Cscope</application> query.
+</para>
+
+<sect3 id="call-tree">
+<title>Call Trees</title>
+
+<para>
+The Call-Tree has two modes, "Called Functions" and "Calling Functions". In the first case, the call chain starts with a root function, and goes on to display all the functions it references. The second mode shows all functions calling the root function. In both modes each function in the second level can be further expanded to show functions calling it (or functions it calls). This process can be further applied to functions in the third level, an so on.
+</para>
+
+<para>
+Both modes use a standard tree widget to display the call chain. Expanding a function to the next level is performed by clicking the plus sign to the left of the function's name. Double-clicking a function (or selecting it and then hitting <keycap>Enter</keycap>) points the editor to the call's actual text. Right-clicking an entry provides a popup-menu with further options, similar to the query results menu (see <link linkend="result-options">Query Result Options</link>).
+</para>
+
+<para>
+<screenshot>
+<screeninfo>A Call-Tree</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="call_tree.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>A Call-Tree in "Called Functions" mode</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+</sect3>
+
+<sect3 id="call-graph">
+<title>Call Graphs</title>
+
+<para>
+A Call-Tree often misses the true nature of a call sequence, since many such sequences contain loops, that is, functions calling back functions that precede them in the sequence. (Recursive calls provide a natural example for such a state of affairs.) A Call-Graph provides a more accurate description of the relationships between functions by depicting calls using a directed graph. Each node in the graph represents a function and each edge a function call. An edge is directed from the caller to the callee.
+</para>
+
+<para>
+<screenshot>
+<screeninfo>A Call-Graph</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="call_graph.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>A Call-Graph</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para>
+When a Call-Graph is created, it only displays a single function. Right-clicking on this function opens a popup menu that allows the user to display or hide either the functions called by or calling to this one. This menu consists of the following entries:
+
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Called Functions</guimenu>
+<guimenuitem>Show</guimenuitem>
+</menuchoice></term>
+<listitem><para>Shows all functions called by this one.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Called Functions</guimenu>
+<guimenuitem>List/Filter...</guimenuitem>
+</menuchoice></term>
+<listitem><para>Displays a detailed list of called functions. This list can also be used to select which calling functions to show.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Called Functions</guimenu>
+<guimenuitem>Hide</guimenuitem>
+</menuchoice></term>
+<listitem><para>Removes any functions called by this one. This will also remove any unconnected graph components resulting from the removal of the corresponding nodes.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Calling Functions</guimenu>
+<guimenuitem>Show</guimenuitem>
+</menuchoice></term>
+<listitem><para>Shows all functions calling this one.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Calling Functions</guimenu>
+<guimenuitem>List/Filter...</guimenuitem>
+</menuchoice></term>
+<listitem><para>Displays a detailed list of calling functions. This list can also be used to select which calling functions to show.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Calling Functions</guimenu>
+<guimenuitem>Hide</guimenuitem>
+</menuchoice></term>
+<listitem><para>Removes any functions calling this one. This will also remove any unconnected graph components resulting from the removal of the corresponding nodes.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>This Function</guimenu>
+<guimenuitem>Find Definition</guimenuitem>
+</menuchoice></term>
+<listitem><para>Queries the database for the definition of the selected function.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>This Function</guimenu>
+<guimenuitem>Remove</guimenuitem>
+</menuchoice></term>
+<listitem><para>Deletes the selected node from the graph.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>
+Another popup menu is displayed when an arrow head is right-clicked:
+
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenuitem>Open Call</guimenuitem>
+</menuchoice></term>
+<listitem><para>Opens an editor page at the location of the call represented by this edge.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect3>
+
+</sect2>
+
+</sect1>
