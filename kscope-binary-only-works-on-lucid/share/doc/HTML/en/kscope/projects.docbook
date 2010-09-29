@@ -1,0 +1,394 @@
+<sect1 id="projects">
+<title>Working with Projects</title>
+
+<para>
+Before any significant work can be done with &kapp;, the user needs to define a project. A &kapp; project is a set of source files, which <application>Cscope</application> uses to create its cross-reference database. Unlike many other project-based environments, &kapp; is not intrusive: it only uses three files to define the project (with additional two files if the inverted index option is used). These files reside on a user-specified folder that does not have to be related to the location of the source files. Thus, &kapp; does not require any source files to be moved, and does not affect the structure of the source tree.
+</para>
+<para>
+The files used by a &kapp; project are:
+<variablelist>
+<varlistentry>
+<term><filename>cscope.proj</filename></term>
+<listitem><para>The project's configuration file</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><filename>cscope.files</filename></term>
+<listitem><para>A list of all source files included in the project</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><filename>cscope.out</filename></term>
+<listitem><para><application>Cscope</application>'s cross-reference database</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><filename>cscope.in.out</filename></term>
+<listitem><para>An inverted index file (optional)</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><filename>cscope.po.out</filename></term>
+<listitem><para>An inverted index file (optional)</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>
+The only limitation imposed by &kapp; is that these files have to reside in the same directory, referred to as the project's directory. The project's directory has the same name as the project (which means that project names should conform to the file-system conventions), and can be placed by the user under any directory. Normally, a user will create a <filename>projects</filename> sub-directory under his or her home directory, and create all projects there. However, this is only a convention, and, as explained above, the user can choose any other method he or she prefers. Furthermore, the project's directory can later be moved to another parent directory, without any risk of data loss.
+</para>
+
+<sect2 id="project-create">
+<title>Creating a New Project</title>
+
+<para>
+The first step in working with projects is to create a new one. This is done by choosing the <menuchoice><guimenu>Projects</guimenu><guimenuitem>New...</guimenuitem></menuchoice> command from the main menu. Issuing this command opens the <guilabel>New Project</guilabel> dialogue. The dialogue consists of three pages: <guilabel>Details</guilabel>, <guilabel>File Types</guilabel> and <guilabel>Options</guilabel>.
+</para>
+<para>
+Note that this dialogue is intended for creating an empty project only, and has nothing to do with the actual source files of the project. This task is left to the <guilabel>Project Files</guilabel> dialogue.
+</para>
+
+<sect3>
+<title>Details</title>
+
+<screenshot>
+<screeninfo>The Project Details page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_details.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Project Details page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Name</guilabel></term>
+<listitem><para>The name of the project. Note that this name will be given to the project's directory, and should therefore comply with the file-system convention for directory names (e.g., no spaces).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Path</guilabel></term>
+<listitem><para>The full path of the directory under which the new project will be created. &kapp; will create a new directory under this one, and name it after the project. Thus this path does not need to point directly to the project's directory, but rather to the project's parent directory. For example, if a user wants to create a project called "my_project" under his local <filename>projects</filename> directory, the project's name should be set to "my_project" and the path to <filename>/home/my_username/projects</filename>. This will set the project's directory to <filename>/home/my_username/projects/my_project</filename>.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Source Root (Optional)</guilabel></term>
+<listitem><para>The top-level directory that contains the source files to be included in the project. This path only serves as a hint to &kapp;, as files may later be added from different directories as well By default, this value is set to the root directory.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3>
+<title>File Types</title>
+
+<screenshot>
+<screeninfo>The File Types page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_types.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The File Types page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>This Project</guilabel></term>
+<listitem><para>A list of file name patterns that are used to define the type of source files to be included in the project. By default, C source files (<filename>.c</filename>) and C header files (<filename>.h</filename>) are included, but other types (including Lex's <filename>.l</filename> files and Yacc's <filename>.y</filename> files) can be added.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Available Types</guilabel></term>
+<listitem><para>A list of standard file types that can be included in a project. To add a type, highlight its entry in the list, and click the <guibutton>Add</guibutton> button. Custom types can also be added, by typing in shell-style patterns in the edit-box at the top of the list.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Add</guibutton></term>
+<listitem><para><action>Adds the currently selected file type to the project.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Remove</guibutton></term>
+<listitem><para><action>Removes the currently selected file types from the project.</action> The file type is added to the list of available types.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3>
+<title>Options</title>
+
+<screenshot>
+<screeninfo>The Project Options page</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_opts.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Project Options page</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Kernel project</guilabel></term>
+<listitem><para>Mark this check-box if the project is designated to be a kernel-style project. For kernel projects, <application>Cscope</application> ignores the system's include files when building the cross-reference database (i.e., <symbol>printf</symbol> will not be found in <filename>/usr/include/stdio.h</filename>).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Build inverted index</guilabel></term>
+<listitem><para><application>Cscope</application> can build an inverted index for the project to speed up queries (though at the expense of more time spent on building and refreshing the database).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Do not compress the database</guilabel></term>
+<listitem><para>Builds cross-reference database without compression. This will create a larger, but human-readable database.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Slower, but more accurate, function definition detection</guilabel></term>
+<listitem><para>Applies a huristic that can overcome <application>Cscope</application>'s inability to detect function declarations with function pointers as parameters. Requires a patch to <application>Cscope</application>.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Refresh database automatically</guilabel></term>
+<listitem><para>&kapp; can rebuild the cross-reference database automatically, a process which is triggered when a source file is saved. If this option is selected, the user needs to specify the time (in seconds) that should elapse after each file save operation and before the database is rebuilt.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Use symbol auto-completion</guilabel></term>
+<listitem><para>Enables automatic "as-you-type" symbol completion. Note that manual symbol completion is always available, regardless of whether this option is selected.</para>
+<note><para>If you choose to enable this option, it is recommended that you also select the inverted index option.</para></note></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Options...</guibutton></term>
+<listitem><para><action>Displays the symbol auto-completion configuration dialogue.</action> This button is only enabled if the symbol auto-completion is selected (see <link linkend="auto-symbol-completion">Automatic Symbol Completion</link> for a description of this dialogue).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Override default tab width (Kate only)</guilabel></term>
+<listitem><para>Use a per-project tab-width (overriding the editor's settings). Helps when browsing code bases that use different styles than the user's preferred one.</para></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+
+<sect3>
+<title>Common Buttons</title>
+<variablelist>
+<varlistentry>
+<term><guibutton>OK</guibutton></term>
+<listitem><para><action>Accepts the values entered in the dialogue, and creates a new project.</action> If any mandatory values were omitted, or not entered correctly, the user is prompted.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Cancel</guibutton></term>
+<listitem><para><action>Closes the dialogue without creating a new project.</action></para></listitem>
+</varlistentry>
+</variablelist>
+</sect3>
+</sect2>
+
+<sect2 id="project-files">
+<title>Adding and Removing Project Files</title>
+
+<para>
+The project's list of source files is maintained by the <guilabel>Project Files</guilabel> dialogue. This dialogue allows the user to add source files to a project, or remove files currently included in it. The dialogue is invoked automatically after a new project has been created, or manually by selecting the <menuchoice><guimenu>Project</guimenu><guimenuitem>Add/Remove Files...</guimenuitem></menuchoice> command from the main menu.
+</para>
+
+<screenshot>
+<screeninfo>The Project Files dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_files.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Project Files dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+
+<variablelist>
+<varlistentry>
+<term><guilabel>File Path</guilabel></term>
+<listitem><para>Displays a list of all source files included in the project. Note that when adding and removing files, the project itself is not modified until the <guibutton>OK</guibutton> button is clicked.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Filter</guibutton></term>
+<listitem><para>Hides all files whose path names do not include the text entered in the edit-box to the left of the button. This can simplify the task of finding files in the project. The filter text can be any simplified regular expression (as given to file commands in a shell).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Show All</guibutton></term>
+<listitem><para>Reveals any files formerly hidden with the <guibutton>Filter</guibutton> button.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Add</guilabel></term>
+<listitem><para>All buttons in this group add files to the current project.</para>
+<variablelist>
+<varlistentry>
+<term><guibutton>Files...</guibutton></term>
+<listitem><para><action>Adds user-selected files to the current project.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Directory...</guibutton></term>
+<listitem><para><action>Adds all source files in a directory to the current project.</action> Source files are scanned according to the file-types associated with the project. Note that sub-directories are not scanned for files.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Tree...</guibutton></term>
+<listitem><para><action>Adds all source files in a selected directory and its sub-directories to the current project.</action> Source files are scanned according to the file-types associated with the project.</para></listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Remove</guilabel></term>
+<listitem><para>All buttons in this group remove files from the current project.</para>
+<variablelist>
+<varlistentry>
+<term><guibutton>Selected</guibutton></term>
+<listitem><para><action>Removes all selected files from the current project.</action> Files can be selected for removal by clicking their path name in the file list. The <keycap>Ctrl</keycap> key can be used to select multiple files, and the <keycap>Shift</keycap> key can be used to select ranges of files.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Directory...</guibutton></term>
+<listitem><para><action>Removes all source files in a directory from the current project.</action> Note that sub-directories are not included.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Tree...</guibutton></term>
+<listitem><para><action>Removes all source files in a directory and any of its sub-directories from the current project.</action></para></listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>OK</guibutton></term>
+<listitem><para><action>Accepts the new list of source files, and updates the project.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Cancel</guibutton></term>
+<listitem><para><action>Closes the dialogue without modifying the list of project files.</action></para></listitem>
+</varlistentry>
+</variablelist>
+
+
+<para>
+Once the list of project files changes (either when files are first added to the project, or upon any subsequent modification), &kapp; informs <application>Cscope</application> to rebuild the cross-reference database.
+</para>
+
+</sect2>
+
+<sect2 id="project-open">
+<title>Opening an Existing Project</title>
+
+<para>
+Existing projects can be opened using the <menuchoice><guimenu>Project</guimenu><guimenuitem>Open...</guimenuitem></menuchoice> menu command. Choosing this command invokes the <guilabel>Open Project</guilabel> dialogue, which allows the user to select the project to open.
+</para>
+
+<screenshot>
+<screeninfo>The Open Project dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_open.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Open Project dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Project Path</guilabel></term>
+<listitem><para>The full path of the project directory. Use the browser button to locate a project by its configuration file (<filename>cscope.proj</filename>).</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Recent Projects</guilabel></term>
+<listitem><para>Displays a list of recently-opened projects. Clicking a list item copies its path to the Project Path edit-box, while double-clicking an item opens the project.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Remove</guibutton></term>
+<listitem><para><action>Removes an entry from the list of recently-opened projects.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Open</guibutton></term>
+<listitem><para><action>Opens the project whose directory is set in the Project Path edit-box.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Cancel</guibutton></term>
+<listitem><para><action>Closes the dialogue without opening a project.</action></para></listitem>
+</varlistentry>
+</variablelist>
+
+<para>
+When a project is closed, it saves session information, such as source files being edited and the contents of locked queries. The session is restored when that project is opened again.
+</para>
+
+<para>
+After the project has been opened, &kapp; will invoke <application>Cscope</application>, which, in turn, will check whether any files have been modified since the last time the project had been closed. If any files have changed, <application>Cscope</application> will rebuild the cross-reference database.
+</para>
+
+</sect2>
+
+<sect2 id="project-prop">
+<title>Changing Project Properties</title>
+
+<para>
+The properties of an open project can be changed by choosing the <menuchoice><guimenu>Project</guimenu><guimenuitem>Properties...</guimenuitem></menuchoice> menu command. This command invokes the <guilabel>Project Properties</guilabel> dialogue, which is similar to the <guilabel>New Project</guilabel> dialogue, except that the name and path of the project cannot be changed.
+</para>
+
+<para>
+See the <link linkend="project-create">New Project dialogue</link> for a description of the available project options.
+</para>
+
+</sect2>
+
+<sect2 id="projects-temp">
+<title>Temporary Projects</title>
+
+<para>
+Temporary projects are created when a user opens a cscope.out file directly. This option is useful for working on projects created by some other <application>Cscope</application> front-end (<application>Cscope</application>'s ncurses interface, <application>Vi</application>, <application>>Emacs</application>, etc.), or simply using <application>Cscope</application>'s <option>-b</option> command-line parameter.
+</para>
+
+<para>
+To open a database file, use the <menuchoice><guimenu>Project</guimenu><guimenuitem>Open Cscope.out...</guimenuitem></menuchoice> menu command. If the file is a valid <application>Cscope</application> cross-reference database, &kapp; will invoke <application>Cscope</application> using this file, and will be ready to accept queries on the database. Cscope.out files can also be opened through the command line, which means that you can simply drag a Cscope.out file, and drop it over &kapp;'s programme icon.
+</para>
+
+<para>
+Note, however, that most project management options provided by &kapp; will not be available for temporary projects: the file list for the project will be empty, users will not be able to add or remove files, and the project properties dialogue will not be available. You will also need to rebuild the database manually when making any changes. &kapp;'s rebuild command assumes the database has been updated, and only re-runs <application>Cscope</application>.
+</para>
+
+</sect2>
+
+<sect2 id="projects-build">
+<title>Building Projects</title>
+
+<para>
+While &kapp; was not designed as an IDE with a complete write-build-debug cycle, it does provide a simple GUI for building projects. The command <menuchoice><guimenu>Project</guimenu><guimenuitem>Make Project</guimenuitem></menuchoice> displays a dialogue, which can be used to invoke any external tool on a given directory. By default, it runs <command>make</command> on the project's source root. The output of the command will be displayed in the dialogue's <guilabel>Output</guilabel> pane, with any errors or warnings marked-up, similar to links in a browser. Clicking on a link will jump to an editor page showing the source file and line responsible for the message. A list of all abnormal messages also appears in the dialogue's <guilabel>Errors and Warnings</guilabel> pane.
+</para>
+
+<screenshot>
+<screeninfo>The Make Project dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="project_make.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Make Project dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Root Directory</guilabel></term>
+<listitem><para>The directory in which to run the build command.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Command</guilabel></term>
+<listitem><para>The command to execute.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Make</guibutton></term>
+<listitem><para><action>Executes the build command.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Stop</guibutton></term>
+<listitem><para><action>Halts an executing build process.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Close</guibutton></term>
+<listitem><para><action>Closes the dialogue.</action></para></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+</sect1>

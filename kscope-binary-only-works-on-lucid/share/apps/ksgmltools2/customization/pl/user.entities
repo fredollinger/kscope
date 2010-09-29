@@ -1,0 +1,258 @@
+<!-- This file contains entities (only!) to make authoring/translating
+     a document easier.  They are necessarily language-specific.
+     In the case of name clashes, entities in this file always lose.
+     Keep the entities simple, but _always_ provide them with full markup.
+     Please keep the entities sorted on the name: it will avoid duplicate
+     names (which if they occur will cost you a _lot_ of time)
+ -->
+
+<!-- Not defined entities, must be replaced with text:
+digikamimageplugins
+klicker
+kpat
+ktnef
+ -->
+
+<!ENTITY akregator-mianownik    '<application>Akregator</application>'>
+<!ENTITY akregator-dopelniacz    '<application>Akregatora</application>'>
+<!ENTITY akregator-celownik    '<application>Akregatorowi</application>'>
+<!ENTITY akregator-biernik    '<application>Akregatora</application>'>
+<!ENTITY akregator-narzednik    '<application>Akregatorem</application>'>
+<!ENTITY akregator-miejscownik    '<application>Akregatorze</application>'>
+
+<!ENTITY Alt        		"<keycap>Alt</keycap>">
+
+<!ENTITY amarok-mianownik    '<application>amaroK</application>'>
+<!ENTITY amarok-dopelniacz    '<application>amaroKa</application>'>
+<!ENTITY amarok-celownik    '<application>amaroKowi</application>'>
+<!ENTITY amarok-biernik    '<application>amaroKa</application>'>
+<!ENTITY amarok-narzednik    '<application>amaroKiem</application>'>
+<!ENTITY amarok-miejscownik    '<application>amaroKu</application>'>
+
+<!ENTITY ark-mianownik    '<application>Ark</application>'>
+<!ENTITY ark-dopelniacz    '<application>Arka</application>'>
+<!ENTITY ark-celownik    '<application>Arkowi</application>'>
+<!ENTITY ark-biernik    '<application>Arka</application>'>
+<!ENTITY ark-narzednik    '<application>Arkiem</application>'>
+<!ENTITY ark-miejscownik    '<application>Arku</application>'>
+
+<!ENTITY Backspace        		"<keycap>Backspace</keycap>">
+
+<!ENTITY cdrom-mianownik    '<hardware>CD-ROM</hardware>'>
+<!ENTITY cdrom-dopelniacz    '<hardware>CD-ROMu</hardware>'>
+<!ENTITY cdrom-celownik    '<hardware>CD-ROMowi</hardware>'>
+<!ENTITY cdrom-biernik    '<hardware>CD-ROM</hardware>'>
+<!ENTITY cdrom-narzednik    '<hardware>CD-ROMem</hardware>'>
+<!ENTITY cdrom-miejscownik    '<hardware>CD-ROMie</hardware>'>
+
+<!ENTITY Ctrl        		"<keycap>Ctrl</keycap>">
+<!ENTITY dpi        		"dpi">
+<!ENTITY Enter        		"<keycap>Enter</keycap>">
+<!ENTITY Esc        		"<keycap>Esc</keycap>">
+<!ENTITY etc        		"itp.">
+<!ENTITY eg        		"np.">
+
+<!ENTITY FAQ        		"FAQ">
+
+<!ENTITY gif        		'<literal role="extension">.gif</literal>'>
+
+<!ENTITY ie        		"tzn.">
+
+<!ENTITY GUI-mianownik    'graficzny interfejs użytkownika'>
+<!ENTITY GUI-dopelniacz    'graficznego interfejsu użytkownika'>
+<!ENTITY GUI-celownik    'graficznemu interfejsowi użytkownika'>
+<!ENTITY GUI-biernik    'graficzny interfejs użytkownika'>
+<!ENTITY GUI-narzednik    'graficznym interfejsem użytkownika'>
+<!ENTITY GUI-miejscownik    'graficznym interfejsie użytkownika'>
+
+<!ENTITY juk-mianownik    '<application>Juk</application>'>
+<!ENTITY juk-dopelniacz    '<application>Juka</application>'>
+<!ENTITY juk-celownik    '<application>Jukowi</application>'>
+<!ENTITY juk-biernik    '<application>Juka</application>'>
+<!ENTITY juk-narzednik    '<application>Jukiem</application>'>
+<!ENTITY juk-miejscownik    '<application>Juku</application>'>
+
+<!ENTITY kaddressbook-mianownik    '<application>Książka adresowa</application>'>
+<!ENTITY kaddressbook-dopelniacz    '<application>Książki adresowej</application>'>
+<!ENTITY kaddressbook-celownik    '<application>Książce adresowej</application>'>
+<!ENTITY kaddressbook-biernik    '<application>Książkę adresową</application>'>
+<!ENTITY kaddressbook-narzednik    '<application>Książką adresową</application>'>
+<!ENTITY kaddressbook-miejscownik    '<application>Książce adresowej</application>'>
+
+
+<!ENTITY kappfinder-mianownik    '<application>Kappfinder</application>'>
+<!ENTITY kappfinder-dopelniacz    '<application>Kappfinder</application>'>
+<!ENTITY kappfinder-celownik    '<application>Kappfinder</application>'>
+<!ENTITY kappfinder-biernik    '<application>Kappfinder</application>'>
+<!ENTITY kappfinder-narzednik    '<application>Kappfinder</application>'>
+<!ENTITY kappfinder-miejscownik    '<application>Kappfinder</application>'>
+
+<!ENTITY kcalc-mianownik    '<application>Kalkulator</application>'>
+<!ENTITY kcalc-dopelniacz    '<application>Kalkulatora</application>'>
+<!ENTITY kcalc-celownik    '<application>Kalkulatorowi</application>'>
+<!ENTITY kcalc-biernik    '<application>Kalkulator</application>'>
+<!ENTITY kcalc-narzednik    '<application>Kalkulatorem</application>'>
+<!ENTITY kcalc-miejscownik    '<application>Kalkulatorze</application>'>
+
+<!ENTITY kcontrolcenter    '&kcontrolcenter-mianownik;'>
+<!ENTITY kcontrolcenter-mianownik    '<application>Centrum sterowania &kde;</application>'>
+<!ENTITY kcontrolcenter-dopelniacz    '<application>Centrum sterowania &kde;</application>'>
+<!ENTITY kcontrolcenter-celownik    '<application>Centrum sterowania &kde;</application>'>
+<!ENTITY kcontrolcenter-biernik    '<application>Centrum sterowania &kde;</application>'>
+<!ENTITY kcontrolcenter-narzednik    '<application>Centrum sterowania &kde;</application>'>
+<!ENTITY kcontrolcenter-miejscownik    '<application>Centrum sterowania &kde;</application>'>
+
+<!ENTITY kdm-mianownik    '<application>KDM</application>'>
+<!ENTITY kdm-dopelniacz    '<application>KDM</application>'>
+<!ENTITY kdm-celownik    '<application>KDM</application>'>
+<!ENTITY kdm-biernik    '<application>KDM</application>'>
+<!ENTITY kdm-narzednik    '<application>KDM</application>'>
+<!ENTITY kdm-miejscownik    '<application>KDM</application>'>
+
+<!ENTITY khelpcenter-mianownik    '<application>Centrum pomocy &kde;</application>'>
+<!ENTITY khelpcenter-dopelniacz    '<application>Centrum pomocy &kde;</application>'>
+<!ENTITY khelpcenter-celownik    '<application>Centrum pomocy &kde;</application>'>
+<!ENTITY khelpcenter-biernik    '<application>Centrum pomocy &kde;</application>'>
+<!ENTITY khelpcenter-narzednik    '<application>Centrum pomocy &kde;</application>'>
+<!ENTITY khelpcenter-miejscownik    '<application>Centrum pomocy &kde;</application>'>
+
+<!ENTITY kicker-mianownik    '<application>Kicker</application>'>
+<!ENTITY kicker-dopelniacz    '<application>Kickera</application>'>
+<!ENTITY kicker-celownik    '<application>Kickerowi</application>'>
+<!ENTITY kicker-biernik    '<application>Kickera</application>'>
+<!ENTITY kicker-narzednik    '<application>Kickerem</application>'>
+<!ENTITY kicker-miejscownik    '<application>Kickerze</application>'>
+
+<!ENTITY kicon                  "
+<guiicon>
+<inlinemediaobject>
+ <objectinfo><title>Ikona K &kde;</title></objectinfo>
+ <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
+ <textobject><phrase>K</phrase></textobject>
+</inlinemediaobject>
+</guiicon>"><!-- if image is localised, then entityref should be used instead of fileref -->
+
+<!ENTITY kipi    '<application>KIPI</application>'>
+
+<!ENTITY klipper-mianownik    '<application>Klipper</application>'>
+<!ENTITY klipper-dopelniacz    '<application>Klippera</application>'>
+<!ENTITY klipper-celownik    '<application>Klipperowi</application>'>
+<!ENTITY klipper-biernik    '<application>Klippera</application>'>
+<!ENTITY klipper-narzednik    '<application>Klipperem</application>'>
+<!ENTITY klipper-miejscownik    '<application>Klipperze</application>'>
+
+<!ENTITY kmail-mianownik    '<application>Kmail</application>'>
+<!ENTITY kmail-dopelniacz    '<application>Kmaila</application>'>
+<!ENTITY kmail-celownik    '<application>Kmailowi</application>'>
+<!ENTITY kmail-biernik    '<application>Kmaila</application>'>
+<!ENTITY kmail-narzednik    '<application>Kmailem</application>'>
+<!ENTITY kmail-miejscownik    '<application>Kmailu</application>'>
+
+<!ENTITY kmenu    'Menu K'>
+<!ENTITY kmenu-mianownik    'Menu K'>
+<!ENTITY kmenu-dopelniacz    '&kmenu-mianownik;'>
+<!ENTITY kmenu-celownik    '&kmenu-mianownik;'>
+<!ENTITY kmenu-biernik    '&kmenu-mianownik;'>
+<!ENTITY kmenu-narzednik    '&kmenu-mianownik;'>
+<!ENTITY kmenu-miejscownik    '&kmenu-mianownik;'>
+
+<!ENTITY knode-mianownik    '<application>Knode</application>'>
+<!ENTITY knode-dopelniacz    '<application>Knode</application>'>
+<!ENTITY knode-celownik    '<application>Knode</application>'>
+<!ENTITY knode-biernik    '<application>Knode</application>'>
+<!ENTITY knode-narzednik    '<application>Knode</application>'>
+<!ENTITY knode-miejscownik    '<application>Knode</application>'>
+
+<!ENTITY konqueror-mianownik    '<application>Konqueror</application>'>
+<!ENTITY konqueror-dopelniacz    '<application>Konquerora</application>'>
+<!ENTITY konqueror-celownik    '<application>Konquerorowi</application>'>
+<!ENTITY konqueror-biernik    '<application>Konquerora</application>'>
+<!ENTITY konqueror-narzednik    '<application>Konquerorem</application>'>
+<!ENTITY konqueror-miejscownik    '<application>Konquerorze</application>'>
+
+<!ENTITY konsole-mianownik    '<application>Konsola</application>'>
+<!ENTITY konsole-dopelniacz    '<application>Konsoli</application>'>
+<!ENTITY konsole-celownik    '<application>Konsoli</application>'>
+<!ENTITY konsole-biernik    '<application>Konsolę</application>'>
+<!ENTITY konsole-narzednik    '<application>Konsolą</application>'>
+<!ENTITY konsole-miejscownik    '<application>Konsoli</application>'>
+
+<!ENTITY kontact-mianownik    '<application>Kontact</application>'>
+<!ENTITY kontact-dopelniacz    '<application>Kontact</application>'>
+<!ENTITY kontact-celownik    '<application>Kontact</application>'>
+<!ENTITY kontact-biernik    '<application>Kontact</application>'>
+<!ENTITY kontact-narzednik    '<application>Kontact</application>'>
+<!ENTITY kontact-miejscownik    '<application>Kontact</application>'>
+
+<!ENTITY kopete-mianownik    '<application>Kopete</application>'>
+<!ENTITY kopete-dopelniacz    '<application>Kopete</application>'>
+<!ENTITY kopete-celownik    '<application>Kopete</application>'>
+<!ENTITY kopete-biernik    '<application>Kopete</application>'>
+<!ENTITY kopete-narzednik    '<application>Kopete</application>'>
+<!ENTITY kopete-miejscownik    '<application>Kopete</application>'>
+
+<!ENTITY korganizer-mianownik    '<application>Korganizer</application>'>
+<!ENTITY korganizer-dopelniacz    '<application>Korganizera</application>'>
+<!ENTITY korganizer-celownik    '<application>Korganizerowi</application>'>
+<!ENTITY korganizer-biernik    '<application>Korganizera</application>'>
+<!ENTITY korganizer-narzednik    '<application>Korganizerem</application>'>
+<!ENTITY korganizer-miejscownik    '<application>Korganizerze</application>'>
+
+<!ENTITY ksysguard-mianownik    '<application>Ksysguard</application>'>
+<!ENTITY ksysguard-dopelniacz    '<application>Ksysguarda</application>'>
+<!ENTITY ksysguard-celownik    '<application>Ksysguardowi</application>'>
+<!ENTITY ksysguard-biernik    '<application>Ksysguarda</application>'>
+<!ENTITY ksysguard-narzednik    '<application>Ksysguardem</application>'>
+<!ENTITY ksysguard-miejscownik    '<application>Ksysguardzie</application>'>
+
+<!ENTITY kwallet-mianownik    '<application>Portfel &kde;</application>'>
+<!ENTITY kwallet-dopelniacz    '<application>Portfela &kde;</application>'>
+<!ENTITY kwallet-celownik    '<application>Portfelowi &kde;</application>'>
+<!ENTITY kwallet-biernik    '<application>Portfel &kde;</application>'>
+<!ENTITY kwallet-narzednik    '<application>Portfelem &kde;</application>'>
+<!ENTITY kwallet-miejscownik    '<application>Portfelu &kde;</application>'>
+
+<!ENTITY kwalletmanager-mianownik    '<application>Menedżer portfeli &kde;</application>'>
+<!ENTITY kwalletmanager-dopelniacz    '<application>Menedżera portfeli &kde;</application>'>
+<!ENTITY kwalletmanager-celownik    '<application>Menedżerowi portfeli &kde;</application>'>
+<!ENTITY kwalletmanager-biernik    '<application>Menedżera portfeli &kde;</application>'>
+<!ENTITY kwalletmanager-narzednik    '<application>Menedżerem portfeli &kde;</application>'>
+<!ENTITY kwalletmanager-miejscownik    '<application>Menedżerze portfeli &kde;</application>'>
+
+<!ENTITY noatun-mianownik    '<application>Noatun</application>'>
+<!ENTITY noatun-dopelniacz    '<application>Noatuna</application>'>
+<!ENTITY noatun-celownik    '<application>Noatunowi</application>'>
+<!ENTITY noatun-biernik    '<application>Noatuna</application>'>
+<!ENTITY noatun-narzednik    '<application>Noatunem</application>'>
+<!ENTITY noatun-miejscownik    '<application>Noatunie</application>'>
+
+<!ENTITY Linux-mianownik    'Linux'>
+<!ENTITY Linux-dopelniacz    'Linuksa'>
+<!ENTITY Linux-celownik    'Linuksowi'>
+<!ENTITY Linux-biernik    'Linuksa'>
+<!ENTITY Linux-narzednik    'Linuksem'>
+<!ENTITY Linux-miejscownik    'Linuksie'>
+
+<!ENTITY OS-mianownik    'system operacyjny'>
+<!ENTITY OS-dopelniacz    'systemu operacyjnego'>
+<!ENTITY OS-celownik    'systemowi operacyjnemu'>
+<!ENTITY OS-biernik    'system operacyjny'>
+<!ENTITY OS-narzednik    'systemem operacyjnym'>
+<!ENTITY OS-miejscownik    'systemie operacyjnym'>
+
+<!ENTITY Sendmail-mianownik    '<application>Sendmail</application>'>
+<!ENTITY Sendmail-dopelniacz    '<application>Sendmaila</application>'>
+<!ENTITY Sendmail-celownik    '<application>Sendmailowi</application>'>
+<!ENTITY Sendmail-biernik    '<application>Sendmaila</application>'>
+<!ENTITY Sendmail-narzednik    '<application>Sendmailem</application>'>
+<!ENTITY Sendmail-miejscownik    '<application>Sendmailu/application>'>
+
+<!ENTITY Shift        		"<keycap>Shift</keycap>">
+<!ENTITY Tab        		"<keycap>Tab</keycap>">
+
+<!ENTITY UNIX-mianownik    'Unix'>
+<!ENTITY UNIX-dopelniacz    'Uniksa'>
+<!ENTITY UNIX-celownik    'Uniksowi'>
+<!ENTITY UNIX-biernik    'Uniksa'>
+<!ENTITY UNIX-narzednik    'Uniksem'>
+<!ENTITY UNIX-miejscownik    'Uniksie'>

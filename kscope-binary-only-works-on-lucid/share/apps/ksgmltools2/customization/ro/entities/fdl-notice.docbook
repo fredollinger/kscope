@@ -1,0 +1,15 @@
+<para>Este permisă copierea, distribuirea şi/sau modificarea 
+acestui document în termenii Licenţei Documentaţiei Libere GNU
+(GNU Free Documentation License), versiunea 1.1 sau orice altă 
+versiune ulterioară publicată de Free Software Foundation; 
+&FDLInvariantSections;, &FDLFrontCoverText; şi
+&FDLBackCoverText;. 
+O copie a acestei licenţe este inclusă în <xref linkend="gnu-fdl"/>.</para>
+
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+sgml-parent-document: ("index.docbook" "book" "bookinfo" "legalnotice" "para")
+End:
+-->

@@ -1,0 +1,61 @@
+<variablelist>
+<varlistentry>
+<term>
+<menuchoice>
+<shortcut>
+<keycombo action="simul"><keycap>F1</keycap></keycombo>
+</shortcut>
+<guimenu>Ayuda</guimenu>
+<guimenuitem>Contenidos...</guimenuitem>
+</menuchoice>
+</term>
+<listitem><para><action>Inicia el sistema de ayuda de KDE</action> 
+mostrando las páginas de información de &kappname;. 
+(este documento).</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo>
+</shortcut>
+<guimenu>Ayuda</guimenu>
+<guimenuitem>¿Qué es esto?</guimenuitem>
+</menuchoice>
+</term>
+<listitem><para><action>Modifica la forma del puntero transformandola en
+una combinación de flecha e 
+interrogación.</action> Al pulsar sobre elementos dentro de &kappname; 
+se abrirá una ventana de ayuda (si existe para ese caso particular) 
+describiendo la función de dicho elemento.</para></listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Ayuda</guimenu>
+<guimenuitem>Informar de fallo...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Abre un cuadro de diálogo de informe de fallos</action>
+donde puede informar de un fallo o solicitar una 
+mejora o nueva propiedad <quote>deseable</quote>.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Ayuda</guimenu>
+<guimenuitem>Acerca de &kappname;</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Mostrará información sobre la versión y el 
+autor.</action></para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Ayuda</guimenu>
+<guimenuitem>Acerca de KDE</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Muestra la versión de KDE y otra información 
+básica.</action></para></listitem>
+</varlistentry>
+</variablelist>

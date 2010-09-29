@@ -1,0 +1,12 @@
+<para>Härmed ges tillåtelse att kopiera, distribuera och/eller ändra detta
+dokument under villkoren i GNU Free Documentation License,
+Version 1.1 eller någon senare version publicerad av Free Software
+Foundation; &FDLInvariantSections;, &FDLFrontCoverText; och
+&FDLBackCoverText;.  En kopia av licensen inkluderas i <xref linkend="gnu-fdl"/>.</para>
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+sgml-parent-document: ("index.docbook" "book" "bookinfo" "legalnotice" "para")
+End:
+-->

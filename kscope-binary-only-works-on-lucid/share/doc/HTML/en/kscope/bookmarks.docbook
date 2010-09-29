@@ -1,0 +1,28 @@
+<sect1 id="bookmarks">
+<title>Bookmarks</title>
+
+<para>
+Bookmarks provide an easy way to navigate through a defined set of positions in the source code. Most editors support the concept of bookmarks as tags attached to lines in a source file. &kapp; can enhance the usablity of per-file markers by enabling users to access the bookmarks currently defined in all open files. &kapp; also saves and restores these bookmarks as part of its session-management services.
+</para>
+
+<para>
+The <guilabel>Bookmarks</guilabel> dialogue is invoked by the <menuchoice><guimenu>Go</guimenu><guimenuitem>Global Bookmarks</guimenuitem></menuchoice> menu command. Once open, it displays the set bookmarks among all currently-open files. This includes the file path, the source line and the line's text (similar to other source views available in &kapp;).
+</para>
+
+<screenshot>
+<screeninfo>The Bookmarks dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="bookmarks.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The Bookmarks dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para>
+Navigating to a defined bookmark can be done by either double-clicking an entry in the dialogue, or by choosing the <menuchoice><guimenuitem>View Source</guimenuitem></menuchoice> item from the context menu (available by right-clicking over a bookmark entry). Other choices presented by the context menu include <menuchoice><guimenuitem>Copy [FIELD]</guimenuitem></menuchoice> for copying the contents of the current field to the clipboard, <menuchoice><guimenuitem>Filter...</guimenuitem></menuchoice> for selecting entries based on some criteria, <menuchoice><guimenuitem>Show All</guimenuitem></menuchoice> for removing all filters and <menuchoice><guimenuitem>Remove Item</guimenuitem></menuchoice> for deleting the bookmark.
+</para>
+
+</sect1>

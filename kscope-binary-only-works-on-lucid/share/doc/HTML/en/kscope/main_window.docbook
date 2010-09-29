@@ -1,0 +1,24 @@
+<sect1 id="main-window">
+<title>The Main Window</title>
+
+<para>
+&kapp;'s main window is divided into three. The central area is dedicated to source editing, and holds a set of editor windows, one for each source file being viewed or edited. This area is greyed-out if no files are open for editing. The window to the right is the file browser, comprised of a list of project files, and a tree-like view of the file system. The project file list will only display files after a project has been created and source files have been added to it. The bottom area contains the query windows, which hold the results of <application>Cscope</application> queries, and the history pages that display locations in the source code visited by the user.
+</para>
+<screenshot>
+<screeninfo>The Main Window</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main_window.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>&kapp;'s main window</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para>
+The size of each of these sub-windows can be changed to meet the user's personal preferences. This is done by dragging the lines that separate one area from the other. The new sizes will be kept and used on the next sessions as well.
+</para>
+<para>
+The file browser and the query window can be hidden in order to free up desktop space (especially on low resolution displays). Hiding and showing these windows is done through the <guimenu>View</guimenu> menu. A window can also be hidden by clicking on its close button, at the upper right corner. As with window sizes, the visibility status will be saved when &kapp; is closed.
+</para>
+</sect1>

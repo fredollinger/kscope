@@ -1,0 +1,35 @@
+<!-- This file can be used to include the notice in documentation
+     <!DOCTYPE book ... >
+    ...
+     <bookinfo>
+       <legalnotice>
+         <para>Copyright (C) 20yy  [name of author]</para>
+         &LGPLnotice;
+       </legalnotice>
+     </bookinfo>
+    ...
+
+    Alternatively, you can include the text literally.
+ -->
+<para>Diese Bibliothek ist freie Software. Sie können sie unter den 
+Bedingungen der GNU Lesser General Public License, wie von der Free Software
+Foundation veröffentlicht, weitergeben und/oder modifizieren, entweder
+gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren
+Version.</para>
+
+<para>Die Veröffentlichung der Bibliothek erfolgt in der Hoffnung, dass
+sie Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar
+ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR
+EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU Lesser
+General Public License.</para>
+
+<para>Sie sollten eine Kopie der GNU Lesser General Public License
+zusammen mit dieser Bibliothek  erhalten haben. Falls nicht, schreiben
+Sie an die Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+Boston, MA 02110-1301 USA.</para>
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+End:
+-->

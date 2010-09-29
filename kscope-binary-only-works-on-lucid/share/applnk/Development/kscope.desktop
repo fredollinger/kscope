@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KScope
+Exec=kscope
+Icon=kscope
+Type=Application
+Comment=Source-editing environment for large C projects
+Comment[fr]=Editeur de codes sources pour de gros projets en C
+GenericName=Source editing environment
+GenericName[fr]=Editeur de code source
+Categories=Qt;KDE;Development
+

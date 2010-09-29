@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.0//EN" "dtd/kdex.dtd" [
+  <!ENTITY kscope '<application>KScope</application>'>
+  <!ENTITY kapp "&kscope;"><!-- replace kscope here -->
+  <!ENTITY about SYSTEM "about.docbook">
+  <!ENTITY quick-start SYSTEM "quick_start.docbook">
+  <!ENTITY main-window SYSTEM "main_window.docbook">
+  <!ENTITY projects SYSTEM "projects.docbook">
+  <!ENTITY editing SYSTEM "editing.docbook">
+  <!ENTITY query-system SYSTEM "query_system.docbook">
+  <!ENTITY position-history SYSTEM "pos_history.docbook">
+  <!ENTITY bookmarks SYSTEM "bookmarks.docbook">
+  <!ENTITY config-dlg SYSTEM "config_dlg.docbook">
+  <!ENTITY main-menu SYSTEM "main_menu.docbook">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"><!-- change language only here -->
+
+
+  <!-- Do not define any other entities; instead, use the entities
+       from kde-genent.entities and $LANG/user.entities. -->
+]>
+
+<!-- The language must NOT be changed here. -->
+
+<book lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title>The &kapp; Handbook</title>
+
+<authorgroup>
+<author>
+<firstname>Elad</firstname>
+<othername></othername>
+<surname>Lahav</surname>
+<affiliation>
+<address><email>elad_lahav@users.sourceforge.net</email></address>
+</affiliation>
+</author>
+</authorgroup>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+<copyright>
+<year>2003-2007</year>
+<holder>Elad Lahav</holder>
+</copyright>
+<!-- Translators: put here the copyright notice of the translation -->
+<!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+     and in the FDL itself on how to use it. -->
+<legalnotice>&FDLNotice;</legalnotice>
+
+<!-- Date and version information of the documentation
+Don't forget to include this last date and this last revision number, we
+need them for translation coordination !
+Please respect the format of the date (DD/MM/YYYY) and of the version
+(V.MM.LL), it could be used by automation scripts.
+Do NOT change these in the translation. -->
+
+<date>08/07/2007</date>
+<releaseinfo>1.6.0</releaseinfo>
+
+<!-- Abstract about this handbook -->
+
+<abstract>
+<para>
+&kapp; is a source-editing environment for KDE, based on <application>Cscope</application>.
+</para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>KScope</keyword>
+<keyword>Cscope</keyword>
+<keyword>source</keyword>
+<keyword>editor</keyword>
+<keyword>browser</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- The contents of the documentation begin here.  Label
+each chapter so with the id attribute. This is necessary for two reasons: it
+allows you to easily reference the chapter from other chapters of your
+document, and if there is no ID, the name of the generated HTML files will vary
+from time to time making it hard to manage for maintainers and for the CVS
+system. Any chapter labelled (OPTIONAL) may be left out at the author's
+discretion. Other chapters should not be left out in order to maintain a
+consistent documentation style across all KDE apps. -->
+
+<chapter id="introduction">
+<title>Introduction</title>
+
+&about;
+&quick-start;
+
+</chapter>
+
+<chapter id="using-kscope">
+<title>Using &kapp;</title>
+
+&main-window;
+&projects;
+&editing;
+&query-system;
+&position-history;
+&bookmarks;
+
+</chapter>
+
+<chapter id="configuration">
+<title>Configuring &kapp;</title>
+
+&config-dlg;
+
+</chapter>
+
+<chapter id="commands">
+<title>Command Reference</title>
+
+&main-menu;
+
+</chapter>
+
+<chapter id="credits">
+
+<!-- Include credits for the programmers, documentation writers, and
+contributors here. The license for your software should then be included below
+the credits with a reference to the appropriate license file included in the KDE
+distribution. -->
+
+<title>Credits and License</title>
+
+<para>
+&kapp;
+</para>
+<para>
+Programme copyright 2003-2007 Elad Lahav <email>elad_lahav@users.sourceforge.net</email>
+</para>
+<para>
+I would like to thank:
+<itemizedlist>
+<listitem><para>The <ulink url="http://www.kde.org">KDE</ulink> team</para></listitem>
+<listitem><para>The <ulink url="http://www.kdevelop.org">KDevelop</ulink> team</para></listitem>
+<listitem><para>Hans-Bernhard Broker, who maintains <ulink url="http://cscope.sourceforge.net">Cscope</ulink></para></listitem>
+</itemizedlist>
+</para>
+
+<para>
+Documentation copyright 2007-2006 Elad Lahav <email>elad_lahav@users.sourceforge.net</email>
+</para>
+
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+&underFDL;               <!-- FDL: do not remove. Commercial development should -->
+<!-- replace this with their copyright and either remove it or re-set this.-->
+
+<!-- Determine which license your application is licensed under,
+     and delete all the remaining licenses below:
+
+     (NOTE:  All documentation are licensed under the FDL,
+     regardless of what license the application uses) -->
+
+&underBSDLicense;        <!-- BSD License -->
+
+</chapter>
+
+</book>

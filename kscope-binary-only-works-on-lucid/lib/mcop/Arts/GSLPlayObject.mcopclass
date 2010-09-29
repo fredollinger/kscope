@@ -1,0 +1,7 @@
+Interface=Arts::GSLPlayObject,Arts::PitchablePlayObject,Arts::PlayObject,Arts::PlayObject_private,Arts::SynthModule,Arts::Object
+Author="Hans Meine <hans_meine@gmx.net>"
+URL="http://www.arts-project.org/"
+Extension=wav,mp3,ogg
+Language=C++
+Library=libartsgslplayobject.la
+MimeType=audio/wav,audio/x-wav,audio/x-mp3,audio/x-mp1,audio/x-mp2,audio/vorbis,application/ogg

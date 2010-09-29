@@ -1,0 +1,41 @@
+<sect1 id="quick-start">
+<title>Quick Start</title>
+
+<para>
+This section provides information for the impatient user who would like to start using &kapp; right away. While using &kapp; should be straight-forward for anyone who has ever used similar tools in the past, and is familiar with KDE applications, there are, nonetheless, some points that require attention. Even if you do not have the time or patience to browse through this entire manual, please make sure to read at least this section.
+</para>
+
+<sect2>
+<title>Configure Paths</title>
+
+<para>
+&kapp; needs to be informed of the absolute paths to several executables, including <application>Cscope</application>, <application>Ctags</application> and (optionally) <application>Dot</application>. These can be configured in the <guilabel>Programmes</guilabel> page of the main configuration dialogue. See <link linkend="config-dlg">The Configuration Dialogue</link> section for more information.
+<warning><para>&kapp; will not work properly if these paths are not configured correctly!</para></warning>
+</para>
+</sect2>
+
+<sect2>
+<title>Create a Project</title>
+
+<para>
+While &kapp; can be used to edit individual files, most of its browsing, analysis and editing features will not be available outside of a project. A project is a set of source files for which &kapp; creates a cross-reference database, the key to most of &kapp;'s capabilities. See <link linkend="project-create">Creating a New Project</link> for detailed instructions.
+</para>
+</sect2>
+
+<sect2>
+<title>Populate the Project</title>
+
+<para>
+As mentioned above, a project is associated with a set of source files. These need to be added to the project, before any useful work can be done. Files can be added (or removed) using the <link linkend="project-files">Project Files</link> dialogue.
+</para>
+</sect2>
+
+<sect2>
+<title>Browse and Edit Files</title>
+
+<para>
+Once a project has been defined, &kapp; is ready for use. You can now open files for viewing and editing, and use the query system for browsing and analysing the project's code base. See the rest of this manual for more information.
+</para>
+</sect2>
+
+</sect1>

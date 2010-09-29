@@ -1,0 +1,465 @@
+<sect1 id="mainmenu">
+<title>&kapp;'s Main Menu</title>
+
+<para>
+This section describes the menu entries declared by &kapp; only. Additional entries may be added to the main menu by the embedded editor (e.g., <guimenu>Edit</guimenu>, <guimenu>View</guimenu> or <guimenu>Tools</guimenu>.) Please refer to the editor's manual for a description of the commands under these sub-menus.
+</para>
+
+<sect2>
+<title>The File Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>New</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Opens an empty editor window.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Open...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Opens a file for editing.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Close</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Closes the active editor window</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Quit</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Quits</action> &kapp;</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<para>
+Other file operations such as <guimenuitem>Save</guimenuitem> and <guimenuitem>Print</guimenuitem> are not integral &kapp; actions, but are rather defined by the type of editor used.
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Edit Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>E</keycap></keycombo>
+</shortcut>
+<guimenu>Edit</guimenu>
+<guimenuitem>Edit in External Editor</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Launches an editor application for the current file and line number</action> </para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>T</keycap></keycombo>
+</shortcut>
+<guimenu>Edit</guimenu>
+<guimenuitem>Go To Tag</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Moves the cursor to the tag list</action>, used for browsing through the file's tags</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>
+</shortcut>
+<guimenu>Edit</guimenu>
+<guimenuitem>Complete Symbol</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Generates a list of possible symbol completions for the text to the left of the cursor.</action> Note that this option is available even if automatic completion is disabled.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+<sect2>
+<title>The View Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>/</keycap></keycombo>
+</shortcut>
+<guimenu>View</guimenu>
+<guimenuitem>Toggle File List</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Shows or hides the project's file list window.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>.</keycap></keycombo>
+</shortcut>
+<guimenu>View</guimenu>
+<guimenuitem>Toggle Query Window</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Shows or hides the query window.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>.</keycap></keycombo>
+</shortcut>
+<guimenu>View</guimenu>
+<guimenuitem>Toggle Tag List</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Shows or hides the tag lists attached to the editor windows.</action></para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Project Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>New...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the New Project dialogue box.</action>Use this dialogue to create a new project.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>Open...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Open Project dialogue box</action>, which lets you search for an existing project to open.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>Open Cscope.out...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Prompts for an existing Cscope.out</action>, which can be opened as a temporary project.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>Add/Remove Files...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Project Files dialogue box</action>, which allows you to add source files to the current project, or remove files from it.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>Properties...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Project Properties dialogue box.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo>
+</shortcut>
+<guimenu>Project</guimenu>
+<guimenuitem>Make Project...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Build dialogue.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>M</keycap></keycombo>
+</shortcut>
+<guimenu>Project</guimenu>
+<guimenuitem>Remake Project</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Build dialogue and executes the last build command.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Project</guimenu>
+<guimenuitem>Close</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Closes the active project</action>, along with all open editor windows.</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Cscope Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Rebuild Database</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Updates the cross-reference database for the current project</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>0</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>References...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all references to a given symbol</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>1</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Definition...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds the global definition of a symbol</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>2</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Called Functions...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all functions called by a given function</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>3</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Calling Functions...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all functions calling a given function</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>4</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Find Text...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all occurrences of a text string</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>5</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Find EGrep Pattern...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all text strings matching a regular expression</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>8</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Find Including Files...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds all files #including a given file</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>]</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Quick Definition</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Finds the global definition of the symbol currently under the cursor.</action> The symbol dialogue appears only if a symbol cannot be determined automatically.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>\</keycap></keycombo>
+</shortcut>
+<guimenu>Cscope</guimenu>
+<guimenuitem>Call Graph...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays a call-graph and/or a call-tree for a given function</action></para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Go Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Up Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Previous Result</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Selects the previous result in the current query window.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Down Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Next Result</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Selects the next result in the current query window.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Left Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Previous Position</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Jumps to the previous stored position in the active history list.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Right Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Next Position</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Jumps to the next stored position in the active history list.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>H</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Position History...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Selects the active position history page in the query window.</action> If the query window is hidden, it becomes visible. </para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>Shift</keycap><keycap>G</keycap></keycombo>
+</shortcut>
+<guimenu>Go</guimenu>
+<guimenuitem>Global Bookmarks...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the Bookmarks dialogue.</action></para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Window Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Window</guimenu>
+<guimenuitem>Close All</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Closes all open editor windows</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>Left Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Window</guimenu>
+<guimenuitem>Go Left</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Selects the editor window to the left of the current one.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>Shift</keycap><keycap>Right Arrow</keycap></keycombo>
+</shortcut>
+<guimenu>Window</guimenu>
+<guimenuitem>Go Right</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Selects the editor window to the right of the current one.</action></para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<para>
+This menu displays the full path of each file edited in an open window. Clicking a
+file name will make its editor window active.
+</para>
+
+</sect2>
+
+<sect2>
+<title>The Settings Menu</title>
+
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guisubmenu>Toolbars</guisubmenu>
+</menuchoice></term>
+<listitem><para><action>Toggles the different toolbars.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure Shortcuts...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Allows the user to assign different shortcuts to &kapp; commands.</action></para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure KScope...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Displays the &kapp; configuration dialogue</action></para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+<para>
+A menu item to configure the embedded editor may also appear under this menu.
+</para>
+
+</sect2>
+
+</sect1>

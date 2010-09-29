@@ -1,0 +1,141 @@
+<!DOCTYPE kpartgui>
+<kpartgui name="kscope">
+<MenuBar>
+	<Menu name="file"><text>&amp;File</text>
+		<Merge/>
+	</Menu>
+	<Menu name="edit"><text>&amp;Edit</text>
+		<Action name="edit_external_editor"/>
+		<Separator/>
+		<Merge/>
+		<Action name="edit_goto_tag"/>
+		<Action name="edit_comp_symbol"/>
+	</Menu>
+	<Menu name="view"><text>&amp;View</text>
+		<Action name="view_toggle_filelist_dock"/>
+		<Action name="view_toggle_query_dock"/>
+		<Action name="view_toggle_tag_list"/>
+		<Separator/>
+		<Merge/>
+	</Menu>
+	<Menu name="project"><text>&amp;Project</text>
+		<Action name="project_new"/>
+		<Action name="project_open"/>
+		<Action name="project_cscope_out"/>
+		<Action name="project_add_rem_files"/>
+		<Action name="project_properties"/>
+		<Separator/>
+		<Action name="project_make"/>
+		<Action name="project_remake"/>
+		<Separator/>
+		<Action name="project_close"/>
+	</Menu>
+	<Menu name="cscope"><text>&amp;Cscope</text>
+		<Action name="cscope_rebuild"/>
+		<Separator/>
+		<Action name="cscope_references"/>
+		<Action name="cscope_definition"/>
+		<Action name="cscope_called"/>
+		<Action name="cscope_calling"/>
+		<Action name="cscope_text"/>
+		<Action name="cscope_pattern"/>
+		<Action name="cscope_file"/>
+		<Action name="cscope_including"/>
+		<Separator/>
+		<Action name="cscope_quick_def"/>
+		<Action name="cscope_call_tree"/>
+	</Menu>
+	<Menu name="go"><text>&amp;Go</text>
+		<Action name="go_prev_result"/>
+		<Action name="go_next_result"/>
+		<Separator/>
+		<Action name="go_prev_pos"/>
+		<Action name="go_next_pos"/>
+		<Action name="go_history"/>
+		<Separator/>
+		<Action name="go_bookmarks"/>
+	</Menu>
+	<Merge/>
+	<Menu name="window"><text>&amp;Window</text>
+		<Action name="window_close_all"/>
+		<Action name="window_go_left"/>
+		<Action name="window_go_right"/>
+		<Separator/>
+	</Menu>
+	<Menu name="settings"><text>&amp;Settings</text>
+		<Merge/>
+	</Menu>
+	<Menu name="help"><text>&amp;Help</text>
+		<Action name="help_welcome"/>
+		<Merge/>		
+	</Menu>
+</MenuBar>
+<Menu name="query_popup"><text>&amp;Query</text>
+	<Action name="query_new"/>
+	<Action name="query_refresh"/>
+	<Action name="query_toggle_locked"/>
+	<Separator/>
+	<Action name="query_close"/>
+</Menu>
+<Menu name="ktexteditor_popup">
+	<Merge/>
+	<Menu name="cscope"><text>Cscope</text>
+		<Action name="cscope_references"/>
+		<Action name="cscope_definition"/>
+		<Action name="cscope_called"/>
+		<Action name="cscope_calling"/>
+		<Action name="cscope_text"/>
+		<Action name="cscope_pattern"/>
+		<Action name="cscope_file"/>
+		<Action name="cscope_including"/>
+		<Separator/>
+		<Action name="cscope_quick_def"/>
+		<Action name="cscope_call_tree"/>
+	</Menu>
+	<Action name="edit_external_editor"/>
+	<Action name="file_close"/>
+</Menu>
+<Menu name="kscope_popup">
+	<Action name="cscope_references"/>
+	<Action name="cscope_definition"/>
+	<Action name="cscope_called"/>
+	<Action name="cscope_calling"/>
+	<Action name="cscope_text"/>
+	<Action name="cscope_pattern"/>
+	<Action name="cscope_file"/>
+	<Action name="cscope_including"/>
+	<Separator/>
+	<Action name="cscope_quick_def"/>
+	<Action name="cscope_call_tree"/>
+	<Action name="edit_external_editor"/>
+	<Separator/>
+	<Action name="file_close"/>
+</Menu>
+<ToolBar fullWidth="true" name="mainToolBar">
+	<Action name="file_close"/>
+</ToolBar>
+<ToolBar fullWidth="true" name="projectToolBar"><text>Project</text>
+	<Action name="project_open"/>
+	<Action name="cscope_rebuild"/>
+</ToolBar>
+<ToolBar fullWidth="true" name="navigateToolBar"><text>Navigation</text>
+	<Action name="go_prev_pos"/>
+	<Action name="go_next_pos"/>
+	<Action name="go_history"/>
+	<Action name="go_bookmarks"/>
+</ToolBar>
+<ToolBar fullWidth="true" name="queryToolBar"><text>Query</text>
+	<Action name="query_new"/>
+	<Action name="query_refresh"/>
+	<Action name="query_toggle_locked"/>
+	<Action name="query_close"/>
+	<Separator/>
+	<Action name="go_prev_result"/>
+	<Action name="go_next_result"/>
+</ToolBar>
+<ToolBar fullWidth="true" name="workspaceToolBar"><text>Workspace</text>
+    <Action name="view_toggle_tag_list"/>
+	<Action name="view_toggle_query_dock"/>
+    <Action name="view_toggle_filelist_dock"/>
+</ToolBar>
+</kpartgui>

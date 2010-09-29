@@ -1,0 +1,107 @@
+[Desktop Entry]
+Type=ServiceType
+X-KDE-ServiceType=KPluginInfo
+Name=KDE Plugin Information
+Name[af]=KDE Inprop module Informasie
+Name[ar]=معلومات ملحقات كيدي
+Name[az]=KDE Əlavə Mə'lumatı
+Name[be]=Звесткі аб дадатках KDE
+Name[bg]=Информация за приставките в KDE
+Name[bn]=কে.ডি.ই. প্লাগ-ইন তথ্য
+Name[br]=Titouroù al lugent KDE
+Name[bs]=KDE informacije o dodatku
+Name[ca]=Connector informatiu de KDE
+Name[cs]=Informace o pluginu KDE
+Name[csb]=Wëdowiédzô ò pluginsach KDE
+Name[cy]=Gwybodaeth Ategynnau KDE
+Name[da]=KDE's plugin-information
+Name[de]=KDE-Modul-Information
+Name[el]=Πληροφορίες πρόσθετου KDE
+Name[eo]=KDEa kromaĵinformo
+Name[es]=Información de los plugin de KDE
+Name[et]=KDE plugina info
+Name[eu]=KDEren plugin-en informazioa
+Name[fa]=اطلاعات وصلۀ KDE
+Name[fi]=KDE:n lisäosatiedot
+Name[fr]=Information sur le module KDE
+Name[fy]=KDE Plugin ynformaasje
+Name[ga]=Eolas Bhreiseán KDE
+Name[gl]=Información de Plugin de KDE
+Name[he]=מידע על תוספים של KDE
+Name[hi]=केडीई प्लगिन जानकारी
+Name[hr]=Podaci o KDE dodatku
+Name[hu]=A KDE bővítőmodulok áttekintése
+Name[id]=Informasi Plugin KDE
+Name[is]=KDE íforritsupplýsingar
+Name[it]=Informazioni plugin KDE
+Name[ja]=KDE プラグイン情報
+Name[ka]=KDE მოდულის ინფორმაცია
+Name[kk]=KDE модулі туралы мәлімет
+Name[km]=ព័ត៌មាន​កម្មវិធី​ជំនួយ​ខាង​ក្នុង KDE
+Name[ko]=KDE 플러그인 정보
+Name[lb]=KDE-Plugininformatioun
+Name[lt]=KDE priedų informacija
+Name[lv]=KDE spraudņa informācija
+Name[mk]=KDE Информација за приклучок
+Name[mn]=КДЭ плугин мэдээлэл
+Name[ms]=Maklumat Plugmasuk KDE
+Name[nb]=KDEs informasjon om programtillegg
+Name[nds]=Plugin-Informatschoon
+Name[ne]=KDE प्लगइन सूचना
+Name[nl]=KDE-plugininformatie
+Name[nn]=Informasjon om KDE-programtillegg
+Name[pa]=KDE ਪਲੱਗਿੰਨ ਜਾਣਕਾਰੀ
+Name[pl]=Informacja o wtyczkach KDE
+Name[pt]=Informação do 'Plugin' do KDE
+Name[pt_BR]=Informações do Plug-in do KDE
+Name[ro]=Informaţii modul KDE
+Name[ru]=Сведения о модуле KDE
+Name[rw]=Ibisobanuro by'Icomeka KDE
+Name[se]=Dieđut KDE-moduvlla birra
+Name[sk]=Informácia o module KDE
+Name[sl]=Informacija o vstavkih v KDE
+Name[sq]=Informata për Shtojca të KDE
+Name[sr]=Информација о KDE dodatku
+Name[sr@Latn]=Informacija o KDE dodatku
+Name[sv]=KDE-insticksinformation
+Name[ta]=KDE சொருகுப்பொருள் தகவல்
+Name[te]=కెడిఈ ప్లగిన్ సమాచారం
+Name[tg]=KDE барномаҳои чоп кунӣ
+Name[th]=ข้อมูลปลั้กอินของ KDE
+Name[tr]=KDE Eklenti Bilgisi
+Name[tt]=KDE Östämäse Turında
+Name[uk]=Інформація про втулок KDE
+Name[uz]=KDE plagin haqida maʼlumot
+Name[uz@cyrillic]=KDE плагин ҳақида маълумот
+Name[vi]=Thông tin bộ cầm phít KDE
+Name[wa]=Informåcion sol tchôke-divins di KDE
+Name[zh_CN]=KDE 打印信息
+Name[zh_HK]=KDE 外掛資訊
+Name[zh_TW]=KDE 外掛資訊
+
+[PropertyDef::X-KDE-PluginInfo-Author]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Email]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Name]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Version]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Website]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Category]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-Depends]
+Type=QStringList
+
+[PropertyDef::X-KDE-PluginInfo-License]
+Type=QString
+
+[PropertyDef::X-KDE-PluginInfo-EnabledByDefault]
+Type=bool

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=RELAX NG
+Comment[af]=Ontspannende NG
+Comment[hi]=रीलेक्स एनजी
+Comment[te]=రిలేక్స్ NG
+Icon=html
+Type=MimeType
+MimeType=application/xml
+X-KDE-IsAlso=text/xml
+Patterns=*.rng;
+
+[Property::X-KDE-text]
+Type=bool
+Value=true

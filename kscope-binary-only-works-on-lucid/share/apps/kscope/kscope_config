@@ -1,0 +1,165 @@
+# Configures KScope parameters
+
+# Checks that the given executable is indeed a Cscope-compatible application
+# and determines which options it supports.
+verifyCscope()
+{
+	CSCOPE_EXE=`basename $CSCOPE_PATH`
+
+	if [ $DEBUG ]
+	then
+		echo -n Checking $CSCOPE_EXE version...
+	fi
+
+	# Get the executable's version
+	CSCOPE_VER_MAJOR=`$CSCOPE_PATH -V 2>&1 | grep -i $CSCOPE_EXE | sed -e "s/.*version \([1-9][0-9]*\)\.\([0-9]\).*/\1/"`
+	CSCOPE_VER_MINOR=`$CSCOPE_PATH -V 2>&1 | grep -i $CSCOPE_EXE | sed -e "s/.*version \([1-9][0-9]*\)\.\([0-9]\).*/\2/"`
+	
+	if [ \( "$CSCOPE_VER_MAJOR" \) -a \( "$CSCOPE_VER_MINOR" \) ]
+	then
+		echo $CSCOPE_VER_MAJOR.$CSCOPE_VER_MINOR
+
+		if [ $DEBUG ]
+		then
+			echo -n Cscope support for line mode verbose output...
+		fi
+
+		# Check for verbose output
+		if [ "`$CSCOPE_PATH -h 2>&1 | grep "\-v"`" ]
+		then
+			CSCOPE_VERBOSE=Yes
+		else
+			CSCOPE_VERBOSE=No
+		fi
+		echo $CSCOPE_VERBOSE
+		
+		if [ $DEBUG ]
+		then
+			echo -n Cscope support slow path definitions...
+		fi
+		
+		# Check for slow-path definitions
+		if [ "`$CSCOPE_PATH -h 2>&1 | grep "\-D"`" ]
+		then
+			CSCOPE_SLOWPATH=Yes
+		else
+			CSCOPE_SLOWPATH=No
+		fi
+		echo $CSCOPE_SLOWPATH
+	else
+		echo ERROR
+		if [ $DEBUG ]
+		then
+			echo -e "\n *** ERROR *** The \"cscope\" executable does not appear to be a Cscope compatible programme"
+		fi
+	fi
+}
+
+DEBUG=
+CSCOPE_OPTIONS_ONLY=
+
+# Parse command-line parameters
+# Supported options:
+# -d: Debug mode
+# -co: Check Cscope options only
+for opt in $@
+do
+	case "$opt" in
+		"-d") DEBUG=1
+		;;
+		"-co") CSCOPE_OPTIONS_ONLY=1
+		;;
+	esac
+done
+
+if [ $DEBUG ]
+then
+	echo -n Looking for cscope...
+fi
+
+if [ -z $CSCOPE_PATH ]
+then
+	CSCOPE_PATH=`which cscope`
+fi
+
+if [ \( $CSCOPE_PATH \) -a \( -x $CSCOPE_PATH \) ]
+then
+	echo $CSCOPE_PATH
+	verifyCscope
+else
+	echo ERROR
+	if [ $DEBUG ]
+	then
+		echo -e "\n *** ERROR *** No Cscope executable found"
+	fi
+fi
+
+if [ $CSCOPE_OPTIONS_ONLY ]
+then
+	exit
+fi
+
+if [ $DEBUG ]
+then
+	echo -n Looking for Ctags...
+fi
+
+if [ -z $CTAGS_PATH ]
+then
+	for CTAGS_NAME in exctags ctags-exuberant exuberant-ctags ctags
+	do
+		CTAGS_PATH=`which $CTAGS_NAME`
+		if [ \( "$CTAGS_PATH" \) -a \( -x "$CTAGS_PATH" \) ]
+		then
+			break
+		fi
+	done
+fi
+
+if [ $CTAGS_PATH ]
+then	
+	echo $CTAGS_PATH
+	
+	# echo -n Checking for Exuberant-Ctags compatibility...
+	
+	CTAGS_EXUB=`$CTAGS_PATH --help | grep -c "\-\-excmd=number"`
+	if [ $CTAGS_EXUB -gt 0 ]
+	then
+		CTAGS_EXUB_PATH=$CTAGS_PATH
+		echo Yes
+	else
+		echo ERROR
+		# echo -e "\n *** ERROR *** The \"ctags\" executable does not appear to be compatible with Exuberant Ctags"
+	fi
+	
+else
+	echo ERROR
+	# echo -e "\n *** ERROR *** No Ctags executable found"
+fi
+
+# echo -n Looking for Dot...
+
+if [ -z $DOT_PATH ]
+then
+	DOT_PATH=`which dot`
+fi
+
+if [ \( $DOT_PATH \) -a \( -x $DOT_PATH \) ]
+then	
+	echo $DOT_PATH
+	
+	# echo -n Checking if dot handles the -Tplain option...
+	
+	echo "digraph G {Hello->World}" | $DOT_PATH -Tplain 2>&1 /dev/null
+	if [ $? -eq 0 ]
+	then
+		echo Yes
+	else
+		echo ERROR
+		# echo -e "\n *** ERROR *** The \"dot\" executable does not support -Tplain"
+	fi
+	
+else
+	echo ERROR
+	# echo -e "\n *** ERROR *** No Dot executable found"
+fi

@@ -1,0 +1,12 @@
+<para>Разрешается копировать, распространять и/или изменять этот
+документ на условиях лицензии GNU для свободной документации,
+версии 1.1 или более поздней, опубликованной Фондом Free Software
+Foundation; без &FDLInvariantSections;, без &FDLFrontCoverText;,
+без &FDLBackCoverText;.  Копия лицензии находится здесь <xref linkend="gnu-fdl"/>.</para>
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+sgml-parent-document: ("index.docbook" "book" "bookinfo" "legalnotice" "para")
+End:
+-->

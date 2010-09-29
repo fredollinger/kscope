@@ -1,0 +1,2 @@
+Interface=Arts::DataHandlePlay,Arts::SynthModule,Arts::Object
+Language=C++

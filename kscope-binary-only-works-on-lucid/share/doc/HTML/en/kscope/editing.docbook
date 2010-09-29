@@ -1,0 +1,138 @@
+<sect1 id="editing">
+<title>Editing Source Files</title>
+
+<sect2 id="editor">
+<title>The Editor</title>
+
+<para>
+&kapp; does not provide its own editor. Instead, it utilises KDE's KTextEditor infrastructure to embed the system's default editor. This means that any editor that supports the KTextEditor interface (e.g., &kate;, <application>KVim</application>) can be used with &kapp;. The editor is defined in KDE's control centre.
+</para>
+<para>
+In any matter related to operating or configuring the editor, please refer to the manual of the editor itself.
+</para>
+
+</sect2>
+
+<sect2 id="open-file">
+<title>Opening Files for Editing</title>
+
+<para>
+Files are usually opened for editing as part of a project. However, &kapp; enables the user to edit an occasional file that is not related to the project, through the <menuchoice><guimenu>File</guimenu><guimenuitem>Open...</guimenuitem></menuchoice> menu command. Note, however, that query results on files outside a project are meaningless.
+</para>
+
+<para>
+Once a project has been opened, the list of all project files appears in the file list, to the right of the editing area. Each file entry in the list shows the file's type, its name, and its full path. Files are opened by either double-clicking their entry in the list, or by selecting the entry, and hitting the <keycap>Enter</keycap> key. The edit-box above the list can be used to quickly search for a file. Typing in this box selects the first list entry whose file name begins with the entered text.
+</para>
+
+<para>
+Files can also be opened through the file tree, which shares its location with the project's file list (using a tabbed-window.) The file tree displays all files in the system, starting with a specific root directory. A root directory for the file tree is set on a per-project basis by using the <guibutton>Set Root...</guibutton> button. The file tree also sports a <guibutton>Find File...</guibutton> button for launching the file search <application>Cscope</application> query.
+</para>
+
+<note>
+<para>
+To decrease the loading time of projects, files and directories are only added to the tree when their parent directory is expanded. Therefore directories will not be marked as expandable by default, even if they are not empty.
+</para>
+</note>
+
+<para>
+For each file opened, &kapp; creates a separate editor window, inside the editing area. Each editor is associated with a tab, displaying the name of the edited file. Thus &kapp; provides a convenient multi-editor environment. You can switch between open files by selecting their respective tabs, or by using the <guimenu>Window</guimenu> menu.
+</para>
+
+<para>
+To work on a new file, the user first needs to create it using the <menuchoice><guimenu>File</guimenu><guimenuitem>New...</guimenuitem></menuchoice> menu command. This opens an empty editor, that is not associated with a file name or path. Upon saving the work in this new editor, &kapp; will prompt the user for a file name and directory. Note that this does not add the file to the project. The user still needs to invoke the <guilabel>Project Files</guilabel> dialogue and add the new file to an open project.
+</para>
+
+</sect2>
+
+<sect2 id="file-tags">
+<title>File Tags</title>
+
+<para>
+In addition to being a front-end to <application>Cscope</application>, &kapp; also uses <application>Ctags</application> to display a list of symbols defined in the current file. Each editor window is added a list of these symbols to its left. This list displays the name of a symbol, its type (as a graphic shape), and the line where it is defined. Double-clicking a symbol, or selecting it and hitting the <keycap>Enter</keycap> key, sets the cursor to the beginning of this symbol's definition line. The list of symbols is refreshed whenever a file is saved.
+</para>
+
+<para>
+The edit-box above the list of symbols can be used for quick symbol look-ups. Entering text in this box selects the first symbol whose name begins with this text.
+</para>
+
+<para>
+By default, tags are sorted by to their name in ascending order. Click on a column header to sort the tags according to that column. A triangle to the side of a column name indicates this is the sorting column, and shows the sorting order (ascending or descending.) Once a sorting order is chosen, it becomes the default, and is used for all newly created lists (though not for currently open, unmodified, editor windows.)
+</para>
+
+</sect2>
+
+<sect2 id="files-other">
+<title>Other File Options</title>
+
+<para>
+&kapp;'s <guimenu>File</guimenu> menu includes further options, such as saving, printing and closing files. In addition, specific editors can offer extended features under the <guimenu>Tools</guimenu> menu (e.g., syntax highlighting, indentation, etc.)
+</para>
+
+</sect2>
+
+<sect2 id="symbol-completion">
+<title>Symbol Completion</title>
+
+<para>
+Symbol completion is a convenient feature that enables the user to enter previously declared symbols with fewer key strokes. Since the cross-reference database keeps record of all globally declared symbols, it can be queried for a complete symbol name based on a given prefix.
+
+There are two types of symbol completion: manual and automatic. Manual symbol completion is always available, and can be invoked by the <menuchoice><guimenu>Edit</guimenu><guimenuitem>Complete Symbol</guimenuitem></menuchoice> menu command (or, more conveniently, by pressing <keycombo><keycap>Ctrl</keycap><keycap>Space</keycap></keycombo>). Once a completion request has been issued, &kapp; uses the characters immediately preceding the current cursor position as a prefix, and queries the database for possible completions. These completions are displayed in a list box, which can be browsed using the arrow keys. Pressing <keycap>Enter</keycap> replaces the prefix with the selected symbol. The <keycap>Esc</keycap> key hides the list without completing the symbol.
+</para>
+
+<sect3 id="auto-symbol-completion">
+<title>Automatic Symbol Completion</title>
+
+<para>
+In addition to manual symbol completion, &kapp; can also provide automatic completion based on changes made by the user to the edited source code. Specifically, &kapp; tracks changes to the edited file, and if certain criteria are met, initiates a symbol completion query to the cross-reference database. Once a completion list is displayed, symbol completion behaves in the same way as in the manual case.
+</para>
+
+<para>
+Automatic symbol completion is configured on a per-project basis. This feature is enabled or disabled via the <guilabel>Use Symbol Auto-Completion</guilabel> check-box in the <guilabel>New Project</guilabel> dialogue (this option can also be changed after a project has been created by invoking the <guilabel>Project Properties</guilabel> dialogue).
+</para>
+
+<note>
+<para>
+For performance reasons, it is highly recommended that automatic symbol completion will be used in conjunction with the inverted-index option.
+</para>
+</note>
+
+<para>
+As mentioned above, &kapp; uses several parameters to decide whether automatic symbol completion should be initiated. These parameters can be configured by clicking on the <guibutton>Options...</guibutton> button in the <guilabel>New Project</guilabel> dialogue (or, later, in the <guilabel>Project Properties</guilabel> dialogue). Clicking this button invokes the <guilabel>Auto-Completion Properties</guilabel> dialogue.
+
+<screenshot>
+<screeninfo>The auto-completion properties dialogue</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="autocomp_dlg.png" format="PNG" />
+</imageobject>
+<textobject>
+<phrase>The auto-completion properties dialogue</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<variablelist>
+<varlistentry>
+<term><guilabel>Minimum Characters</guilabel></term>
+<listitem><para>The minimal length of a symbol for which completion is provided.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guibutton>Delay (ms)</guibutton></term>
+<listitem><para>Specifies a time interval that should elapse after the last change to the edited text and before the symbol completion query is executed.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><guilabel>Maximum Entries</guilabel></term>
+<listitem><para>The symbol completion list will display at most this number of possible completions. If the number of matched symbols in the database is greater, a message will be displayed (and no symbols will be available).</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+<para>
+The main purpose of these parameters is to reduce the load on the system caused by frequent queries to the database. The default values have been tested in various scenarios, and are usually adequate.
+</para>
+
+</sect3>
+
+</sect2>
+
+</sect1>

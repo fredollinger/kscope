@@ -1,0 +1,24 @@
+<para>
+Ta biblioteka jest wolnym oprogramowaniem, możesz go rozprowadzać 
+i/lub modyfikować na zasadach licencji GNU Lesser General Public License, 
+opublikowanej przez Free Software Foundation, w wersji 2 lub
+(według Twojego uznania) dowolnej późniejszej wersji.</para>
+
+<para>
+Ta biblioteka jest udostępniana w nadziei, że będzie 
+użyteczna, ale BEZ ŻADNEJ GWARANCJI, nawet bez 
+domyślnej gwarancji CO DO PRZYDATNOŚCI HANDLOWEJ i 
+PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. 
+Szczegóły można znaleźć w licencji GNU
+Lesser General Public License.</para>
+
+<para>Do tej biblioteki powinna zostać dołączona kopia licencji GNU Lesser General
+Public License. Jeśli nie została, napisz  do: Free
+Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301 USA</para>
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+End:
+-->

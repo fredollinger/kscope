@@ -1,0 +1,25 @@
+<!-- This file can be used to include the notice in documentation 
+     <!DOCTYPE book ... >
+    ...
+     <bookinfo>
+       <legalnotice>
+         <para>Copyright (C) 20yy  [name of author]</para>
+         &LGPLnotice;
+       </legalnotice>
+     </bookinfo>
+    ...
+
+    Alternatively, you can include the text literally.
+ -->
+<para>ספריה זו הינה תוכנה חופשית; באפשרותך להפיץ אותה מחדש ו\או לשנותה תחת התנאים של הרישיון הציבורי הפחות כללי של GNU כפי שפורסם על ידי אירגון התוכנה החופשית; או גירסה 2 של הרישיון, או (לפי בחירתך) כל גירסה מאוחרת יותר.</para>
+
+<para>ספריה זו מופצת בתקווה שהיא תהיה שימושית, אך ללא כל אחריות; אפילו ללא האחריות המשתמעת של סחירות או התאמה למטרה מסויימת. עיין ברישיון הציבורי הפחות כללי של GNU לפרטים נוספים.</para>
+
+<para>היית אמור לקבל עותק של הרישיון הציבורי הפחות כללי של GNU ביחד עם ספריה זו; אם לא כך הדבר, כתוב אל Free Software Foundation, Inc., 51 Franklin Street,
+Fifth Floor, Boston, MA 02110-1301 USA</para>
+<!--
+Local variables:
+mode: sgml
+sgml-general-insert-case: lower
+End:
+-->
